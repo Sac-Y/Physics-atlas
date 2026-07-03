@@ -1,0 +1,587 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>物理学星图 · Physics Star Atlas</title>
+  <style>
+    :root {
+      --ink: rgba(235, 240, 255, 0.92);
+      --ink-dim: rgba(235, 240, 255, 0.45);
+      --glass: rgba(14, 18, 34, 0.38);
+      --glass-border: rgba(160, 180, 255, 0.14);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; overflow: hidden; background: #04050c; }
+    body {
+      font-family: "Songti SC", "Noto Serif SC", "STSong", serif;
+      color: var(--ink);
+      -webkit-font-smoothing: antialiased;
+    }
+    #app { position: fixed; inset: 0; }
+    #app canvas { display: block; }
+
+    .hud { position: fixed; z-index: 10; user-select: none; }
+    /* HUD 随开场苏醒错峰浮现 */
+    .hud-title { animation: hudIn 1.8s ease 0.8s backwards; }
+    .hud-styles { animation: hudIn 1.8s ease 3.4s backwards; }
+    .hud-search { animation: hudIn 1.8s ease 3.8s backwards; }
+    .hud-lenses { animation: hudIn 1.8s ease 4.2s backwards; }
+    .hud-tours { animation: hudIn 1.8s ease 4.6s backwards; }
+    @keyframes hudIn { from { opacity: 0; } }
+
+    .hud-title {
+      top: 28px; left: 34px;
+      display: flex; flex-direction: column; gap: 6px;
+      pointer-events: none;
+    }
+    .hud-title h1 {
+      font-size: 19px; font-weight: 500;
+      letter-spacing: 0.42em; text-indent: 0.42em;
+      color: var(--ink);
+      text-shadow: 0 0 24px rgba(120, 150, 255, 0.35);
+    }
+    .hud-title span {
+      font-family: "Avenir Next", "Helvetica Neue", sans-serif;
+      font-size: 9.5px; font-weight: 400;
+      letter-spacing: 0.34em;
+      color: var(--ink-dim);
+      text-transform: uppercase;
+    }
+    .hud-styles {
+      top: 30px; right: 34px;
+      display: flex; align-items: center; gap: 4px;
+      padding: 5px;
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 999px;
+      backdrop-filter: blur(14px) saturate(1.3);
+      -webkit-backdrop-filter: blur(14px) saturate(1.3);
+    }
+    .hud-styles button {
+      appearance: none; border: 0; background: transparent;
+      font-family: inherit; font-size: 12px;
+      letter-spacing: 0.18em; text-indent: 0.18em;
+      color: var(--ink-dim);
+      padding: 7px 16px; border-radius: 999px;
+      cursor: pointer;
+      transition: color 0.5s ease, background 0.5s ease;
+    }
+    .hud-styles button:hover { color: var(--ink); }
+    .hud-styles button.active {
+      color: var(--ink);
+      background: rgba(150, 170, 255, 0.13);
+      box-shadow: inset 0 0 0 1px rgba(170, 190, 255, 0.18);
+    }
+
+    .hud-lenses { top: auto; bottom: 26px; left: 34px; right: auto; }
+
+    /* 搜索框 */
+    .hud-search { top: 116px; left: 34px; width: 240px; }
+    .search-input {
+      width: 100%;
+      appearance: none; border: 1px solid var(--glass-border);
+      background: var(--glass);
+      backdrop-filter: blur(14px) saturate(1.3);
+      -webkit-backdrop-filter: blur(14px) saturate(1.3);
+      border-radius: 999px;
+      color: var(--ink);
+      font-family: inherit; font-size: 12px; letter-spacing: 0.12em;
+      padding: 8px 16px;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+    .search-input::placeholder { color: rgba(235, 240, 255, 0.3); }
+    .search-input:focus { border-color: rgba(160, 185, 255, 0.35); }
+    .search-results {
+      list-style: none; margin-top: 8px;
+      background: rgba(10, 14, 28, 0.72);
+      border: 1px solid var(--glass-border);
+      border-radius: 14px;
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      overflow: hidden;
+      display: none;
+    }
+    .hud-search.has-results .search-results { display: block; }
+    .search-results li {
+      display: flex; justify-content: space-between; align-items: baseline;
+      padding: 9px 16px; cursor: pointer;
+      font-size: 12.5px; letter-spacing: 0.08em;
+      color: rgba(228, 235, 252, 0.85);
+      transition: background 0.25s;
+    }
+    .search-results li:hover, .search-results li.hit { background: rgba(140, 165, 255, 0.1); }
+    .search-results li i {
+      font-style: normal; font-size: 10px; color: var(--ink-dim);
+    }
+
+    /* 导览菜单与字幕条 */
+    .hud-tours { top: auto; bottom: 26px; right: 34px; left: auto; }
+    .tour-label {
+      font-size: 11px; letter-spacing: 0.3em; text-indent: 0.3em;
+      color: var(--ink-dim); padding: 0 4px 0 12px;
+    }
+    #tourBar {
+      position: fixed; z-index: 15;
+      bottom: 84px; left: 50%; transform: translateX(-50%) translateY(12px);
+      width: min(620px, calc(100vw - 80px));
+      padding: 16px 22px 18px;
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 16px;
+      backdrop-filter: blur(18px) saturate(1.3);
+      -webkit-backdrop-filter: blur(18px) saturate(1.3);
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    #tourBar.open {
+      opacity: 1; pointer-events: auto;
+      transform: translateX(-50%) translateY(0);
+    }
+    .tour-head {
+      display: flex; align-items: baseline; gap: 12px;
+      font-size: 11px; letter-spacing: 0.22em; color: var(--ink-dim);
+    }
+    .tour-progress { margin-left: auto; font-family: "SF Mono", Menlo, monospace; font-size: 10px; }
+    .tour-exit {
+      appearance: none; border: 0; background: transparent;
+      color: var(--ink-dim); font-size: 16px; cursor: pointer;
+      transition: color 0.3s;
+    }
+    .tour-exit:hover { color: var(--ink); }
+    .tour-caption {
+      margin-top: 10px;
+      font-size: 14.5px; line-height: 1.95; letter-spacing: 0.06em;
+      color: rgba(228, 235, 252, 0.92);
+      min-height: 56px;
+      transition: opacity 0.35s ease;
+    }
+    #tourBar.swap .tour-caption { opacity: 0; }
+    .tour-nav {
+      display: flex; justify-content: space-between;
+      margin-top: 10px;
+    }
+    .tour-nav button {
+      appearance: none; border: 1px solid rgba(150, 175, 255, 0.14);
+      background: rgba(140, 165, 255, 0.05);
+      color: var(--ink-dim);
+      font-family: inherit; font-size: 11.5px; letter-spacing: 0.18em;
+      padding: 6px 16px; border-radius: 999px; cursor: pointer;
+      transition: color 0.3s, background 0.3s;
+    }
+    .tour-nav button:hover:not(:disabled) { color: var(--ink); background: rgba(140, 165, 255, 0.12); }
+    .tour-nav button:disabled { opacity: 0.3; cursor: default; }
+    .tour-timer {
+      position: absolute; bottom: 0; left: 14px;
+      height: 1px; width: 0;
+      background: linear-gradient(90deg, rgba(150, 190, 255, 0.55), rgba(150, 190, 255, 0.1));
+      border-radius: 1px;
+      max-width: calc(100% - 28px);
+    }
+
+    .hud-hint {
+      bottom: 26px; left: 50%; transform: translateX(-50%);
+      font-size: 11px; letter-spacing: 0.3em; text-indent: 0.3em;
+      color: var(--ink-dim);
+      pointer-events: none;
+      opacity: 0; animation: hintIn 2.4s ease 1.8s forwards;
+    }
+    @keyframes hintIn { to { opacity: 1; } }
+
+    .hud-reset {
+      bottom: 58px; left: 50%; transform: translateX(-50%);
+      width: 34px; height: 34px;
+      appearance: none;
+      border: 1px solid var(--glass-border);
+      border-radius: 50%;
+      background: var(--glass);
+      color: var(--ink-dim);
+      font-family: "Avenir Next", "Helvetica Neue", sans-serif;
+      font-size: 20px; line-height: 1;
+      cursor: pointer;
+      backdrop-filter: blur(14px) saturate(1.3);
+      -webkit-backdrop-filter: blur(14px) saturate(1.3);
+      box-shadow: inset 0 0 0 1px rgba(170, 190, 255, 0.05);
+      transition: color 0.35s ease, border-color 0.35s ease, background 0.35s ease, transform 0.2s ease;
+      animation: hudIn 1.8s ease 4.8s backwards;
+    }
+    .hud-reset:hover {
+      color: var(--ink);
+      border-color: rgba(170, 190, 255, 0.26);
+      background: rgba(140, 165, 255, 0.09);
+    }
+    .hud-reset:active { transform: translateX(-50%) scale(0.94); }
+
+    #fps {
+      bottom: 22px; right: 30px;
+      font-family: "SF Mono", Menlo, monospace;
+      font-size: 10px; color: var(--ink-dim);
+      display: none;
+    }
+
+    /* 档案卡：深空实验室 */
+    #starCard {
+      position: fixed; z-index: 20;
+      top: 50%; right: 38px; transform: translateY(-50%) translateX(24px);
+      width: 400px; max-height: 88vh;
+      perspective: 1600px;
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.45s ease, transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    #starCard.open {
+      opacity: 1; pointer-events: auto;
+      transform: translateY(-50%) translateX(0);
+    }
+    .card-inner {
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.65s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    #starCard.flipped .card-inner { transform: rotateY(180deg); }
+    .card-face {
+      backface-visibility: hidden; -webkit-backface-visibility: hidden;
+      background: rgba(10, 14, 28, 0.62);
+      border: 1px solid var(--glass-border);
+      border-radius: 18px;
+      backdrop-filter: blur(22px) saturate(1.25);
+      -webkit-backdrop-filter: blur(22px) saturate(1.25);
+      padding: 26px 28px 22px;
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(190, 205, 255, 0.08);
+    }
+    .card-back {
+      position: absolute; inset: 0;
+      transform: rotateY(180deg);
+      overflow-y: auto;
+    }
+    .card-close {
+      position: absolute; top: 14px; right: 16px;
+      appearance: none; border: 0; background: transparent;
+      color: var(--ink-dim); font-size: 20px; line-height: 1;
+      cursor: pointer; transition: color 0.3s;
+    }
+    .card-close:hover { color: var(--ink); }
+    .card-meta {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 11px; letter-spacing: 0.28em; color: var(--ink-dim);
+    }
+    .card-dot { width: 7px; height: 7px; border-radius: 50%; box-shadow: 0 0 8px currentColor; }
+    .card-title {
+      margin-top: 10px;
+      font-size: 24px; font-weight: 500;
+      letter-spacing: 0.14em;
+      text-shadow: 0 0 18px rgba(140, 170, 255, 0.3);
+    }
+    .card-author {
+      margin-top: 6px;
+      font-family: "Avenir Next", "Helvetica Neue", sans-serif;
+      font-size: 10.5px; letter-spacing: 0.12em; color: var(--ink-dim);
+    }
+    .card-eq {
+      margin: 16px 0 4px; text-align: center;
+      color: rgba(220, 230, 255, 0.95);
+      font-size: 17px;
+      min-height: 30px;
+      overflow-x: auto; overflow-y: hidden;
+    }
+    .card-oneliner {
+      margin-top: 10px;
+      font-size: 13.5px; line-height: 1.9; letter-spacing: 0.06em;
+      color: rgba(225, 232, 250, 0.82);
+    }
+    .card-simwrap {
+      position: relative; margin-top: 16px;
+      border: 1px solid rgba(150, 175, 255, 0.12);
+      border-radius: 12px;
+      background: rgba(3, 4, 10, 0.65);
+      overflow: hidden;
+    }
+    .card-simcanvas { display: block; width: 100%; height: 240px; cursor: grab; }
+    .card-simcanvas:active { cursor: grabbing; }
+    .card-simhint {
+      position: absolute; bottom: 8px; left: 0; right: 0;
+      text-align: center; font-size: 10px; letter-spacing: 0.3em;
+      color: rgba(235, 240, 255, 0.4);
+      pointer-events: none;
+    }
+    .card-stats {
+      margin-top: 8px; text-align: center;
+      font-family: "SF Mono", Menlo, monospace;
+      font-size: 10.5px; color: rgba(160, 200, 255, 0.75);
+      letter-spacing: 0.04em;
+      min-height: 15px;
+    }
+    .card-flip {
+      margin-top: 16px; width: 100%;
+      appearance: none; border: 1px solid rgba(150, 175, 255, 0.14);
+      background: rgba(140, 165, 255, 0.06);
+      color: var(--ink-dim);
+      font-family: inherit; font-size: 12px; letter-spacing: 0.24em;
+      padding: 9px 0; border-radius: 10px; cursor: pointer;
+      transition: color 0.3s, background 0.3s;
+    }
+    .card-flip:hover { color: var(--ink); background: rgba(140, 165, 255, 0.12); }
+    .card-back h3 {
+      font-size: 19px; font-weight: 500; letter-spacing: 0.14em; margin-top: 4px;
+    }
+    .card-sec { margin-top: 18px; }
+    .card-sec h4 {
+      font-size: 11px; font-weight: 400; letter-spacing: 0.3em;
+      color: var(--ink-dim); margin-bottom: 8px;
+    }
+    .card-sec ul { list-style: none; }
+    .card-sec li {
+      font-size: 13px; line-height: 1.8; letter-spacing: 0.05em;
+      color: rgba(225, 232, 250, 0.85);
+      padding-left: 14px; position: relative;
+    }
+    .card-sec li::before {
+      content: ''; position: absolute; left: 0; top: 0.85em;
+      width: 5px; height: 1px; background: rgba(160, 185, 255, 0.5);
+    }
+
+    /* 演示台：近全屏教学仪器 */
+    #demoStage {
+      position: fixed; inset: 0; z-index: 30;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(2, 3, 8, 0.55);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.45s ease;
+    }
+    #demoStage.open { opacity: 1; pointer-events: auto; }
+    .stage-frame {
+      width: min(1240px, calc(100vw - 56px));
+      height: min(780px, calc(100vh - 56px));
+      display: flex; flex-direction: column;
+      background: rgba(8, 11, 24, 0.78);
+      border: 1px solid var(--glass-border);
+      border-radius: 22px;
+      backdrop-filter: blur(26px) saturate(1.25);
+      -webkit-backdrop-filter: blur(26px) saturate(1.25);
+      box-shadow: 0 40px 120px rgba(0, 0, 0, 0.6);
+      padding: 24px 28px;
+      transform: translateY(14px) scale(0.985);
+      transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    #demoStage.open .stage-frame { transform: none; }
+    .stage-head {
+      display: flex; align-items: baseline; gap: 18px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(150, 175, 255, 0.1);
+      position: relative;
+    }
+    .stage-meta { display: flex; align-items: center; gap: 8px; font-size: 11px; letter-spacing: 0.22em; color: var(--ink-dim); }
+    .stage-dot { width: 7px; height: 7px; border-radius: 50%; box-shadow: 0 0 8px currentColor; }
+    .stage-title { font-size: 21px; font-weight: 500; letter-spacing: 0.14em; }
+    .stage-eq { color: rgba(220, 230, 255, 0.9); font-size: 15px; margin-left: auto; margin-right: 44px; }
+    .stage-close {
+      position: absolute; top: -2px; right: 0;
+      appearance: none; border: 0; background: transparent;
+      color: var(--ink-dim); font-size: 24px; cursor: pointer; transition: color 0.3s;
+    }
+    .stage-close:hover { color: var(--ink); }
+    .stage-body { flex: 1; display: flex; gap: 24px; min-height: 0; padding-top: 20px; }
+    .stage-canvaswrap {
+      flex: 1; position: relative; min-width: 0;
+      border: 1px solid rgba(150, 175, 255, 0.1);
+      border-radius: 16px;
+      background: rgba(3, 4, 10, 0.7);
+      overflow: hidden;
+    }
+    .stage-canvas { display: block; width: 100%; height: 100%; cursor: grab; }
+    .stage-canvas:active { cursor: grabbing; }
+    .stage-stats {
+      position: absolute; bottom: 12px; left: 0; right: 0;
+      text-align: center;
+      font-family: "SF Mono", Menlo, monospace;
+      font-size: 12px; color: rgba(160, 200, 255, 0.8);
+      pointer-events: none;
+    }
+    .stage-panel {
+      width: 320px; flex-shrink: 0;
+      display: flex; flex-direction: column; gap: 18px;
+      overflow-y: auto;
+    }
+    .stage-steps { display: flex; flex-direction: column; gap: 8px; }
+    .stage-steps button {
+      appearance: none; text-align: left;
+      border: 1px solid rgba(150, 175, 255, 0.1);
+      background: rgba(140, 165, 255, 0.04);
+      color: var(--ink-dim);
+      font-family: inherit; font-size: 13.5px; letter-spacing: 0.1em;
+      padding: 11px 14px; border-radius: 12px; cursor: pointer;
+      transition: all 0.35s ease;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .stage-steps button em {
+      font-style: normal; font-size: 11px;
+      width: 22px; height: 22px; border-radius: 50%;
+      border: 1px solid rgba(150, 175, 255, 0.25);
+      display: inline-flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .stage-steps button:hover { color: var(--ink); }
+    .stage-steps button.active {
+      color: var(--ink);
+      background: rgba(140, 165, 255, 0.12);
+      border-color: rgba(150, 175, 255, 0.3);
+    }
+    .stage-steps button.active em { background: rgba(150, 175, 255, 0.2); }
+    .stage-text {
+      font-size: 13.5px; line-height: 2; letter-spacing: 0.05em;
+      color: rgba(225, 232, 250, 0.85);
+      min-height: 110px;
+    }
+    .stage-params { display: flex; flex-direction: column; gap: 12px; margin-top: auto; }
+    .stage-param {
+      display: flex; align-items: center; gap: 12px;
+      font-size: 11.5px; letter-spacing: 0.14em; color: var(--ink-dim);
+    }
+    .stage-param i { font-style: normal; font-family: "SF Mono", Menlo, monospace; font-size: 11px; width: 38px; text-align: right; color: rgba(160, 200, 255, 0.85); }
+    .stage-param input[type="range"] {
+      flex: 1; appearance: none; -webkit-appearance: none;
+      height: 2px; border-radius: 2px;
+      background: rgba(150, 175, 255, 0.25);
+      outline: none;
+    }
+    .stage-param input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none; appearance: none;
+      width: 13px; height: 13px; border-radius: 50%;
+      background: #cfd9ff;
+      box-shadow: 0 0 10px rgba(160, 190, 255, 0.6);
+      cursor: pointer;
+    }
+    .stage-chiprow {
+      display: flex; flex-direction: column; gap: 7px;
+      font-size: 11.5px; letter-spacing: 0.14em; color: var(--ink-dim);
+    }
+    .stage-chips { display: flex; gap: 6px; flex-wrap: wrap; }
+    .stage-chips button {
+      appearance: none; border: 1px solid rgba(150, 175, 255, 0.14);
+      background: rgba(140, 165, 255, 0.05);
+      color: var(--ink-dim);
+      font-family: inherit; font-size: 11px; letter-spacing: 0.1em;
+      padding: 5px 11px; border-radius: 999px; cursor: pointer;
+      transition: all 0.3s;
+    }
+    .stage-chips button:hover { color: var(--ink); }
+    .stage-chips button.active {
+      color: var(--ink);
+      background: rgba(140, 165, 255, 0.14);
+      border-color: rgba(150, 175, 255, 0.35);
+    }
+
+    .stage-action {
+      appearance: none; width: 100%;
+      border: 1px solid rgba(150, 175, 255, 0.18);
+      background: rgba(140, 165, 255, 0.07);
+      color: rgba(215, 225, 250, 0.9);
+      font-family: inherit; font-size: 12.5px; letter-spacing: 0.2em;
+      padding: 10px 0; border-radius: 10px; cursor: pointer;
+      transition: background 0.3s;
+    }
+    .stage-action:hover { background: rgba(140, 165, 255, 0.15); }
+
+    .card-stage {
+      margin-top: 10px; width: 100%;
+      appearance: none; border: 1px solid rgba(120, 220, 235, 0.25);
+      background: rgba(80, 200, 220, 0.08);
+      color: rgba(180, 235, 245, 0.9);
+      font-family: inherit; font-size: 12.5px; letter-spacing: 0.24em;
+      padding: 10px 0; border-radius: 10px; cursor: pointer;
+      transition: background 0.3s;
+    }
+    .card-stage:hover { background: rgba(80, 200, 220, 0.16); }
+
+    /* 星名标签：随缩放逐层浮现 */
+    .star-label {
+      color: var(--ink);
+      white-space: nowrap;
+      letter-spacing: 0.22em; text-indent: 0.22em;
+      /* 三层描边：贴着亮星 bloom 或星云亮区时仍保住字形 */
+      text-shadow:
+        0 0 12px rgba(3, 4, 10, 0.95),
+        0 0 4px rgba(3, 4, 10, 1),
+        0 1px 2px rgba(0, 0, 0, 0.85);
+      padding-top: 34px;
+      opacity: 0;
+      transition: opacity 0.35s ease;
+      user-select: none;
+    }
+    .star-label--high { font-size: 14px; }
+    .star-label--mid { font-size: 11.5px; color: rgba(235, 240, 255, 0.72); padding-top: 28px; }
+    .star-label--low { font-size: 10px; color: rgba(235, 240, 255, 0.55); padding-top: 24px; }
+    .star-label--dust { font-size: 9px; color: rgba(235, 240, 255, 0.38); padding-top: 18px; letter-spacing: 0.14em; }
+
+    /* 透镜轴刻度标签：SF Mono 小号、克制蓝，随轴淡入淡出（opacity 由 JS 控） */
+    .axis-label {
+      font-family: "SF Mono", Menlo, monospace;
+      font-size: 11.5px; letter-spacing: 0.08em;
+      color: rgba(200, 225, 255, 0.95);
+      white-space: nowrap;
+      /* 外圈亮晕 + 内圈深色保字形 */
+      text-shadow: 0 0 10px rgba(150, 190, 255, 0.6), 0 0 3px rgba(3, 4, 10, 0.9);
+      transition: opacity 0.35s ease;
+      user-select: none; pointer-events: none;
+    }
+    .axis-label.axis-end {
+      font-family: "Songti SC", "Noto Serif SC", "STSong", serif;
+      font-size: 15px; letter-spacing: 0.2em;
+      color: rgba(210, 230, 255, 0.95);
+    }
+
+    /* 学科图例：标题下方一排色点 + 中文名，可交互（hover/点击聚焦流派），与 HUD 同字体语言 */
+    #branchLegend {
+      top: 78px; left: 34px;
+      display: flex; flex-wrap: nowrap; gap: 8px;
+      pointer-events: none;
+      animation: hudIn 1.8s ease 1.4s backwards;
+    }
+    #branchLegend .legend-item {
+      display: flex; align-items: center; gap: 7px;
+      font-size: 10px; letter-spacing: 0.2em; text-indent: 0.2em;
+      color: var(--ink-dim);
+      padding: 4px 8px; border-radius: 999px;
+      pointer-events: auto; cursor: pointer;
+      border: 1px solid transparent;
+      transition: color 0.4s ease, background 0.4s ease, border-color 0.4s ease;
+    }
+    #branchLegend .legend-item:hover { color: var(--ink); }
+    #branchLegend .legend-item.active {
+      color: var(--ink);
+      background: rgba(150, 170, 255, 0.12);
+      border-color: rgba(170, 190, 255, 0.18);
+    }
+    #branchLegend .legend-dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      flex-shrink: 0;
+      transition: box-shadow 0.4s ease;
+    }
+    #branchLegend .legend-item:hover .legend-dot,
+    #branchLegend .legend-item.active .legend-dot {
+      box-shadow: 0 0 10px currentColor;
+    }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+
+  <div class="hud hud-title">
+    <h1>物理学星图</h1>
+    <span>Physics Star Atlas</span>
+  </div>
+
+  <div class="hud" id="branchLegend" aria-label="学科图例"></div>
+
+  <div class="hud hud-styles" id="styleSwitcher" aria-label="风格方案"></div>
+  <div class="hud hud-styles hud-lenses" id="lensSwitcher" aria-label="透镜"></div>
+
+  <div class="hud hud-hint">拖 拽 旋 转 &nbsp;·&nbsp; 滚 轮 缩 放</div>
+  <button class="hud hud-reset" id="resetView" type="button" aria-label="恢复初始视图" title="恢复初始视图">↺</button>
+  <div class="hud" id="fps"></div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,1657 @@
+[
+  {
+    "from": "kepler-laws",
+    "to": "newton-gravitation",
+    "type": "derivation"
+  },
+  {
+    "from": "kepler-laws",
+    "to": "laplace-celestial-mechanics",
+    "type": "derivation"
+  },
+  {
+    "from": "galileo-inertia",
+    "to": "newton-first-law",
+    "type": "derivation"
+  },
+  {
+    "from": "galileo-falling-bodies",
+    "to": "newton-second-law",
+    "type": "derivation"
+  },
+  {
+    "from": "conservation-momentum",
+    "to": "newton-third-law",
+    "type": "inspiration"
+  },
+  {
+    "from": "galilean-relativity",
+    "to": "newton-first-law",
+    "type": "inspiration"
+  },
+  {
+    "from": "galileo-moons-jupiter",
+    "to": "newton-gravitation",
+    "type": "inspiration"
+  },
+  {
+    "from": "newton-second-law",
+    "to": "d-alembert-principle",
+    "type": "derivation"
+  },
+  {
+    "from": "newton-first-law",
+    "to": "newton-second-law",
+    "type": "inspiration"
+  },
+  {
+    "from": "newton-second-law",
+    "to": "euler-rigid-body",
+    "type": "derivation"
+  },
+  {
+    "from": "newton-second-law",
+    "to": "least-action-principle",
+    "type": "inspiration"
+  },
+  {
+    "from": "newton-second-law",
+    "to": "laplace-celestial-mechanics",
+    "type": "derivation"
+  },
+  {
+    "from": "newton-gravitation",
+    "to": "laplace-celestial-mechanics",
+    "type": "derivation"
+  },
+  {
+    "from": "d-alembert-principle",
+    "to": "lagrangian-mechanics",
+    "type": "derivation"
+  },
+  {
+    "from": "least-action-principle",
+    "to": "lagrangian-mechanics",
+    "type": "derivation"
+  },
+  {
+    "from": "euler-rigid-body",
+    "to": "lagrangian-mechanics",
+    "type": "inspiration"
+  },
+  {
+    "from": "newton-second-law",
+    "to": "lagrangian-mechanics",
+    "type": "derivation"
+  },
+  {
+    "from": "lagrangian-mechanics",
+    "to": "hamiltonian-mechanics",
+    "type": "derivation"
+  },
+  {
+    "from": "least-action-principle",
+    "to": "hamiltonian-mechanics",
+    "type": "derivation"
+  },
+  {
+    "from": "hamiltonian-mechanics",
+    "to": "noether-theorem",
+    "type": "inspiration"
+  },
+  {
+    "from": "lagrangian-mechanics",
+    "to": "noether-theorem",
+    "type": "derivation"
+  },
+  {
+    "from": "conservation-momentum",
+    "to": "noether-theorem",
+    "type": "inspiration"
+  },
+  {
+    "from": "newton-second-law",
+    "to": "navier-stokes",
+    "type": "derivation"
+  },
+  {
+    "from": "euler-rigid-body",
+    "to": "navier-stokes",
+    "type": "inspiration"
+  },
+  {
+    "from": "navier-stokes",
+    "to": "kolmogorov-turbulence",
+    "type": "derivation"
+  },
+  {
+    "from": "hamiltonian-mechanics",
+    "to": "chaos-lorenz",
+    "type": "inspiration"
+  },
+  {
+    "from": "navier-stokes",
+    "to": "chaos-lorenz",
+    "type": "inspiration"
+  },
+  {
+    "from": "laplace-celestial-mechanics",
+    "to": "chaos-lorenz",
+    "type": "inspiration"
+  },
+  {
+    "from": "newton-gravitation",
+    "to": "general-relativity",
+    "type": "inspiration"
+  },
+  {
+    "from": "hamiltonian-mechanics",
+    "to": "matrix-mechanics",
+    "type": "inspiration"
+  },
+  {
+    "from": "hamiltonian-mechanics",
+    "to": "schrodinger-equation",
+    "type": "inspiration"
+  },
+  {
+    "from": "least-action-principle",
+    "to": "qed-renormalization",
+    "type": "inspiration"
+  },
+  {
+    "from": "noether-theorem",
+    "to": "standard-model",
+    "type": "derivation"
+  },
+  {
+    "from": "general-relativity",
+    "to": "noether-theorem",
+    "type": "inspiration"
+  },
+  {
+    "from": "gilbert-magnetism",
+    "to": "coulomb-law",
+    "type": "inspiration"
+  },
+  {
+    "from": "snell-law",
+    "to": "huygens-wave-light",
+    "type": "derivation"
+  },
+  {
+    "from": "snell-law",
+    "to": "fresnel-wave-optics",
+    "type": "inspiration"
+  },
+  {
+    "from": "huygens-wave-light",
+    "to": "young-double-slit",
+    "type": "inspiration"
+  },
+  {
+    "from": "newton-opticks",
+    "to": "young-double-slit",
+    "type": "inspiration"
+  },
+  {
+    "from": "huygens-wave-light",
+    "to": "fresnel-wave-optics",
+    "type": "derivation"
+  },
+  {
+    "from": "young-double-slit",
+    "to": "fresnel-wave-optics",
+    "type": "derivation"
+  },
+  {
+    "from": "huygens-wave-light",
+    "to": "wave-equation",
+    "type": "inspiration"
+  },
+  {
+    "from": "wave-equation",
+    "to": "fresnel-wave-optics",
+    "type": "derivation"
+  },
+  {
+    "from": "coulomb-law",
+    "to": "gauss-law",
+    "type": "derivation"
+  },
+  {
+    "from": "coulomb-law",
+    "to": "maxwell-equations",
+    "type": "derivation"
+  },
+  {
+    "from": "ampere-law",
+    "to": "maxwell-equations",
+    "type": "derivation"
+  },
+  {
+    "from": "ohm-law",
+    "to": "maxwell-equations",
+    "type": "inspiration"
+  },
+  {
+    "from": "faraday-induction",
+    "to": "maxwell-equations",
+    "type": "derivation"
+  },
+  {
+    "from": "gauss-law",
+    "to": "maxwell-equations",
+    "type": "derivation"
+  },
+  {
+    "from": "stokes-polarization",
+    "to": "maxwell-equations",
+    "type": "inspiration"
+  },
+  {
+    "from": "fresnel-wave-optics",
+    "to": "maxwell-equations",
+    "type": "inspiration"
+  },
+  {
+    "from": "maxwell-equations",
+    "to": "hertz-radio-waves",
+    "type": "derivation"
+  },
+  {
+    "from": "hertz-radio-waves",
+    "to": "photoelectric-effect",
+    "type": "inspiration"
+  },
+  {
+    "from": "maxwell-equations",
+    "to": "michelson-morley",
+    "type": "inspiration"
+  },
+  {
+    "from": "michelson-morley",
+    "to": "lorentz-transformations",
+    "type": "inspiration"
+  },
+  {
+    "from": "maxwell-equations",
+    "to": "lorentz-force",
+    "type": "derivation"
+  },
+  {
+    "from": "faraday-induction",
+    "to": "lorentz-force",
+    "type": "derivation"
+  },
+  {
+    "from": "ampere-law",
+    "to": "lorentz-force",
+    "type": "inspiration"
+  },
+  {
+    "from": "lorentz-force",
+    "to": "lorentz-transformations",
+    "type": "inspiration"
+  },
+  {
+    "from": "maxwell-equations",
+    "to": "special-relativity",
+    "type": "derivation"
+  },
+  {
+    "from": "lorentz-transformations",
+    "to": "special-relativity",
+    "type": "derivation"
+  },
+  {
+    "from": "maxwell-equations",
+    "to": "qed-renormalization",
+    "type": "derivation"
+  },
+  {
+    "from": "photoelectric-effect",
+    "to": "laser",
+    "type": "inspiration"
+  },
+  {
+    "from": "qed-renormalization",
+    "to": "laser",
+    "type": "derivation"
+  },
+  {
+    "from": "stokes-polarization",
+    "to": "cosmic-microwave-background",
+    "type": "inspiration"
+  },
+  {
+    "from": "young-double-slit",
+    "to": "de-broglie-waves",
+    "type": "inspiration"
+  },
+  {
+    "from": "fresnel-wave-optics",
+    "to": "de-broglie-waves",
+    "type": "inspiration"
+  },
+  {
+    "from": "boyle-law",
+    "to": "carnot-cycle",
+    "type": "inspiration"
+  },
+  {
+    "from": "caloric-theory",
+    "to": "carnot-cycle",
+    "type": "inspiration"
+  },
+  {
+    "from": "caloric-theory",
+    "to": "joule-mechanical-equivalent",
+    "type": "inspiration"
+  },
+  {
+    "from": "carnot-cycle",
+    "to": "second-law-thermodynamics",
+    "type": "derivation"
+  },
+  {
+    "from": "joule-mechanical-equivalent",
+    "to": "first-law-thermodynamics",
+    "type": "derivation"
+  },
+  {
+    "from": "first-law-thermodynamics",
+    "to": "second-law-thermodynamics",
+    "type": "inspiration"
+  },
+  {
+    "from": "first-law-thermodynamics",
+    "to": "kinetic-theory-gases",
+    "type": "inspiration"
+  },
+  {
+    "from": "second-law-thermodynamics",
+    "to": "entropy-clausius",
+    "type": "derivation"
+  },
+  {
+    "from": "carnot-cycle",
+    "to": "entropy-clausius",
+    "type": "inspiration"
+  },
+  {
+    "from": "kinetic-theory-gases",
+    "to": "maxwell-boltzmann-distribution",
+    "type": "derivation"
+  },
+  {
+    "from": "kinetic-theory-gases",
+    "to": "boltzmann-entropy",
+    "type": "derivation"
+  },
+  {
+    "from": "maxwell-boltzmann-distribution",
+    "to": "boltzmann-entropy",
+    "type": "derivation"
+  },
+  {
+    "from": "entropy-clausius",
+    "to": "boltzmann-entropy",
+    "type": "derivation"
+  },
+  {
+    "from": "stefan-boltzmann-law",
+    "to": "planck-blackbody",
+    "type": "derivation"
+  },
+  {
+    "from": "boltzmann-entropy",
+    "to": "planck-blackbody",
+    "type": "inspiration"
+  },
+  {
+    "from": "maxwell-boltzmann-distribution",
+    "to": "gibbs-ensemble",
+    "type": "derivation"
+  },
+  {
+    "from": "boltzmann-entropy",
+    "to": "gibbs-ensemble",
+    "type": "derivation"
+  },
+  {
+    "from": "gibbs-ensemble",
+    "to": "brownian-motion",
+    "type": "inspiration"
+  },
+  {
+    "from": "kinetic-theory-gases",
+    "to": "brownian-motion",
+    "type": "derivation"
+  },
+  {
+    "from": "brownian-motion",
+    "to": "fluctuation-dissipation",
+    "type": "inspiration"
+  },
+  {
+    "from": "gibbs-ensemble",
+    "to": "onsager-reciprocity",
+    "type": "derivation"
+  },
+  {
+    "from": "second-law-thermodynamics",
+    "to": "onsager-reciprocity",
+    "type": "inspiration"
+  },
+  {
+    "from": "onsager-reciprocity",
+    "to": "fluctuation-dissipation",
+    "type": "derivation"
+  },
+  {
+    "from": "fluctuation-dissipation",
+    "to": "landauer-principle",
+    "type": "inspiration"
+  },
+  {
+    "from": "boltzmann-entropy",
+    "to": "landauer-principle",
+    "type": "inspiration"
+  },
+  {
+    "from": "gibbs-ensemble",
+    "to": "renormalization-critical",
+    "type": "inspiration"
+  },
+  {
+    "from": "fluctuation-dissipation",
+    "to": "renormalization-critical",
+    "type": "inspiration"
+  },
+  {
+    "from": "renormalization-critical",
+    "to": "standard-model",
+    "type": "inspiration"
+  },
+  {
+    "from": "second-law-thermodynamics",
+    "to": "hawking-radiation",
+    "type": "inspiration"
+  },
+  {
+    "from": "boltzmann-entropy",
+    "to": "hawking-radiation",
+    "type": "inspiration"
+  },
+  {
+    "from": "landauer-principle",
+    "to": "quantum-information",
+    "type": "inspiration"
+  },
+  {
+    "from": "renormalization-critical",
+    "to": "topological-insulators",
+    "type": "inspiration"
+  },
+  {
+    "from": "galilean-relativity",
+    "to": "lorentz-transformations",
+    "type": "derivation"
+  },
+  {
+    "from": "bradley-aberration",
+    "to": "lorentz-transformations",
+    "type": "inspiration"
+  },
+  {
+    "from": "maxwell-equations",
+    "to": "lorentz-transformations",
+    "type": "derivation"
+  },
+  {
+    "from": "michelson-morley",
+    "to": "special-relativity",
+    "type": "inspiration"
+  },
+  {
+    "from": "lorentz-transformations",
+    "to": "minkowski-spacetime",
+    "type": "derivation"
+  },
+  {
+    "from": "special-relativity",
+    "to": "mass-energy-equivalence",
+    "type": "derivation"
+  },
+  {
+    "from": "special-relativity",
+    "to": "minkowski-spacetime",
+    "type": "derivation"
+  },
+  {
+    "from": "special-relativity",
+    "to": "dirac-equation",
+    "type": "derivation"
+  },
+  {
+    "from": "special-relativity",
+    "to": "general-relativity",
+    "type": "inspiration"
+  },
+  {
+    "from": "equivalence-principle",
+    "to": "gravitational-redshift",
+    "type": "derivation"
+  },
+  {
+    "from": "equivalence-principle",
+    "to": "general-relativity",
+    "type": "derivation"
+  },
+  {
+    "from": "gravitational-redshift",
+    "to": "general-relativity",
+    "type": "inspiration"
+  },
+  {
+    "from": "minkowski-spacetime",
+    "to": "general-relativity",
+    "type": "derivation"
+  },
+  {
+    "from": "general-relativity",
+    "to": "schwarzschild-black-hole",
+    "type": "derivation"
+  },
+  {
+    "from": "general-relativity",
+    "to": "gravitational-lensing",
+    "type": "derivation"
+  },
+  {
+    "from": "general-relativity",
+    "to": "frame-dragging",
+    "type": "derivation"
+  },
+  {
+    "from": "general-relativity",
+    "to": "friedmann-equations",
+    "type": "derivation"
+  },
+  {
+    "from": "schwarzschild-black-hole",
+    "to": "hawking-radiation",
+    "type": "derivation"
+  },
+  {
+    "from": "general-relativity",
+    "to": "hawking-radiation",
+    "type": "inspiration"
+  },
+  {
+    "from": "gravitational-redshift",
+    "to": "pound-rebka",
+    "type": "derivation"
+  },
+  {
+    "from": "general-relativity",
+    "to": "pound-rebka",
+    "type": "inspiration"
+  },
+  {
+    "from": "general-relativity",
+    "to": "binary-pulsar",
+    "type": "inspiration"
+  },
+  {
+    "from": "pulsars",
+    "to": "binary-pulsar",
+    "type": "inspiration"
+  },
+  {
+    "from": "binary-pulsar",
+    "to": "gravitational-waves",
+    "type": "inspiration"
+  },
+  {
+    "from": "general-relativity",
+    "to": "gravitational-waves",
+    "type": "derivation"
+  },
+  {
+    "from": "schwarzschild-black-hole",
+    "to": "gravitational-waves",
+    "type": "inspiration"
+  },
+  {
+    "from": "gravitational-waves",
+    "to": "multi-messenger-astronomy",
+    "type": "derivation"
+  },
+  {
+    "from": "gravitational-waves",
+    "to": "black-hole-image",
+    "type": "inspiration"
+  },
+  {
+    "from": "schwarzschild-black-hole",
+    "to": "black-hole-image",
+    "type": "derivation"
+  },
+  {
+    "from": "general-relativity",
+    "to": "black-hole-image",
+    "type": "inspiration"
+  },
+  {
+    "from": "special-relativity",
+    "to": "qed-renormalization",
+    "type": "derivation"
+  },
+  {
+    "from": "minkowski-spacetime",
+    "to": "dirac-equation",
+    "type": "inspiration"
+  },
+  {
+    "from": "planck-blackbody",
+    "to": "photoelectric-effect",
+    "type": "derivation"
+  },
+  {
+    "from": "planck-blackbody",
+    "to": "bohr-atom",
+    "type": "inspiration"
+  },
+  {
+    "from": "photoelectric-effect",
+    "to": "bohr-atom",
+    "type": "inspiration"
+  },
+  {
+    "from": "bohr-atom",
+    "to": "franck-hertz",
+    "type": "inspiration"
+  },
+  {
+    "from": "bohr-atom",
+    "to": "de-broglie-waves",
+    "type": "inspiration"
+  },
+  {
+    "from": "photoelectric-effect",
+    "to": "de-broglie-waves",
+    "type": "inspiration"
+  },
+  {
+    "from": "de-broglie-waves",
+    "to": "schrodinger-equation",
+    "type": "derivation"
+  },
+  {
+    "from": "bohr-atom",
+    "to": "matrix-mechanics",
+    "type": "inspiration"
+  },
+  {
+    "from": "matrix-mechanics",
+    "to": "uncertainty-principle",
+    "type": "derivation"
+  },
+  {
+    "from": "schrodinger-equation",
+    "to": "born-rule",
+    "type": "derivation"
+  },
+  {
+    "from": "born-rule",
+    "to": "uncertainty-principle",
+    "type": "inspiration"
+  },
+  {
+    "from": "schrodinger-equation",
+    "to": "dirac-equation",
+    "type": "derivation"
+  },
+  {
+    "from": "matrix-mechanics",
+    "to": "dirac-equation",
+    "type": "inspiration"
+  },
+  {
+    "from": "dirac-equation",
+    "to": "qed-renormalization",
+    "type": "derivation"
+  },
+  {
+    "from": "photoelectric-effect",
+    "to": "qed-renormalization",
+    "type": "inspiration"
+  },
+  {
+    "from": "qed-renormalization",
+    "to": "standard-model",
+    "type": "derivation"
+  },
+  {
+    "from": "pauli-exclusion",
+    "to": "standard-model",
+    "type": "inspiration"
+  },
+  {
+    "from": "dirac-equation",
+    "to": "standard-model",
+    "type": "inspiration"
+  },
+  {
+    "from": "born-rule",
+    "to": "bell-inequality",
+    "type": "inspiration"
+  },
+  {
+    "from": "schrodinger-equation",
+    "to": "bell-inequality",
+    "type": "inspiration"
+  },
+  {
+    "from": "bell-inequality",
+    "to": "quantum-information",
+    "type": "derivation"
+  },
+  {
+    "from": "matrix-mechanics",
+    "to": "quantum-information",
+    "type": "inspiration"
+  },
+  {
+    "from": "uncertainty-principle",
+    "to": "quantum-information",
+    "type": "inspiration"
+  },
+  {
+    "from": "quantum-hall-effect",
+    "to": "topological-insulators",
+    "type": "derivation"
+  },
+  {
+    "from": "planck-blackbody",
+    "to": "schrodinger-equation",
+    "type": "inspiration"
+  },
+  {
+    "from": "stellar-parallax",
+    "to": "cepheid-law",
+    "type": "inspiration"
+  },
+  {
+    "from": "stellar-spectroscopy",
+    "to": "hubble-expansion",
+    "type": "inspiration"
+  },
+  {
+    "from": "cepheid-law",
+    "to": "hubble-expansion",
+    "type": "derivation"
+  },
+  {
+    "from": "friedmann-equations",
+    "to": "hubble-expansion",
+    "type": "derivation"
+  },
+  {
+    "from": "hubble-expansion",
+    "to": "big-bang-nucleosynthesis",
+    "type": "inspiration"
+  },
+  {
+    "from": "friedmann-equations",
+    "to": "big-bang-nucleosynthesis",
+    "type": "derivation"
+  },
+  {
+    "from": "big-bang-nucleosynthesis",
+    "to": "cosmic-microwave-background",
+    "type": "inspiration"
+  },
+  {
+    "from": "hubble-expansion",
+    "to": "cosmic-microwave-background",
+    "type": "inspiration"
+  },
+  {
+    "from": "cosmic-microwave-background",
+    "to": "inflation",
+    "type": "inspiration"
+  },
+  {
+    "from": "friedmann-equations",
+    "to": "inflation",
+    "type": "derivation"
+  },
+  {
+    "from": "hubble-expansion",
+    "to": "dark-energy",
+    "type": "inspiration"
+  },
+  {
+    "from": "cepheid-law",
+    "to": "dark-energy",
+    "type": "derivation"
+  },
+  {
+    "from": "dark-matter-rotation",
+    "to": "lambda-cdm",
+    "type": "derivation"
+  },
+  {
+    "from": "inflation",
+    "to": "lambda-cdm",
+    "type": "inspiration"
+  },
+  {
+    "from": "dark-energy",
+    "to": "lambda-cdm",
+    "type": "derivation"
+  },
+  {
+    "from": "cosmic-microwave-background",
+    "to": "lambda-cdm",
+    "type": "derivation"
+  },
+  {
+    "from": "dark-energy",
+    "to": "baryon-acoustic-oscillations",
+    "type": "inspiration"
+  },
+  {
+    "from": "cosmic-microwave-background",
+    "to": "baryon-acoustic-oscillations",
+    "type": "derivation"
+  },
+  {
+    "from": "lambda-cdm",
+    "to": "baryon-acoustic-oscillations",
+    "type": "inspiration"
+  },
+  {
+    "from": "newton-gravitation",
+    "to": "exoplanet-detection",
+    "type": "derivation"
+  },
+  {
+    "from": "stellar-spectroscopy",
+    "to": "exoplanet-detection",
+    "type": "inspiration"
+  },
+  {
+    "from": "pulsars",
+    "to": "multi-messenger-astronomy",
+    "type": "inspiration"
+  },
+  {
+    "from": "cosmic-microwave-background",
+    "to": "cosmic-reionization",
+    "type": "derivation"
+  },
+  {
+    "from": "dark-matter-rotation",
+    "to": "black-hole-image",
+    "type": "inspiration"
+  },
+  {
+    "from": "planck-blackbody",
+    "to": "cosmic-microwave-background",
+    "type": "derivation"
+  },
+  {
+    "from": "archimedes-buoyancy",
+    "to": "bernoulli-equation",
+    "type": "inspiration"
+  },
+  {
+    "from": "archimedes-buoyancy",
+    "to": "cauchy-continuum-mechanics",
+    "type": "inspiration"
+  },
+  {
+    "from": "hooke-law",
+    "to": "wave-equation",
+    "type": "derivation"
+  },
+  {
+    "from": "hooke-law",
+    "to": "cauchy-continuum-mechanics",
+    "type": "derivation"
+  },
+  {
+    "from": "hooke-law",
+    "to": "lagrangian-mechanics",
+    "type": "inspiration"
+  },
+  {
+    "from": "newton-second-law",
+    "to": "bernoulli-equation",
+    "type": "derivation"
+  },
+  {
+    "from": "bernoulli-equation",
+    "to": "navier-stokes",
+    "type": "inspiration"
+  },
+  {
+    "from": "least-action-principle",
+    "to": "poisson-brackets",
+    "type": "inspiration"
+  },
+  {
+    "from": "poisson-brackets",
+    "to": "hamiltonian-mechanics",
+    "type": "derivation"
+  },
+  {
+    "from": "poisson-brackets",
+    "to": "noether-theorem",
+    "type": "inspiration"
+  },
+  {
+    "from": "poisson-brackets",
+    "to": "matrix-mechanics",
+    "type": "inspiration"
+  },
+  {
+    "from": "cauchy-continuum-mechanics",
+    "to": "navier-stokes",
+    "type": "derivation"
+  },
+  {
+    "from": "wave-equation",
+    "to": "cauchy-continuum-mechanics",
+    "type": "inspiration"
+  },
+  {
+    "from": "hamiltonian-mechanics",
+    "to": "action-principal-function",
+    "type": "derivation"
+  },
+  {
+    "from": "action-principal-function",
+    "to": "schrodinger-equation",
+    "type": "inspiration"
+  },
+  {
+    "from": "action-principal-function",
+    "to": "quantum-tunneling",
+    "type": "inspiration"
+  },
+  {
+    "from": "newton-third-law",
+    "to": "tsiolkovsky-rocket-equation",
+    "type": "derivation"
+  },
+  {
+    "from": "conservation-momentum",
+    "to": "tsiolkovsky-rocket-equation",
+    "type": "derivation"
+  },
+  {
+    "from": "wave-equation",
+    "to": "korteweg-de-vries",
+    "type": "inspiration"
+  },
+  {
+    "from": "navier-stokes",
+    "to": "korteweg-de-vries",
+    "type": "inspiration"
+  },
+  {
+    "from": "korteweg-de-vries",
+    "to": "soliton-recurrence",
+    "type": "derivation"
+  },
+  {
+    "from": "lyapunov-stability",
+    "to": "chaos-lorenz",
+    "type": "derivation"
+  },
+  {
+    "from": "hamiltonian-mechanics",
+    "to": "lyapunov-stability",
+    "type": "inspiration"
+  },
+  {
+    "from": "huygens-wave-light",
+    "to": "poisson-spot-test",
+    "type": "inspiration"
+  },
+  {
+    "from": "young-double-slit",
+    "to": "poisson-spot-test",
+    "type": "inspiration"
+  },
+  {
+    "from": "poisson-spot-test",
+    "to": "fresnel-wave-optics",
+    "type": "derivation"
+  },
+  {
+    "from": "ampere-law",
+    "to": "biot-savart-field",
+    "type": "inspiration"
+  },
+  {
+    "from": "biot-savart-field",
+    "to": "maxwell-equations",
+    "type": "derivation"
+  },
+  {
+    "from": "biot-savart-field",
+    "to": "lorentz-force",
+    "type": "inspiration"
+  },
+  {
+    "from": "faraday-induction",
+    "to": "lenz-law",
+    "type": "derivation"
+  },
+  {
+    "from": "lenz-law",
+    "to": "maxwell-equations",
+    "type": "derivation"
+  },
+  {
+    "from": "ohm-law",
+    "to": "kirchhoff-circuit-rules",
+    "type": "derivation"
+  },
+  {
+    "from": "kirchhoff-circuit-rules",
+    "to": "maxwell-equations",
+    "type": "inspiration"
+  },
+  {
+    "from": "huygens-wave-light",
+    "to": "doppler-effect",
+    "type": "inspiration"
+  },
+  {
+    "from": "wave-equation",
+    "to": "doppler-effect",
+    "type": "derivation"
+  },
+  {
+    "from": "doppler-effect",
+    "to": "stellar-spectroscopy",
+    "type": "inspiration"
+  },
+  {
+    "from": "doppler-effect",
+    "to": "hubble-expansion",
+    "type": "inspiration"
+  },
+  {
+    "from": "fresnel-wave-optics",
+    "to": "fizeau-light-speed",
+    "type": "inspiration"
+  },
+  {
+    "from": "fizeau-light-speed",
+    "to": "michelson-morley",
+    "type": "inspiration"
+  },
+  {
+    "from": "fizeau-light-speed",
+    "to": "special-relativity",
+    "type": "inspiration"
+  },
+  {
+    "from": "kirchhoff-radiation-law",
+    "to": "planck-blackbody",
+    "type": "derivation"
+  },
+  {
+    "from": "kirchhoff-radiation-law",
+    "to": "stellar-spectroscopy",
+    "type": "inspiration"
+  },
+  {
+    "from": "maxwell-equations",
+    "to": "poynting-theorem",
+    "type": "derivation"
+  },
+  {
+    "from": "poynting-theorem",
+    "to": "special-relativity",
+    "type": "inspiration"
+  },
+  {
+    "from": "poynting-theorem",
+    "to": "qed-renormalization",
+    "type": "inspiration"
+  },
+  {
+    "from": "x-ray-discovery",
+    "to": "photon-momentum-compton",
+    "type": "inspiration"
+  },
+  {
+    "from": "maxwell-equations",
+    "to": "x-ray-discovery",
+    "type": "inspiration"
+  },
+  {
+    "from": "meissner-effect",
+    "to": "microscopic-superconductivity",
+    "type": "inspiration"
+  },
+  {
+    "from": "faraday-induction",
+    "to": "poynting-theorem",
+    "type": "inspiration"
+  },
+  {
+    "from": "caloric-theory",
+    "to": "fourier-heat-equation",
+    "type": "inspiration"
+  },
+  {
+    "from": "fourier-heat-equation",
+    "to": "first-law-thermodynamics",
+    "type": "inspiration"
+  },
+  {
+    "from": "fourier-heat-equation",
+    "to": "fluctuation-dissipation",
+    "type": "inspiration"
+  },
+  {
+    "from": "boyle-law",
+    "to": "ideal-gas-equation",
+    "type": "derivation"
+  },
+  {
+    "from": "ideal-gas-equation",
+    "to": "kinetic-theory-gases",
+    "type": "inspiration"
+  },
+  {
+    "from": "ideal-gas-equation",
+    "to": "maxwell-boltzmann-distribution",
+    "type": "inspiration"
+  },
+  {
+    "from": "ideal-gas-equation",
+    "to": "van-der-waals-real-gas",
+    "type": "inspiration"
+  },
+  {
+    "from": "van-der-waals-real-gas",
+    "to": "renormalization-critical",
+    "type": "inspiration"
+  },
+  {
+    "from": "van-der-waals-real-gas",
+    "to": "gibbs-phase-equilibrium",
+    "type": "inspiration"
+  },
+  {
+    "from": "first-law-thermodynamics",
+    "to": "gibbs-phase-equilibrium",
+    "type": "derivation"
+  },
+  {
+    "from": "second-law-thermodynamics",
+    "to": "gibbs-phase-equilibrium",
+    "type": "derivation"
+  },
+  {
+    "from": "entropy-clausius",
+    "to": "gibbs-phase-equilibrium",
+    "type": "derivation"
+  },
+  {
+    "from": "gibbs-phase-equilibrium",
+    "to": "gibbs-ensemble",
+    "type": "inspiration"
+  },
+  {
+    "from": "gibbs-phase-equilibrium",
+    "to": "kosterlitz-thouless-vortices",
+    "type": "inspiration"
+  },
+  {
+    "from": "second-law-thermodynamics",
+    "to": "third-law-absolute-zero",
+    "type": "inspiration"
+  },
+  {
+    "from": "third-law-absolute-zero",
+    "to": "landau-superfluidity",
+    "type": "inspiration"
+  },
+  {
+    "from": "boltzmann-entropy",
+    "to": "onsager-ising-solution",
+    "type": "inspiration"
+  },
+  {
+    "from": "gibbs-ensemble",
+    "to": "onsager-ising-solution",
+    "type": "derivation"
+  },
+  {
+    "from": "onsager-ising-solution",
+    "to": "renormalization-critical",
+    "type": "inspiration"
+  },
+  {
+    "from": "onsager-ising-solution",
+    "to": "kosterlitz-thouless-vortices",
+    "type": "inspiration"
+  },
+  {
+    "from": "landau-superfluidity",
+    "to": "microscopic-superconductivity",
+    "type": "inspiration"
+  },
+  {
+    "from": "landau-superfluidity",
+    "to": "fermi-liquid-theory",
+    "type": "inspiration"
+  },
+  {
+    "from": "fermi-liquid-theory",
+    "to": "microscopic-superconductivity",
+    "type": "inspiration"
+  },
+  {
+    "from": "fermi-liquid-theory",
+    "to": "quantum-hall-effect",
+    "type": "inspiration"
+  },
+  {
+    "from": "kosterlitz-thouless-vortices",
+    "to": "topological-insulators",
+    "type": "inspiration"
+  },
+  {
+    "from": "renormalization-critical",
+    "to": "kosterlitz-thouless-vortices",
+    "type": "inspiration"
+  },
+  {
+    "from": "equivalence-principle",
+    "to": "einstein-field-equations",
+    "type": "inspiration"
+  },
+  {
+    "from": "minkowski-spacetime",
+    "to": "einstein-field-equations",
+    "type": "inspiration"
+  },
+  {
+    "from": "einstein-field-equations",
+    "to": "general-relativity",
+    "type": "derivation"
+  },
+  {
+    "from": "einstein-field-equations",
+    "to": "schwarzschild-black-hole",
+    "type": "derivation"
+  },
+  {
+    "from": "einstein-field-equations",
+    "to": "friedmann-equations",
+    "type": "derivation"
+  },
+  {
+    "from": "einstein-field-equations",
+    "to": "gravitational-waves",
+    "type": "derivation"
+  },
+  {
+    "from": "einstein-field-equations",
+    "to": "eddington-light-deflection",
+    "type": "derivation"
+  },
+  {
+    "from": "general-relativity",
+    "to": "cosmological-constant",
+    "type": "derivation"
+  },
+  {
+    "from": "cosmological-constant",
+    "to": "dark-energy",
+    "type": "inspiration"
+  },
+  {
+    "from": "cosmological-constant",
+    "to": "lambda-cdm",
+    "type": "derivation"
+  },
+  {
+    "from": "general-relativity",
+    "to": "eddington-light-deflection",
+    "type": "derivation"
+  },
+  {
+    "from": "eddington-light-deflection",
+    "to": "gravitational-lensing",
+    "type": "derivation"
+  },
+  {
+    "from": "general-relativity",
+    "to": "shapiro-time-delay",
+    "type": "derivation"
+  },
+  {
+    "from": "shapiro-time-delay",
+    "to": "gps-relativity-correction",
+    "type": "inspiration"
+  },
+  {
+    "from": "schwarzschild-black-hole",
+    "to": "kerr-black-hole",
+    "type": "inspiration"
+  },
+  {
+    "from": "einstein-field-equations",
+    "to": "kerr-black-hole",
+    "type": "derivation"
+  },
+  {
+    "from": "kerr-black-hole",
+    "to": "black-hole-image",
+    "type": "inspiration"
+  },
+  {
+    "from": "kerr-black-hole",
+    "to": "gravitational-waves",
+    "type": "inspiration"
+  },
+  {
+    "from": "general-relativity",
+    "to": "penrose-singularity-theorem-star",
+    "type": "derivation"
+  },
+  {
+    "from": "schwarzschild-black-hole",
+    "to": "penrose-singularity-theorem-star",
+    "type": "inspiration"
+  },
+  {
+    "from": "penrose-singularity-theorem-star",
+    "to": "hawking-radiation",
+    "type": "inspiration"
+  },
+  {
+    "from": "penrose-singularity-theorem-star",
+    "to": "black-hole-entropy",
+    "type": "inspiration"
+  },
+  {
+    "from": "schwarzschild-black-hole",
+    "to": "black-hole-entropy",
+    "type": "inspiration"
+  },
+  {
+    "from": "black-hole-entropy",
+    "to": "hawking-radiation",
+    "type": "derivation"
+  },
+  {
+    "from": "hawking-radiation",
+    "to": "unruh-thermal-bath",
+    "type": "inspiration"
+  },
+  {
+    "from": "special-relativity",
+    "to": "gps-relativity-correction",
+    "type": "derivation"
+  },
+  {
+    "from": "general-relativity",
+    "to": "gps-relativity-correction",
+    "type": "derivation"
+  },
+  {
+    "from": "rutherford-nucleus",
+    "to": "bohr-atom",
+    "type": "inspiration"
+  },
+  {
+    "from": "rutherford-nucleus",
+    "to": "fermi-beta-decay",
+    "type": "inspiration"
+  },
+  {
+    "from": "rutherford-nucleus",
+    "to": "nuclear-fission",
+    "type": "inspiration"
+  },
+  {
+    "from": "planck-blackbody",
+    "to": "photon-momentum-compton",
+    "type": "inspiration"
+  },
+  {
+    "from": "photoelectric-effect",
+    "to": "photon-momentum-compton",
+    "type": "inspiration"
+  },
+  {
+    "from": "photon-momentum-compton",
+    "to": "de-broglie-waves",
+    "type": "inspiration"
+  },
+  {
+    "from": "photon-momentum-compton",
+    "to": "qed-renormalization",
+    "type": "inspiration"
+  },
+  {
+    "from": "bohr-atom",
+    "to": "space-quantization",
+    "type": "inspiration"
+  },
+  {
+    "from": "space-quantization",
+    "to": "pauli-exclusion",
+    "type": "inspiration"
+  },
+  {
+    "from": "space-quantization",
+    "to": "quantum-information",
+    "type": "inspiration"
+  },
+  {
+    "from": "de-broglie-waves",
+    "to": "quantum-tunneling",
+    "type": "inspiration"
+  },
+  {
+    "from": "schrodinger-equation",
+    "to": "quantum-tunneling",
+    "type": "derivation"
+  },
+  {
+    "from": "quantum-tunneling",
+    "to": "nuclear-fission",
+    "type": "inspiration"
+  },
+  {
+    "from": "dirac-equation",
+    "to": "fermi-beta-decay",
+    "type": "inspiration"
+  },
+  {
+    "from": "fermi-beta-decay",
+    "to": "standard-model",
+    "type": "derivation"
+  },
+  {
+    "from": "fermi-beta-decay",
+    "to": "neutrino-oscillation-evidence",
+    "type": "inspiration"
+  },
+  {
+    "from": "fermi-beta-decay",
+    "to": "big-bang-nucleosynthesis",
+    "type": "inspiration"
+  },
+  {
+    "from": "matrix-mechanics",
+    "to": "nuclear-magnetic-resonance",
+    "type": "inspiration"
+  },
+  {
+    "from": "born-rule",
+    "to": "nuclear-magnetic-resonance",
+    "type": "inspiration"
+  },
+  {
+    "from": "nuclear-magnetic-resonance",
+    "to": "quantum-information",
+    "type": "inspiration"
+  },
+  {
+    "from": "pauli-exclusion",
+    "to": "microscopic-superconductivity",
+    "type": "inspiration"
+  },
+  {
+    "from": "microscopic-superconductivity",
+    "to": "topological-insulators",
+    "type": "inspiration"
+  },
+  {
+    "from": "qed-renormalization",
+    "to": "quark-model-hadrons",
+    "type": "inspiration"
+  },
+  {
+    "from": "quark-model-hadrons",
+    "to": "standard-model",
+    "type": "derivation"
+  },
+  {
+    "from": "higgs-mechanism-breaking",
+    "to": "standard-model",
+    "type": "derivation"
+  },
+  {
+    "from": "standard-model",
+    "to": "neutrino-oscillation-evidence",
+    "type": "inspiration"
+  },
+  {
+    "from": "galileo-moons-jupiter",
+    "to": "herschel-galaxy-model",
+    "type": "inspiration"
+  },
+  {
+    "from": "herschel-galaxy-model",
+    "to": "stellar-parallax",
+    "type": "inspiration"
+  },
+  {
+    "from": "herschel-galaxy-model",
+    "to": "stellar-spectroscopy",
+    "type": "inspiration"
+  },
+  {
+    "from": "cepheid-law",
+    "to": "andromeda-cepheids",
+    "type": "derivation"
+  },
+  {
+    "from": "andromeda-cepheids",
+    "to": "hubble-expansion",
+    "type": "inspiration"
+  },
+  {
+    "from": "andromeda-cepheids",
+    "to": "dark-energy",
+    "type": "inspiration"
+  },
+  {
+    "from": "rutherford-nucleus",
+    "to": "stellar-nucleosynthesis",
+    "type": "inspiration"
+  },
+  {
+    "from": "fermi-beta-decay",
+    "to": "stellar-nucleosynthesis",
+    "type": "inspiration"
+  },
+  {
+    "from": "stellar-nucleosynthesis",
+    "to": "cosmic-reionization",
+    "type": "inspiration"
+  },
+  {
+    "from": "maxwell-equations",
+    "to": "hydrogen-21cm-line",
+    "type": "inspiration"
+  },
+  {
+    "from": "hydrogen-21cm-line",
+    "to": "dark-matter-rotation",
+    "type": "inspiration"
+  },
+  {
+    "from": "hydrogen-21cm-line",
+    "to": "cosmic-reionization",
+    "type": "inspiration"
+  },
+  {
+    "from": "stellar-spectroscopy",
+    "to": "quasar-redshift",
+    "type": "inspiration"
+  },
+  {
+    "from": "quasar-redshift",
+    "to": "black-hole-image",
+    "type": "inspiration"
+  },
+  {
+    "from": "gravitational-lensing",
+    "to": "double-quasar-lens",
+    "type": "derivation"
+  },
+  {
+    "from": "double-quasar-lens",
+    "to": "lambda-cdm",
+    "type": "inspiration"
+  },
+  {
+    "from": "cosmic-microwave-background",
+    "to": "cmb-anisotropy-map",
+    "type": "derivation"
+  },
+  {
+    "from": "inflation",
+    "to": "cmb-anisotropy-map",
+    "type": "inspiration"
+  },
+  {
+    "from": "cmb-anisotropy-map",
+    "to": "lambda-cdm",
+    "type": "derivation"
+  },
+  {
+    "from": "cmb-anisotropy-map",
+    "to": "baryon-acoustic-oscillations",
+    "type": "derivation"
+  },
+  {
+    "from": "cepheid-law",
+    "to": "type-ia-standard-candles",
+    "type": "inspiration"
+  },
+  {
+    "from": "type-ia-standard-candles",
+    "to": "dark-energy",
+    "type": "derivation"
+  }
+]

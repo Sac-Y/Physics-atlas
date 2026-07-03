@@ -1,0 +1,7830 @@
+[
+  {
+    "id": "kepler-laws",
+    "name": {
+      "zh": "开普勒行星定律",
+      "en": "Kepler's Laws of Planetary Motion"
+    },
+    "author": {
+      "zh": "开普勒",
+      "en": "Johannes Kepler"
+    },
+    "year": 1609,
+    "branch": "mechanics",
+    "influence": 3,
+    "frontier": false,
+    "scaleExp": 11,
+    "oneLiner": "把行星轨道压成三条朴素规律，天空第一次像钟表。",
+    "equation": "T^2 \\propto a^3",
+    "cardBack": {
+      "supersedes": [
+        "托勒密均轮本轮体系"
+      ],
+      "supersededBy": [
+        "牛顿万有引力定律"
+      ],
+      "leadsTo": [
+        "天体力学",
+        "轨道设计",
+        "太阳系质量测定"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -952.399,
+        -48.012,
+        -101.949
+      ],
+      "timeline": [
+        28.8,
+        -20.061,
+        -310.436
+      ],
+      "scale": [
+        605,
+        -16.382,
+        -326.263
+      ]
+    }
+  },
+  {
+    "id": "galileo-inertia",
+    "name": {
+      "zh": "惯性原理",
+      "en": "Principle of Inertia"
+    },
+    "author": {
+      "zh": "伽利略",
+      "en": "Galileo Galilei"
+    },
+    "year": 1632,
+    "branch": "mechanics",
+    "influence": 4,
+    "frontier": false,
+    "scaleExp": 0,
+    "simId": "inertia-frame",
+    "oneLiner": "没有外力时，物体不急着停下，只会沿原路走。",
+    "equation": "\\vec{F}=0 \\Rightarrow \\vec{v}=\\mathrm{const.}",
+    "cardBack": {
+      "supersedes": [
+        "亚里士多德的天然静止观"
+      ],
+      "supersededBy": [
+        "牛顿第一定律",
+        "狭义相对论中的惯性系"
+      ],
+      "leadsTo": [
+        "牛顿力学",
+        "惯性系概念",
+        "现代实验物理"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -853.537,
+        -91.703,
+        -138.744
+      ],
+      "timeline": [
+        102.4,
+        -18.075,
+        -310.851
+      ],
+      "scale": [
+        0,
+        -102.299,
+        -330.783
+      ]
+    }
+  },
+  {
+    "id": "galileo-falling-bodies",
+    "name": {
+      "zh": "落体定律",
+      "en": "Law of Falling Bodies"
+    },
+    "author": {
+      "zh": "伽利略",
+      "en": "Galileo Galilei"
+    },
+    "year": 1638,
+    "branch": "mechanics",
+    "influence": 3,
+    "frontier": false,
+    "scaleExp": 0,
+    "oneLiner": "轻重物体一起下落，差别多半来自空气。",
+    "equation": "s=\\frac{1}{2}gt^2",
+    "cardBack": {
+      "supersedes": [
+        "重物下落更快的直觉"
+      ],
+      "supersededBy": [
+        "牛顿第二定律",
+        "广义相对论中的自由落体"
+      ],
+      "leadsTo": [
+        "加速度测量",
+        "抛体运动",
+        "等效原理"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -863.618,
+        32.175,
+        -237.296
+      ],
+      "timeline": [
+        121.6,
+        6.926,
+        -328.944
+      ],
+      "scale": [
+        0,
+        -136.618,
+        -322.391
+      ]
+    }
+  },
+  {
+    "id": "conservation-momentum",
+    "name": {
+      "zh": "动量守恒",
+      "en": "Conservation of Momentum"
+    },
+    "author": {
+      "zh": "惠更斯等",
+      "en": "Christiaan Huygens et al."
+    },
+    "year": 1668,
+    "branch": "mechanics",
+    "influence": 2,
+    "frontier": false,
+    "scaleExp": 0,
+    "oneLiner": "碰撞前后，整体的运动账本不凭空增减。",
+    "equation": "\\sum_i m_i\\vec{v}_i=\\mathrm{const.}",
+    "cardBack": {
+      "supersedes": [
+        "碰撞只靠经验描述"
+      ],
+      "supersededBy": [
+        "诺特定理的平移对称解释"
+      ],
+      "leadsTo": [
+        "弹性碰撞",
+        "火箭推进",
+        "粒子散射"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -721.407,
+        -10.131,
+        -131.756
+      ],
+      "timeline": [
+        217.6,
+        -8.205,
+        -319.55
+      ],
+      "scale": [
+        0,
+        -232.886,
+        -329.25
+      ]
+    }
+  },
+  {
+    "id": "newton-first-law",
+    "name": {
+      "zh": "牛顿第一定律",
+      "en": "Newton's First Law"
+    },
+    "author": {
+      "zh": "牛顿",
+      "en": "Isaac Newton"
+    },
+    "year": 1687,
+    "branch": "mechanics",
+    "influence": 3,
+    "frontier": false,
+    "scaleExp": 0,
+    "oneLiner": "没有合力时，物体不会自己改变运动状态。",
+    "equation": "\\sum\\vec{F}=0 \\Rightarrow \\vec{v}=\\mathrm{const.}",
+    "cardBack": {
+      "supersedes": [
+        "亚里士多德的天然静止观"
+      ],
+      "supersededBy": [
+        "狭义相对论中的惯性系",
+        "广义相对论中的测地线运动"
+      ],
+      "leadsTo": [
+        "惯性系",
+        "理想无摩擦模型",
+        "经典力学参考系"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -623.469,
+        -10.787,
+        -169.993
+      ],
+      "timeline": [
+        278.4,
+        -63.328,
+        -339.19
+      ],
+      "scale": [
+        0,
+        182.433,
+        -326.9
+      ]
+    }
+  },
+  {
+    "id": "newton-second-law",
+    "name": {
+      "zh": "牛顿第二定律",
+      "en": "Newton's Second Law"
+    },
+    "author": {
+      "zh": "牛顿",
+      "en": "Isaac Newton"
+    },
+    "year": 1687,
+    "branch": "mechanics",
+    "influence": 5,
+    "frontier": false,
+    "scaleExp": 0,
+    "simId": "newton-motion",
+    "oneLiner": "力决定运动怎样改变，质量决定改变有多难。",
+    "equation": "\\vec{F}_{\\mathrm{net}}=\\frac{d\\vec{p}}{dt}=m\\vec{a}",
+    "cardBack": {
+      "supersedes": [
+        "把力只当作维持运动的直觉"
+      ],
+      "supersededBy": [
+        "相对论动量形式",
+        "量子力学中的动力学方程"
+      ],
+      "leadsTo": [
+        "工程力学",
+        "航天动力学",
+        "连续介质动力学"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -856.427,
+        7.762,
+        -109.514
+      ],
+      "timeline": [
+        278.4,
+        17.554,
+        -313.433
+      ],
+      "scale": [
+        0,
+        215.078,
+        -325.522
+      ]
+    }
+  },
+  {
+    "id": "newton-third-law",
+    "name": {
+      "zh": "牛顿第三定律",
+      "en": "Newton's Third Law"
+    },
+    "author": {
+      "zh": "牛顿",
+      "en": "Isaac Newton"
+    },
+    "year": 1687,
+    "branch": "mechanics",
+    "influence": 3,
+    "frontier": false,
+    "scaleExp": 0,
+    "oneLiner": "任何推拉都成对出现，你推世界，世界也推回你。",
+    "equation": "\\vec{F}_{A\\to B}=-\\vec{F}_{B\\to A}",
+    "cardBack": {
+      "supersedes": [
+        "单向施力的直觉"
+      ],
+      "supersededBy": [
+        "场论中的局域动量守恒"
+      ],
+      "leadsTo": [
+        "动量守恒",
+        "碰撞与反冲",
+        "火箭推进"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -872.705,
+        -70.525,
+        -48.925
+      ],
+      "timeline": [
+        278.4,
+        62.5,
+        -340.091
+      ],
+      "scale": [
+        0,
+        257.116,
+        -328.477
+      ]
+    }
+  },
+  {
+    "id": "newton-gravitation",
+    "name": {
+      "zh": "万有引力定律",
+      "en": "Universal Gravitation"
+    },
+    "author": {
+      "zh": "牛顿",
+      "en": "Isaac Newton"
+    },
+    "year": 1687,
+    "branch": "mechanics",
+    "influence": 5,
+    "frontier": false,
+    "scaleExp": 11,
+    "simId": "gravity-orbit",
+    "oneLiner": "苹果落地和月亮绕地，被同一条吸引律连起来。",
+    "equation": "F=G\\frac{m_1m_2}{r^2}",
+    "cardBack": {
+      "supersedes": [
+        "开普勒定律的经验拼图"
+      ],
+      "supersededBy": [
+        "广义相对论的强场修正"
+      ],
+      "leadsTo": [
+        "潮汐预报",
+        "行星发现",
+        "航天轨道计算"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -810.42,
+        15.347,
+        -118.112
+      ],
+      "timeline": [
+        278.4,
+        -17.721,
+        -330.129
+      ],
+      "scale": [
+        605,
+        45.091,
+        -321.944
+      ]
+    }
+  },
+  {
+    "id": "d-alembert-principle",
+    "name": {
+      "zh": "达朗贝尔原理",
+      "en": "D'Alembert's Principle"
+    },
+    "author": {
+      "zh": "达朗贝尔",
+      "en": "Jean le Rond d'Alembert"
+    },
+    "year": 1743,
+    "branch": "mechanics",
+    "influence": 2,
+    "frontier": false,
+    "scaleExp": 0,
+    "oneLiner": "把运动问题改写成平衡问题，复杂机器突然可算。",
+    "equation": "\\sum_i(\\vec{F}_i-m_i\\vec{a}_i)\\cdot\\delta\\vec{r}_i=0",
+    "cardBack": {
+      "supersedes": [
+        "逐个力分解的繁琐做法"
+      ],
+      "supersededBy": [
+        "拉格朗日方程"
+      ],
+      "leadsTo": [
+        "约束系统",
+        "分析力学",
+        "机器人动力学"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -864.896,
+        120.765,
+        -101.13
+      ],
+      "timeline": [
+        457.6,
+        -0.4,
+        -325.884
+      ],
+      "scale": [
+        0,
+        -242.269,
+        -337.489
+      ]
+    }
+  },
+  {
+    "id": "wave-equation",
+    "name": {
+      "zh": "波动方程",
+      "en": "Wave Equation"
+    },
+    "author": {
+      "zh": "达朗贝尔",
+      "en": "Jean le Rond d'Alembert"
+    },
+    "year": 1747,
+    "branch": "mechanics",
+    "influence": 2,
+    "frontier": false,
+    "scaleExp": 0,
+    "oneLiner": "绳子的抖动有了方程，声音和光也会借路走来。",
+    "equation": "\\frac{\\partial^2 u}{\\partial t^2}=c^2\\nabla^2u",
+    "cardBack": {
+      "supersedes": [
+        "波只靠图像类比的描述"
+      ],
+      "supersededBy": [
+        "场论中的波方程"
+      ],
+      "leadsTo": [
+        "声学",
+        "光波理论",
+        "量子波函数"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -552.37,
+        41.583,
+        -242.829
+      ],
+      "timeline": [
+        470.4,
+        16.759,
+        -336.143
+      ],
+      "scale": [
+        0,
+        376.137,
+        -336.864
+      ]
+    }
+  },
+  {
+    "id": "least-action-principle",
+    "name": {
+      "zh": "最小作用量原理",
+      "en": "Principle of Least Action"
+    },
+    "author": {
+      "zh": "莫佩尔蒂等",
+      "en": "Maupertuis et al."
+    },
+    "year": 1744,
+    "branch": "mechanics",
+    "influence": 3,
+    "frontier": false,
+    "scaleExp": 0,
+    "oneLiner": "自然像会省事一样，从所有可能路径里挑一条。",
+    "equation": "\\delta S=0",
+    "cardBack": {
+      "supersedes": [
+        "逐时刻追踪受力的单一路径"
+      ],
+      "supersededBy": [
+        "路径积分表述"
+      ],
+      "leadsTo": [
+        "拉格朗日力学",
+        "哈密顿力学",
+        "量子场论"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -542.61,
+        2.974,
+        -75.277
+      ],
+      "timeline": [
+        460.8,
+        -3.819,
+        -338.161
+      ],
+      "scale": [
+        0,
+        86.21,
+        -313.765
+      ]
+    }
+  },
+  {
+    "id": "euler-rigid-body",
+    "name": {
+      "zh": "刚体转动方程",
+      "en": "Euler's Equations for Rigid Bodies"
+    },
+    "author": {
+      "zh": "欧拉",
+      "en": "Leonhard Euler"
+    },
+    "year": 1758,
+    "branch": "mechanics",
+    "influence": 2,
+    "frontier": false,
+    "scaleExp": 0,
+    "oneLiner": "陀螺、船和卫星的翻滚，从此能被精确追踪。",
+    "equation": "\\frac{d\\vec{L}}{dt}=\\vec{\\tau}",
+    "cardBack": {
+      "supersedes": [
+        "刚体转动的几何经验"
+      ],
+      "supersededBy": [
+        "现代多体动力学"
+      ],
+      "leadsTo": [
+        "陀螺仪",
+        "姿态控制",
+        "刚体仿真"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -803.015,
+        -49.805,
+        -202.266
+      ],
+      "timeline": [
+        505.6,
+        -4.58,
+        -317.603
+      ],
+      "scale": [
+        0,
+        -189.502,
+        -331.324
+      ]
+    }
+  },
+  {
+    "id": "lagrangian-mechanics",
+    "name": {
+      "zh": "拉格朗日力学",
+      "en": "Lagrangian Mechanics"
+    },
+    "author": {
+      "zh": "拉格朗日",
+      "en": "Joseph-Louis Lagrange"
+    },
+    "year": 1788,
+    "branch": "mechanics",
+    "influence": 4,
+    "frontier": false,
+    "scaleExp": 0,
+    "simId": "action-path",
+    "oneLiner": "少看力，多看能量差，复杂系统也能一笔写下。",
+    "equation": "\\frac{d}{dt}\\frac{\\partial L}{\\partial \\dot{q}_i}-\\frac{\\partial L}{\\partial q_i}=0",
+    "cardBack": {
+      "supersedes": [
+        "笛卡尔坐标里的牛顿分量计算"
+      ],
+      "supersededBy": [
+        "哈密顿力学",
+        "量子路径积分"
+      ],
+      "leadsTo": [
+        "变分法",
+        "场论拉氏量",
+        "现代控制"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -665.496,
+        46.271,
+        -88.657
+      ],
+      "timeline": [
+        601.6,
+        -9.631,
+        -309.026
+      ],
+      "scale": [
+        0,
+        37.163,
+        -313.221
+      ]
+    }
+  },
+  {
+    "id": "laplace-celestial-mechanics",
+    "name": {
+      "zh": "拉普拉斯天体力学",
+      "en": "Laplace's Celestial Mechanics"
+    },
+    "author": {
+      "zh": "拉普拉斯",
+      "en": "Pierre-Simon Laplace"
+    },
+    "year": 1799,
+    "branch": "mechanics",
+    "influence": 3,
+    "frontier": false,
+    "scaleExp": 11,
+    "oneLiner": "把太阳系当成可计算机器，误差也纳入方程。",
+    "equation": "\\nabla^2\\Phi=4\\pi G\\rho",
+    "cardBack": {
+      "supersedes": [
+        "行星表的经验修补"
+      ],
+      "supersededBy": [
+        "相对论天体力学",
+        "混沌轨道理论"
+      ],
+      "leadsTo": [
+        "摄动理论",
+        "海王星预言",
+        "星历计算"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -898.895,
+        10.879,
+        8.144
+      ],
+      "timeline": [
+        636.8,
+        -8.718,
+        -315.973
+      ],
+      "scale": [
+        605,
+        -20.087,
+        -318.132
+      ]
+    }
+  },
+  {
+    "id": "navier-stokes",
+    "name": {
+      "zh": "纳维-斯托克斯方程",
+      "en": "Navier-Stokes Equations"
+    },
+    "author": {
+      "zh": "纳维、斯托克斯",
+      "en": "Claude-Louis Navier and George Stokes"
+    },
+    "year": 1822,
+    "branch": "mechanics",
+    "influence": 3,
+    "frontier": true,
+    "scaleExp": 0,
+    "oneLiner": "空气和水的流动被写下，但湍流仍不肯彻底服输。",
+    "equation": "\\rho(\\partial_t\\vec{v}+\\vec{v}\\cdot\\nabla\\vec{v})=-\\nabla p+\\mu\\nabla^2\\vec{v}",
+    "cardBack": {
+      "supersedes": [
+        "理想流体的过度简化"
+      ],
+      "supersededBy": [],
+      "leadsTo": [
+        "天气预报",
+        "空气动力学",
+        "湍流研究"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -873.697,
+        98.203,
+        -179.477
+      ],
+      "timeline": [
+        710.4,
+        6.904,
+        -318.871
+      ],
+      "scale": [
+        0,
+        165.474,
+        -319.512
+      ]
+    }
+  },
+  {
+    "id": "hamiltonian-mechanics",
+    "name": {
+      "zh": "哈密顿力学",
+      "en": "Hamiltonian Mechanics"
+    },
+    "author": {
+      "zh": "哈密顿",
+      "en": "William Rowan Hamilton"
+    },
+    "year": 1834,
+    "branch": "mechanics",
+    "influence": 4,
+    "frontier": false,
+    "scaleExp": 0,
+    "simId": "phase-space",
+    "oneLiner": "位置和动量结成相空间，运动变成几何流。",
+    "equation": "\\dot{q}_i=\\frac{\\partial H}{\\partial p_i},\\ \\dot{p}_i=-\\frac{\\partial H}{\\partial q_i}",
+    "cardBack": {
+      "supersedes": [
+        "单纯构型空间描述"
+      ],
+      "supersededBy": [
+        "量子力学中的哈密顿算符"
+      ],
+      "leadsTo": [
+        "辛几何",
+        "统计力学",
+        "量子力学"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -329.082,
+        3.701,
+        44.199
+      ],
+      "timeline": [
+        748.8,
+        11.766,
+        -325.025
+      ],
+      "scale": [
+        0,
+        -72.736,
+        -328.344
+      ]
+    }
+  },
+  {
+    "id": "kolmogorov-turbulence",
+    "name": {
+      "zh": "柯尔莫哥洛夫湍流标度",
+      "en": "Kolmogorov Turbulence Scaling"
+    },
+    "author": {
+      "zh": "柯尔莫哥洛夫",
+      "en": "Andrey Kolmogorov"
+    },
+    "year": 1941,
+    "branch": "mechanics",
+    "influence": 2,
+    "frontier": true,
+    "scaleExp": 0,
+    "oneLiner": "大涡把能量撕成小涡，直到黏性把它磨热。",
+    "equation": "E(k)\\propto \\varepsilon^{2/3}k^{-5/3}",
+    "cardBack": {
+      "supersedes": [
+        "完全经验的湍流谱"
+      ],
+      "supersededBy": [],
+      "leadsTo": [
+        "大气湍流",
+        "计算流体",
+        "等离子体湍流"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -962.613,
+        41.807,
+        -147.438
+      ],
+      "timeline": [
+        1091.2,
+        24.792,
+        -337.228
+      ],
+      "scale": [
+        0,
+        -5.587,
+        -312.562
+      ]
+    }
+  },
+  {
+    "id": "noether-theorem",
+    "name": {
+      "zh": "诺特定理",
+      "en": "Noether's Theorem"
+    },
+    "author": {
+      "zh": "诺特",
+      "en": "Emmy Noether"
+    },
+    "year": 1918,
+    "branch": "mechanics",
+    "influence": 4,
+    "frontier": false,
+    "scaleExp": 0,
+    "simId": "symmetry-conservation",
+    "oneLiner": "每一种连续对称背后，都藏着一条守恒律。",
+    "equation": "\\frac{dQ}{dt}=0",
+    "cardBack": {
+      "supersedes": [
+        "守恒律的零散清单"
+      ],
+      "supersededBy": [],
+      "leadsTo": [
+        "规范场论",
+        "粒子物理",
+        "现代宇宙学"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -383.157,
+        5.835,
+        -94.34
+      ],
+      "timeline": [
+        1017.6,
+        -1.129,
+        -326.606
+      ],
+      "scale": [
+        0,
+        290.006,
+        -337.184
+      ]
+    }
+  },
+  {
+    "id": "chaos-lorenz",
+    "name": {
+      "zh": "洛伦兹混沌",
+      "en": "Lorenz Chaos"
+    },
+    "author": {
+      "zh": "洛伦兹",
+      "en": "Edward Lorenz"
+    },
+    "year": 1963,
+    "branch": "mechanics",
+    "influence": 2,
+    "frontier": true,
+    "scaleExp": 6,
+    "oneLiner": "方程完全确定，长期结果却能被微小差别放大。",
+    "equation": "\\dot{x}=\\sigma(y-x)",
+    "cardBack": {
+      "supersedes": [
+        "可预测性等同于决定论的想法"
+      ],
+      "supersededBy": [],
+      "leadsTo": [
+        "天气可预报性",
+        "非线性动力学",
+        "复杂系统"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -737.113,
+        61.446,
+        -38.156
+      ],
+      "timeline": [
+        1161.6,
+        7.877,
+        -332.118
+      ],
+      "scale": [
+        330,
+        -27.409,
+        -340.829
+      ]
+    }
+  },
+  {
+    "id": "gilbert-magnetism",
+    "name": {
+      "zh": "地球磁学",
+      "en": "Terrestrial Magnetism"
+    },
+    "author": {
+      "zh": "吉尔伯特",
+      "en": "William Gilbert"
+    },
+    "year": 1600,
+    "branch": "em",
+    "influence": 2,
+    "frontier": false,
+    "scaleExp": 7,
+    "oneLiner": "地球本身像一块巨磁石，指南针不再只是奇物。",
+    "equation": "\\vec{B}_{\\oplus}\\ne 0",
+    "cardBack": {
+      "supersedes": [
+        "磁石的神秘解释"
+      ],
+      "supersededBy": [
+        "电磁场理论",
+        "地磁发电机理论"
+      ],
+      "leadsTo": [
+        "导航",
+        "磁学实验",
+        "地球物理"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -346.014,
+        146.969,
+        -644.22
+      ],
+      "timeline": [
+        0,
+        12.879,
+        -207.079
+      ],
+      "scale": [
+        385,
+        2.97,
+        -195.319
+      ]
+    }
+  },
+  {
+    "id": "snell-law",
+    "name": {
+      "zh": "斯涅尔折射定律",
+      "en": "Snell's Law"
+    },
+    "author": {
+      "zh": "斯涅尔",
+      "en": "Willebrord Snellius"
+    },
+    "year": 1621,
+    "branch": "em",
+    "influence": 2,
+    "frontier": false,
+    "scaleExp": 0,
+    "oneLiner": "光进水会转弯，转多少终于能算出来。",
+    "equation": "n_1\\sin\\theta_1=n_2\\sin\\theta_2",
+    "cardBack": {
+      "supersedes": [
+        "折射角的经验表"
+      ],
+      "supersededBy": [
+        "费马原理",
+        "麦克斯韦电磁波"
+      ],
+      "leadsTo": [
+        "透镜设计",
+        "光学仪器",
+        "波动光学"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -354.345,
+        -23.69,
+        -558.206
+      ],
+      "timeline": [
+        67.2,
+        -8.418,
+        -204.343
+      ],
+      "scale": [
+        0,
+        159.439,
+        -206.03
+      ]
+    }
+  },
+  {
+    "id": "huygens-wave-light",
+    "name": {
+      "zh": "惠更斯光波说",
+      "en": "Huygens' Wave Theory of Light"
+    },
+    "author": {
+      "zh": "惠更斯",
+      "en": "Christiaan Huygens"
+    },
+    "year": 1690,
+    "branch": "em",
+    "influence": 3,
+    "frontier": false,
+    "scaleExp": 0,
+    "oneLiner": "光像波面一样推进，每个点都在生出新的小波。",
+    "equation": "v=\\frac{c}{n}",
+    "cardBack": {
+      "supersedes": [
+        "光只像粒子直线飞行的图景"
+      ],
+      "supersededBy": [
+        "麦克斯韦电磁波",
+        "量子电动力学"
+      ],
+      "leadsTo": [
+        "干涉",
+        "衍射",
+        "波前光学"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -310.673,
+        105.844,
+        -459.086
+      ],
+      "timeline": [
+        288,
+        2.287,
+        -181.701
+      ],
+      "scale": [
+        0,
+        -52.623,
+        -183.592
+      ]
+    }
+  },
+  {
+    "id": "newton-opticks",
+    "name": {
+      "zh": "牛顿光学微粒说",
+      "en": "Newton's Corpuscular Optics"
+    },
+    "author": {
+      "zh": "牛顿",
+      "en": "Isaac Newton"
+    },
+    "year": 1704,
+    "branch": "em",
+    "influence": 3,
+    "frontier": false,
+    "scaleExp": 0,
+    "oneLiner": "白光被拆成彩虹，光也被想成一束束微粒。",
+    "equation": "n=n(\\lambda)",
+    "cardBack": {
+      "supersedes": [
+        "颜色来自介质染色的说法"
+      ],
+      "supersededBy": [
+        "杨氏双缝",
+        "麦克斯韦电磁波"
+      ],
+      "leadsTo": [
+        "色散研究",
+        "光谱学",
+        "波粒二象性之争"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -248.437,
+        105.411,
+        -626.153
+      ],
+      "timeline": [
+        332.8,
+        -10.78,
+        -208.331
+      ],
+      "scale": [
+        0,
+        68.458,
+        -202.814
+      ]
+    }
+  },
+  {
+    "id": "coulomb-law",
+    "name": {
+      "zh": "库仑定律",
+      "en": "Coulomb's Law"
+    },
+    "author": {
+      "zh": "库仑",
+      "en": "Charles-Augustin de Coulomb"
+    },
+    "year": 1785,
+    "branch": "em",
+    "influence": 4,
+    "frontier": false,
+    "scaleExp": -10,
+    "simId": "electric-force",
+    "oneLiner": "电荷也按平方反比相互推拉，电学有了牛顿式骨架。",
+    "equation": "F=k\\frac{q_1q_2}{r^2}",
+    "cardBack": {
+      "supersedes": [
+        "电力强弱的定性描述"
+      ],
+      "supersededBy": [
+        "麦克斯韦方程组",
+        "量子电动力学"
+      ],
+      "leadsTo": [
+        "静电学",
+        "原子束缚",
+        "电场概念"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -401.897,
+        138.59,
+        -533.189
+      ],
+      "timeline": [
+        592,
+        9.353,
+        -207.457
+      ],
+      "scale": [
+        -550,
+        -16.451,
+        -204.508
+      ]
+    }
+  },
+  {
+    "id": "young-double-slit",
+    "name": {
+      "zh": "杨氏双缝实验",
+      "en": "Young's Double-Slit Experiment"
+    },
+    "author": {
+      "zh": "托马斯·杨",
+      "en": "Thomas Young"
+    },
+    "year": 1801,
+    "branch": "em",
+    "influence": 3,
+    "frontier": false,
+    "scaleExp": -6,
+    "oneLiner": "两条缝让光自己和自己相遇，屏上长出明暗条纹。",
+    "equation": "d\\sin\\theta=m\\lambda",
+    "cardBack": {
+      "supersedes": [
+        "纯微粒光学"
+      ],
+      "supersededBy": [
+        "量子双缝实验"
+      ],
+      "leadsTo": [
+        "干涉测量",
+        "波动光学",
+        "量子叠加"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -183.693,
+        95.182,
+        -411.636
+      ],
+      "timeline": [
+        643.2,
+        -24.837,
+        -201.136
+      ],
+      "scale": [
+        -330,
+        87.211,
+        -187.855
+      ]
+    },
+    "simId": "double-slit"
+  },
+  {
+    "id": "fresnel-wave-optics",
+    "name": {
+      "zh": "菲涅耳波动光学",
+      "en": "Fresnel Wave Optics"
+    },
+    "author": {
+      "zh": "菲涅耳",
+      "en": "Augustin-Jean Fresnel"
+    },
+    "year": 1818,
+    "branch": "em",
+    "influence": 3,
+    "frontier": false,
+    "scaleExp": -6,
+    "oneLiner": "衍射阴影里出现亮点，波动光学赢下硬仗。",
+    "equation": "U(P)\\propto \\iint \\frac{e^{ikr}}{r}\\,dS",
+    "cardBack": {
+      "supersedes": [
+        "几何光学的锐利阴影"
+      ],
+      "supersededBy": [
+        "麦克斯韦电磁波"
+      ],
+      "leadsTo": [
+        "衍射理论",
+        "偏振光学",
+        "全息术"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -261.243,
+        28.603,
+        -373.74
+      ],
+      "timeline": [
+        697.6,
+        -38.736,
+        -196.261
+      ],
+      "scale": [
+        -330,
+        -90.528,
+        -183.007
+      ]
+    }
+  },
+  {
+    "id": "ampere-law",
+    "name": {
+      "zh": "安培环路定律",
+      "en": "Ampere's Circuital Law"
+    },
+    "author": {
+      "zh": "安培",
+      "en": "Andre-Marie Ampere"
+    },
+    "year": 1820,
+    "branch": "em",
+    "influence": 3,
+    "frontier": false,
+    "scaleExp": 0,
+    "oneLiner": "电流会绕出磁场，电和磁第一次真正纠缠。",
+    "equation": "\\oint\\vec{B}\\cdot d\\vec{l}=\\mu_0 I",
+    "cardBack": {
+      "supersedes": [
+        "电与磁互不相干的看法"
+      ],
+      "supersededBy": [
+        "麦克斯韦-安培定律"
+      ],
+      "leadsTo": [
+        "电磁铁",
+        "电机",
+        "场论"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -299.344,
+        170.693,
+        -552.926
+      ],
+      "timeline": [
+        704,
+        -3.143,
+        -202.264
+      ],
+      "scale": [
+        0,
+        -154.066,
+        -209.868
+      ]
+    }
+  },
+  {
+    "id": "ohm-law",
+    "name": {
+      "zh": "欧姆定律",
+      "en": "Ohm's Law"
+    },
+    "author": {
+      "zh": "欧姆",
+      "en": "Georg Ohm"
+    },
+    "year": 1827,
+    "branch": "em",
+    "influence": 2,
+    "frontier": false,
+    "scaleExp": 0,
+    "oneLiner": "电压、电流、电阻三者排好队，电路开始能设计。",
+    "equation": "V=IR",
+    "cardBack": {
+      "supersedes": [
+        "电路只靠试错"
+      ],
+      "supersededBy": [
+        "微观输运理论"
+      ],
+      "leadsTo": [
+        "电路工程",
+        "材料电阻率",
+        "电子学"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -437.228,
+        37.449,
+        -574.069
+      ],
+      "timeline": [
+        726.4,
+        4.255,
+        -207.361
+      ],
+      "scale": [
+        0,
+        94.462,
+        -179.133
+      ]
+    }
+  },
+  {
+    "id": "faraday-induction",
+    "name": {
+      "zh": "法拉第电磁感应",
+      "en": "Faraday's Law of Induction"
+    },
+    "author": {
+      "zh": "法拉第",
+      "en": "Michael Faraday"
+    },
+    "year": 1831,
+    "branch": "em",
+    "influence": 4,
+    "frontier": false,
+    "scaleExp": 0,
+    "simId": "induction-field",
+    "oneLiner": "变化的磁场会生出电，发电机从此有了灵魂。",
+    "equation": "\\mathcal{E}=-\\frac{d\\Phi_B}{dt}",
+    "cardBack": {
+      "supersedes": [
+        "静态电磁作用图景"
+      ],
+      "supersededBy": [
+        "麦克斯韦方程组"
+      ],
+      "leadsTo": [
+        "发电机",
+        "变压器",
+        "电磁场概念"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -279.012,
+        -16.609,
+        -614.189
+      ],
+      "timeline": [
+        739.2,
+        -10.705,
+        -204.096
+      ],
+      "scale": [
+        0,
+        -115.996,
+        -204.453
+      ]
+    }
+  },
+  {
+    "id": "gauss-law",
+    "name": {
+      "zh": "高斯定律",
+      "en": "Gauss's Law"
+    },
+    "author": {
+      "zh": "高斯",
+      "en": "Carl Friedrich Gauss"
+    },
+    "year": 1835,
+    "branch": "em",
+    "influence": 3,
+    "frontier": false,
+    "scaleExp": 0,
+    "oneLiner": "穿过封闭面的电场通量，数的就是里面的电荷。",
+    "equation": "\\nabla\\cdot\\vec{E}=\\frac{\\rho}{\\varepsilon_0}",
+    "cardBack": {
+      "supersedes": [
+        "库仑力的逐点求和"
+      ],
+      "supersededBy": [
+        "麦克斯韦方程组"
+      ],
+      "leadsTo": [
+        "场的散度",
+        "电势理论",
+        "电磁边界条件"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -412.751,
+        72.262,
+        -653.918
+      ],
+      "timeline": [
+        752,
+        4.159,
+        -194.189
+      ],
+      "scale": [
+        0,
+        -81.166,
+        -182.57
+      ]
+    }
+  },
+  {
+    "id": "stokes-polarization",
+    "name": {
+      "zh": "斯托克斯偏振参数",
+      "en": "Stokes Parameters"
+    },
+    "author": {
+      "zh": "斯托克斯",
+      "en": "George Gabriel Stokes"
+    },
+    "year": 1852,
+    "branch": "em",
+    "influence": 2,
+    "frontier": false,
+    "scaleExp": 0,
+    "oneLiner": "光不只明暗和颜色，还有振动方向这层性格。",
+    "equation": "S=(I,Q,U,V)",
+    "cardBack": {
+      "supersedes": [
+        "偏振只能口头分类"
+      ],
+      "supersededBy": [
+        "量子光学的偏振态"
+      ],
+      "leadsTo": [
+        "偏振成像",
+        "遥感",
+        "宇宙微波背景偏振"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        5.315,
+        62.871,
+        -490.837
+      ],
+      "timeline": [
+        806.4,
+        -21.44,
+        -193.578
+      ],
+      "scale": [
+        0,
+        161.748,
+        -207.607
+      ]
+    }
+  },
+  {
+    "id": "maxwell-equations",
+    "name": {
+      "zh": "麦克斯韦方程组",
+      "en": "Maxwell's Equations"
+    },
+    "author": {
+      "zh": "麦克斯韦",
+      "en": "James Clerk Maxwell"
+    },
+    "year": 1865,
+    "branch": "em",
+    "influence": 5,
+    "frontier": false,
+    "scaleExp": 0,
+    "simId": "maxwell-field",
+    "oneLiner": "电与磁合成一张场的乐谱，光就是其中的波。",
+    "equation": "\\nabla\\cdot\\vec{E}=\\frac{\\rho}{\\varepsilon_0},\\ \\nabla\\times\\vec{B}=\\mu_0\\vec{J}+\\mu_0\\varepsilon_0\\partial_t\\vec{E}",
+    "cardBack": {
+      "supersedes": [
+        "分散的电磁实验定律"
+      ],
+      "supersededBy": [
+        "量子电动力学"
+      ],
+      "leadsTo": [
+        "无线电",
+        "狭义相对论",
+        "现代通信"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -283.322,
+        70.532,
+        -563.774
+      ],
+      "timeline": [
+        848,
+        -0.075,
+        -205.488
+      ],
+      "scale": [
+        0,
+        3.712,
+        -207.838
+      ]
+    }
+  },
+  {
+    "id": "hertz-radio-waves",
+    "name": {
+      "zh": "赫兹电磁波实验",
+      "en": "Hertz's Radio-Wave Experiments"
+    },
+    "author": {
+      "zh": "赫兹",
+      "en": "Heinrich Hertz"
+    },
+    "year": 1887,
+    "branch": "em",
+    "influence": 3,
+    "frontier": false,
+    "scaleExp": 1,
+    "oneLiner": "火花间跳出的波，证明麦克斯韦不是纸上空想。",
+    "equation": "c=\\lambda f",
+    "cardBack": {
+      "supersedes": [
+        "电磁波未被直接验证的状态"
+      ],
+      "supersededBy": [
+        "无线电工程"
+      ],
+      "leadsTo": [
+        "射频技术",
+        "雷达",
+        "光电效应发现"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -162.654,
+        -6.644,
+        -404.125
+      ],
+      "timeline": [
+        918.4,
+        1.484,
+        -199.604
+      ],
+      "scale": [
+        55,
+        10.513,
+        -194.321
+      ]
+    }
+  },
+  {
+    "id": "michelson-morley",
+    "name": {
+      "zh": "迈克耳孙-莫雷实验",
+      "en": "Michelson-Morley Experiment"
+    },
+    "author": {
+      "zh": "迈克耳孙、莫雷",
+      "en": "Albert Michelson and Edward Morley"
+    },
+    "year": 1887,
+    "branch": "em",
+    "influence": 3,
+    "frontier": false,
+    "scaleExp": 0,
+    "oneLiner": "寻找以太风却几乎一无所获，反倒撬开相对论大门。",
+    "equation": "\\Delta t\\approx 0",
+    "cardBack": {
+      "supersedes": [
+        "静止以太的可测预期"
+      ],
+      "supersededBy": [
+        "狭义相对论"
+      ],
+      "leadsTo": [
+        "干涉仪",
+        "洛伦兹变换",
+        "光速不变原理"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -92.065,
+        66.574,
+        -550.032
+      ],
+      "timeline": [
+        918.4,
+        34.791,
+        -184.184
+      ],
+      "scale": [
+        0,
+        12.972,
+        -187.426
+      ]
+    }
+  },
+  {
+    "id": "lorentz-force",
+    "name": {
+      "zh": "洛伦兹力",
+      "en": "Lorentz Force"
+    },
+    "author": {
+      "zh": "洛伦兹",
+      "en": "Hendrik Lorentz"
+    },
+    "year": 1895,
+    "branch": "em",
+    "influence": 3,
+    "frontier": false,
+    "scaleExp": -6,
+    "oneLiner": "带电粒子在电磁场中转弯，轨迹露出场的手势。",
+    "equation": "\\vec{F}=q(\\vec{E}+\\vec{v}\\times\\vec{B})",
+    "cardBack": {
+      "supersedes": [
+        "电磁作用的分散规则"
+      ],
+      "supersededBy": [
+        "相对论电动力学",
+        "量子电动力学"
+      ],
+      "leadsTo": [
+        "粒子加速器",
+        "质谱仪",
+        "等离子体物理"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -180.73,
+        30.059,
+        -579.17
+      ],
+      "timeline": [
+        944,
+        -27.535,
+        -199.112
+      ],
+      "scale": [
+        -330,
+        -2.477,
+        -185.062
+      ]
+    }
+  },
+  {
+    "id": "laser",
+    "name": {
+      "zh": "激光",
+      "en": "Laser"
+    },
+    "author": {
+      "zh": "梅曼等",
+      "en": "Theodore Maiman et al."
+    },
+    "year": 1960,
+    "branch": "em",
+    "influence": 2,
+    "frontier": true,
+    "scaleExp": -6,
+    "oneLiner": "原子排队发出同相光束，光第一次像刀一样整齐。",
+    "equation": "N_2>N_1",
+    "cardBack": {
+      "supersedes": [
+        "普通热光源的杂乱相位"
+      ],
+      "supersededBy": [
+        "量子光学器件"
+      ],
+      "leadsTo": [
+        "精密测量",
+        "光通信",
+        "量子控制"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -76.162,
+        9.044,
+        -334.535
+      ],
+      "timeline": [
+        1152,
+        0.601,
+        -196.479
+      ],
+      "scale": [
+        -330,
+        -12.603,
+        -210.36
+      ]
+    }
+  },
+  {
+    "id": "boyle-law",
+    "name": {
+      "zh": "玻意耳定律",
+      "en": "Boyle's Law"
+    },
+    "author": {
+      "zh": "玻意耳",
+      "en": "Robert Boyle"
+    },
+    "year": 1662,
+    "branch": "thermo",
+    "influence": 2,
+    "frontier": false,
+    "scaleExp": 0,
+    "oneLiner": "气体被压小，压力就升高，空气也听数学的话。",
+    "equation": "PV=\\mathrm{const.}",
+    "cardBack": {
+      "supersedes": [
+        "空气弹性的定性说法"
+      ],
+      "supersededBy": [
+        "理想气体状态方程",
+        "动理论"
+      ],
+      "leadsTo": [
+        "气体定律",
+        "热机分析",
+        "真空技术"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -305.267,
+        -8.495,
+        324.313
+      ],
+      "timeline": [
+        198.4,
+        -20.511,
+        -50.961
+      ],
+      "scale": [
+        0,
+        -141.341,
+        -52.907
+      ]
+    }
+  },
+  {
+    "id": "caloric-theory",
+    "name": {
+      "zh": "热质说",
+      "en": "Caloric Theory"
+    },
+    "author": {
+      "zh": "拉瓦锡等",
+      "en": "Antoine Lavoisier et al."
+    },
+    "year": 1783,
+    "branch": "thermo",
+    "influence": 1,
+    "frontier": false,
+    "scaleExp": 0,
+    "oneLiner": "热曾被想成会流动的无重液体，后来被能量取代。",
+    "equation": "Q_{\\mathrm{caloric}}=\\mathrm{const.}",
+    "cardBack": {
+      "supersedes": [
+        "热是火元素的观念"
+      ],
+      "supersededBy": [
+        "热力学第一定律",
+        "动理论"
+      ],
+      "leadsTo": [
+        "卡诺热机",
+        "热量守恒讨论",
+        "热学实验"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -387.994,
+        -162.704,
+        453.439
+      ],
+      "timeline": [
+        585.6,
+        12.808,
+        -56.328
+      ],
+      "scale": [
+        0,
+        -96.357,
+        -76.704
+      ]
+    }
+  },
+  {
+    "id": "carnot-cycle",
+    "name": {
+      "zh": "卡诺循环",
+      "en": "Carnot Cycle"
+    },
+    "author": {
+      "zh": "卡诺",
+      "en": "Sadi Carnot"
+    },
+    "year": 1824,
+    "branch": "thermo",
+    "influence": 3,
+    "frontier": false,
+    "scaleExp": 0,
+    "oneLiner": "热机效率有天花板，聪明设计也不能白拿能量。",
+    "equation": "\\eta=1-\\frac{T_c}{T_h}",
+    "cardBack": {
+      "supersedes": [
+        "热机效率只靠工艺的想法"
+      ],
+      "supersededBy": [
+        "热力学第二定律"
+      ],
+      "leadsTo": [
+        "发动机理论",
+        "制冷循环",
+        "熵概念"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -360.176,
+        -193.354,
+        342.994
+      ],
+      "timeline": [
+        716.8,
+        11.53,
+        -79.754
+      ],
+      "scale": [
+        0,
+        -105.112,
+        -66.043
+      ]
+    }
+  },
+  {
+    "id": "joule-mechanical-equivalent",
+    "name": {
+      "zh": "热功当量",
+      "en": "Mechanical Equivalent of Heat"
+    },
+    "author": {
+      "zh": "焦耳",
+      "en": "James Prescott Joule"
+    },
+    "year": 1845,
+    "branch": "thermo",
+    "influence": 2,
+    "frontier": false,
+    "scaleExp": 0,
+    "oneLiner": "搅水做功会升温，热不是物质，而是能量账。",
+    "equation": "W=JQ",
+    "cardBack": {
+      "supersedes": [
+        "热质不可转化观"
+      ],
+      "supersededBy": [
+        "热力学第一定律"
+      ],
+      "leadsTo": [
+        "能量守恒",
+        "热机实验",
+        "工程热力学"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -444.786,
+        -147.227,
+        337.209
+      ],
+      "timeline": [
+        784,
+        6.938,
+        -53.938
+      ],
+      "scale": [
+        0,
+        27.907,
+        -65.022
+      ]
+    }
+  },
+  {
+    "id": "first-law-thermodynamics",
+    "name": {
+      "zh": "热力学第一定律",
+      "en": "First Law of Thermodynamics"
+    },
+    "author": {
+      "zh": "迈尔、焦耳、亥姆霍兹",
+      "en": "Mayer, Joule and Helmholtz"
+    },
+    "year": 1847,
+    "branch": "thermo",
+    "influence": 4,
+    "frontier": false,
+    "scaleExp": 0,
+    "simId": "energy-accounting",
+    "oneLiner": "能量可以换装，却不会从无到有或凭空消失。",
+    "equation": "\\Delta U=Q-W",
+    "cardBack": {
+      "supersedes": [
+        "热质说"
+      ],
+      "supersededBy": [
+        "能量守恒的场论表述"
+      ],
+      "leadsTo": [
+        "热机",
+        "化学热力学",
+        "能量工程"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -388.751,
+        5.073,
+        259.937
+      ],
+      "timeline": [
+        790.4,
+        -9.798,
+        -69.455
+      ],
+      "scale": [
+        0,
+        -31.872,
+        -58.244
+      ]
+    }
+  },
+  {
+    "id": "second-law-thermodynamics",
+    "name": {
+      "zh": "热力学第二定律",
+      "en": "Second Law of Thermodynamics"
+    },
+    "author": {
+      "zh": "克劳修斯、开尔文",
+      "en": "Rudolf Clausius and Lord Kelvin"
+    },
+    "year": 1850,
+    "branch": "thermo",
+    "influence": 5,
+    "frontier": false,
+    "scaleExp": 0,
+    "simId": "entropy-arrow",
+    "oneLiner": "能量会散开，时间之箭从一杯冷却的咖啡里出现。",
+    "equation": "\\Delta S\\ge 0",
+    "cardBack": {
+      "supersedes": [
+        "热过程完全可逆的幻想"
+      ],
+      "supersededBy": [
+        "统计力学的微观解释"
+      ],
+      "leadsTo": [
+        "熵",
+        "不可逆过程",
+        "宇宙热寂"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -339.632,
+        -82.275,
+        333.75
+      ],
+      "timeline": [
+        800,
+        -8.865,
+        -62.57
+      ],
+      "scale": [
+        0,
+        96.528,
+        -66.295
+      ]
+    }
+  },
+  {
+    "id": "kinetic-theory-gases",
+    "name": {
+      "zh": "气体动理论",
+      "en": "Kinetic Theory of Gases"
+    },
+    "author": {
+      "zh": "克劳修斯、麦克斯韦",
+      "en": "Clausius and Maxwell"
+    },
+    "year": 1857,
+    "branch": "thermo",
+    "influence": 3,
+    "frontier": false,
+    "scaleExp": -8,
+    "oneLiner": "温度不是神秘热感，而是分子乱跑的平均劲头。",
+    "equation": "PV=\\frac{1}{3}Nm\\langle v^2\\rangle",
+    "cardBack": {
+      "supersedes": [
+        "连续热质图景"
+      ],
+      "supersededBy": [
+        "统计力学"
+      ],
+      "leadsTo": [
+        "分子速度分布",
+        "布朗运动解释",
+        "输运理论"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -362.413,
+        -136.607,
+        255.95
+      ],
+      "timeline": [
+        822.4,
+        9.799,
+        -74.749
+      ],
+      "scale": [
+        -440,
+        25.394,
+        -54.54
+      ]
+    }
+  },
+  {
+    "id": "maxwell-boltzmann-distribution",
+    "name": {
+      "zh": "麦克斯韦-玻尔兹曼分布",
+      "en": "Maxwell-Boltzmann Distribution"
+    },
+    "author": {
+      "zh": "麦克斯韦、玻尔兹曼",
+      "en": "Maxwell and Boltzmann"
+    },
+    "year": 1860,
+    "branch": "thermo",
+    "influence": 3,
+    "frontier": false,
+    "scaleExp": -8,
+    "oneLiner": "分子速度不是一样快，而是排成一条概率曲线。",
+    "equation": "f(v)\\propto v^2e^{-mv^2/(2kT)}",
+    "cardBack": {
+      "supersedes": [
+        "单一分子速度假设"
+      ],
+      "supersededBy": [
+        "量子统计分布"
+      ],
+      "leadsTo": [
+        "气体输运",
+        "等离子体物理",
+        "统计推断"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -343.905,
+        -91.276,
+        386.829
+      ],
+      "timeline": [
+        832,
+        2.097,
+        -69.211
+      ],
+      "scale": [
+        -440,
+        67.802,
+        -67.699
+      ]
+    }
+  },
+  {
+    "id": "entropy-clausius",
+    "name": {
+      "zh": "克劳修斯熵",
+      "en": "Clausius Entropy"
+    },
+    "author": {
+      "zh": "克劳修斯",
+      "en": "Rudolf Clausius"
+    },
+    "year": 1865,
+    "branch": "thermo",
+    "influence": 3,
+    "frontier": false,
+    "scaleExp": 0,
+    "oneLiner": "熵把热的散乱程度记成数，方向感第一次入账。",
+    "equation": "dS=\\frac{\\delta Q_{\\mathrm{rev}}}{T}",
+    "cardBack": {
+      "supersedes": [
+        "效率损失的口头描述"
+      ],
+      "supersededBy": [
+        "玻尔兹曼熵"
+      ],
+      "leadsTo": [
+        "相变",
+        "热力学势",
+        "信息熵类比"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -236.918,
+        -90.662,
+        387.218
+      ],
+      "timeline": [
+        848,
+        14.791,
+        -73.076
+      ],
+      "scale": [
+        0,
+        -64.226,
+        -64.521
+      ]
+    }
+  },
+  {
+    "id": "boltzmann-entropy",
+    "name": {
+      "zh": "玻尔兹曼熵",
+      "en": "Boltzmann Entropy"
+    },
+    "author": {
+      "zh": "玻尔兹曼",
+      "en": "Ludwig Boltzmann"
+    },
+    "year": 1877,
+    "branch": "thermo",
+    "influence": 4,
+    "frontier": false,
+    "scaleExp": -8,
+    "simId": "entropy-microstates",
+    "oneLiner": "宏观混乱来自微观排法的数量，熵有了原子解释。",
+    "equation": "S=k_B\\ln W",
+    "cardBack": {
+      "supersedes": [
+        "熵的纯宏观定义"
+      ],
+      "supersededBy": [
+        "量子统计力学"
+      ],
+      "leadsTo": [
+        "统计力学",
+        "信息论",
+        "黑洞熵"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -145.624,
+        -55.916,
+        220.43
+      ],
+      "timeline": [
+        886.4,
+        2.942,
+        -74.778
+      ],
+      "scale": [
+        -440,
+        -76.049,
+        -71.737
+      ]
+    }
+  },
+  {
+    "id": "stefan-boltzmann-law",
+    "name": {
+      "zh": "斯特藩-玻尔兹曼定律",
+      "en": "Stefan-Boltzmann Law"
+    },
+    "author": {
+      "zh": "斯特藩、玻尔兹曼",
+      "en": "Josef Stefan and Ludwig Boltzmann"
+    },
+    "year": 1879,
+    "branch": "thermo",
+    "influence": 2,
+    "frontier": false,
+    "scaleExp": 0,
+    "oneLiner": "物体越热，辐射能量按四次方暴涨。",
+    "equation": "j^*=\\sigma T^4",
+    "cardBack": {
+      "supersedes": [
+        "热辐射强度的经验曲线"
+      ],
+      "supersededBy": [
+        "普朗克黑体辐射"
+      ],
+      "leadsTo": [
+        "恒星温度估算",
+        "红外测温",
+        "宇宙背景辐射"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -146.678,
+        -121.33,
+        284.747
+      ],
+      "timeline": [
+        892.8,
+        19.468,
+        -73.432
+      ],
+      "scale": [
+        0,
+        170.822,
+        -47.75
+      ]
+    }
+  },
+  {
+    "id": "gibbs-ensemble",
+    "name": {
+      "zh": "吉布斯系综",
+      "en": "Gibbs Ensembles"
+    },
+    "author": {
+      "zh": "吉布斯",
+      "en": "J. Willard Gibbs"
+    },
+    "year": 1902,
+    "branch": "thermo",
+    "influence": 3,
+    "frontier": false,
+    "scaleExp": -8,
+    "oneLiner": "不用追每个分子，改追所有可能世界的权重。",
+    "equation": "Z=\\sum_i e^{-\\beta E_i}",
+    "cardBack": {
+      "supersedes": [
+        "单条微观轨道平均"
+      ],
+      "supersededBy": [
+        "量子统计系综"
+      ],
+      "leadsTo": [
+        "相变理论",
+        "蒙特卡洛模拟",
+        "量子统计"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -276.684,
+        -134.022,
+        308.704
+      ],
+      "timeline": [
+        966.4,
+        -19.143,
+        -77.835
+      ],
+      "scale": [
+        -440,
+        -13.122,
+        -59.28
+      ]
+    }
+  },
+  {
+    "id": "brownian-motion",
+    "name": {
+      "zh": "布朗运动解释",
+      "en": "Explanation of Brownian Motion"
+    },
+    "author": {
+      "zh": "爱因斯坦",
+      "en": "Albert Einstein"
+    },
+    "year": 1905,
+    "branch": "thermo",
+    "influence": 3,
+    "frontier": false,
+    "scaleExp": -6,
+    "oneLiner": "花粉乱晃不是生命力，而是分子撞击留下的抖动。",
+    "equation": "\\langle x^2\\rangle=2Dt",
+    "cardBack": {
+      "supersedes": [
+        "布朗运动的生物性解释"
+      ],
+      "supersededBy": [
+        "随机过程理论"
+      ],
+      "leadsTo": [
+        "原子实在性证据",
+        "扩散理论",
+        "金融随机游走"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -427.363,
+        -96.397,
+        414.451
+      ],
+      "timeline": [
+        976,
+        17.715,
+        -73.456
+      ],
+      "scale": [
+        -330,
+        -11.031,
+        -62.86
+      ]
+    }
+  },
+  {
+    "id": "onsager-reciprocity",
+    "name": {
+      "zh": "昂萨格互易关系",
+      "en": "Onsager Reciprocal Relations"
+    },
+    "author": {
+      "zh": "昂萨格",
+      "en": "Lars Onsager"
+    },
+    "year": 1931,
+    "branch": "thermo",
+    "influence": 2,
+    "frontier": false,
+    "scaleExp": 0,
+    "oneLiner": "接近平衡时，不同流动彼此牵连得有规矩。",
+    "equation": "J_i=\\sum_j L_{ij}X_j",
+    "cardBack": {
+      "supersedes": [
+        "不可逆过程的零散经验律"
+      ],
+      "supersededBy": [
+        "非平衡统计力学"
+      ],
+      "leadsTo": [
+        "热电效应",
+        "输运理论",
+        "生命系统热力学"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -381.926,
+        -23.096,
+        451.182
+      ],
+      "timeline": [
+        1059.2,
+        -2.935,
+        -72.277
+      ],
+      "scale": [
+        0,
+        69.22,
+        -80.529
+      ]
+    }
+  },
+  {
+    "id": "landauer-principle",
+    "name": {
+      "zh": "兰道尔原理",
+      "en": "Landauer's Principle"
+    },
+    "author": {
+      "zh": "兰道尔",
+      "en": "Rolf Landauer"
+    },
+    "year": 1961,
+    "branch": "thermo",
+    "influence": 2,
+    "frontier": true,
+    "scaleExp": -9,
+    "oneLiner": "抹掉一比特信息，至少要向世界交一笔热账。",
+    "equation": "E\\ge k_BT\\ln 2",
+    "cardBack": {
+      "supersedes": [
+        "信息处理可无耗散的想象"
+      ],
+      "supersededBy": [],
+      "leadsTo": [
+        "可逆计算",
+        "信息热力学",
+        "量子计算能耗"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -103.387,
+        -141.634,
+        372.492
+      ],
+      "timeline": [
+        1155.2,
+        -8.872,
+        -69.099
+      ],
+      "scale": [
+        -495,
+        -3.907,
+        -79.009
+      ]
+    }
+  },
+  {
+    "id": "fluctuation-dissipation",
+    "name": {
+      "zh": "涨落-耗散定理",
+      "en": "Fluctuation-Dissipation Theorem"
+    },
+    "author": {
+      "zh": "卡拉尼、韦尔顿等",
+      "en": "Callen, Welton et al."
+    },
+    "year": 1951,
+    "branch": "thermo",
+    "influence": 2,
+    "frontier": false,
+    "scaleExp": -8,
+    "oneLiner": "系统自己抖得有多厉害，也说明它会怎样耗能。",
+    "equation": "S_x(\\omega)\\propto \\mathrm{Im}\\,\\chi(\\omega)",
+    "cardBack": {
+      "supersedes": [
+        "热涨落与响应分开处理"
+      ],
+      "supersededBy": [
+        "非平衡涨落定理"
+      ],
+      "leadsTo": [
+        "噪声测量",
+        "软物质物理",
+        "量子耗散"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -288.559,
+        -163.855,
+        405.944
+      ],
+      "timeline": [
+        1123.2,
+        -7.369,
+        -74.232
+      ],
+      "scale": [
+        -440,
+        -45.228,
+        -57.739
+      ]
+    }
+  },
+  {
+    "id": "renormalization-critical",
+    "name": {
+      "zh": "临界现象重整化群",
+      "en": "Renormalization Group for Critical Phenomena"
+    },
+    "author": {
+      "zh": "威尔逊",
+      "en": "Kenneth Wilson"
+    },
+    "year": 1971,
+    "branch": "thermo",
+    "influence": 3,
+    "frontier": true,
+    "scaleExp": -6,
+    "oneLiner": "相变临界点附近，细节消失，尺度自己重复自己。",
+    "equation": "\\xi\\propto |T-T_c|^{-\\nu}",
+    "cardBack": {
+      "supersedes": [
+        "平均场临界指数"
+      ],
+      "supersededBy": [],
+      "leadsTo": [
+        "普适类",
+        "量子场论重整化",
+        "复杂系统标度"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -123.328,
+        -59.425,
+        378.946
+      ],
+      "timeline": [
+        1187.2,
+        -13.74,
+        -67.407
+      ],
+      "scale": [
+        -330,
+        38.071,
+        -49.737
+      ]
+    }
+  },
+  {
+    "id": "galilean-relativity",
+    "name": {
+      "zh": "伽利略相对性",
+      "en": "Galilean Relativity"
+    },
+    "author": {
+      "zh": "伽利略",
+      "en": "Galileo Galilei"
+    },
+    "year": 1632,
+    "branch": "relativity",
+    "influence": 3,
+    "frontier": false,
+    "scaleExp": 0,
+    "oneLiner": "匀速船舱里做实验，看不出自己是否在航行。",
+    "equation": "x'=x-vt,\\ t'=t",
+    "cardBack": {
+      "supersedes": [
+        "绝对静止可由力学实验识别的想法"
+      ],
+      "supersededBy": [
+        "狭义相对论"
+      ],
+      "leadsTo": [
+        "惯性系",
+        "洛伦兹变换",
+        "相对性原理"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        13.423,
+        9.594,
+        -284.148
+      ],
+      "timeline": [
+        102.4,
+        9.274,
+        56.016
+      ],
+      "scale": [
+        0,
+        -27.174,
+        54.331
+      ]
+    }
+  },
+  {
+    "id": "bradley-aberration",
+    "name": {
+      "zh": "光行差",
+      "en": "Aberration of Light"
+    },
+    "author": {
+      "zh": "布拉德雷",
+      "en": "James Bradley"
+    },
+    "year": 1728,
+    "branch": "relativity",
+    "influence": 1,
+    "frontier": false,
+    "scaleExp": 16,
+    "oneLiner": "星光方向会随地球运动轻微偏斜，光速有限被看见。",
+    "equation": "\\Delta\\theta\\sim \\frac{v}{c}",
+    "cardBack": {
+      "supersedes": [
+        "恒星位置完全静止的看法"
+      ],
+      "supersededBy": [
+        "相对论速度合成"
+      ],
+      "leadsTo": [
+        "光速测量",
+        "天体测量",
+        "相对论天文学"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        269.573,
+        -43.401,
+        -409.195
+      ],
+      "timeline": [
+        409.6,
+        3.376,
+        51.933
+      ],
+      "scale": [
+        880,
+        9.642,
+        67.449
+      ]
+    }
+  },
+  {
+    "id": "lorentz-transformations",
+    "name": {
+      "zh": "洛伦兹变换",
+      "en": "Lorentz Transformations"
+    },
+    "author": {
+      "zh": "洛伦兹",
+      "en": "Hendrik Lorentz"
+    },
+    "year": 1904,
+    "branch": "relativity",
+    "influence": 4,
+    "frontier": false,
+    "scaleExp": 0,
+    "simId": "spacetime-transform",
+    "oneLiner": "时间和长度会随运动混合，以保住光速这条底线。",
+    "equation": "t'=\\gamma\\left(t-\\frac{vx}{c^2}\\right)",
+    "cardBack": {
+      "supersedes": [
+        "伽利略变换"
+      ],
+      "supersededBy": [
+        "闵可夫斯基时空几何"
+      ],
+      "leadsTo": [
+        "狭义相对论",
+        "相对论电动力学",
+        "粒子加速器"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        106.475,
+        33.721,
+        -434.381
+      ],
+      "timeline": [
+        972.8,
+        6.377,
+        61.955
+      ],
+      "scale": [
+        0,
+        -24.349,
+        54.257
+      ]
+    }
+  },
+  {
+    "id": "special-relativity",
+    "name": {
+      "zh": "狭义相对论",
+      "en": "Special Relativity"
+    },
+    "author": {
+      "zh": "爱因斯坦",
+      "en": "Albert Einstein"
+    },
+    "year": 1905,
+    "branch": "relativity",
+    "influence": 5,
+    "frontier": false,
+    "scaleExp": 0,
+    "simId": "light-cone",
+    "oneLiner": "所有惯性观察者共享同一束光速，也各自拥有时间。",
+    "equation": "s^2=c^2t^2-x^2-y^2-z^2",
+    "cardBack": {
+      "supersedes": [
+        "绝对时间和静止以太"
+      ],
+      "supersededBy": [
+        "广义相对论"
+      ],
+      "leadsTo": [
+        "核能",
+        "粒子物理",
+        "现代时空观"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        264.759,
+        39.923,
+        -372.49
+      ],
+      "timeline": [
+        976,
+        11.588,
+        59.76
+      ],
+      "scale": [
+        0,
+        35.266,
+        70.18
+      ]
+    }
+  },
+  {
+    "id": "mass-energy-equivalence",
+    "name": {
+      "zh": "质能等价",
+      "en": "Mass-Energy Equivalence"
+    },
+    "author": {
+      "zh": "爱因斯坦",
+      "en": "Albert Einstein"
+    },
+    "year": 1905,
+    "branch": "relativity",
+    "influence": 3,
+    "frontier": false,
+    "scaleExp": -15,
+    "oneLiner": "质量不是死重，而是能量的一种浓缩形态。",
+    "equation": "E=mc^2",
+    "cardBack": {
+      "supersedes": [
+        "质量与能量完全分家的观念"
+      ],
+      "supersededBy": [
+        "相对论场论"
+      ],
+      "leadsTo": [
+        "核裂变",
+        "恒星能量来源",
+        "粒子湮灭"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        373.065,
+        25.997,
+        -339.002
+      ],
+      "timeline": [
+        976,
+        -19.51,
+        72.094
+      ],
+      "scale": [
+        -825,
+        2.437,
+        78.206
+      ]
+    }
+  },
+  {
+    "id": "equivalence-principle",
+    "name": {
+      "zh": "等效原理",
+      "en": "Equivalence Principle"
+    },
+    "author": {
+      "zh": "爱因斯坦",
+      "en": "Albert Einstein"
+    },
+    "year": 1907,
+    "branch": "relativity",
+    "influence": 3,
+    "frontier": false,
+    "scaleExp": 0,
+    "oneLiner": "电梯里分不清重力和加速度，几何大门被推开。",
+    "equation": "m_g=m_i",
+    "cardBack": {
+      "supersedes": [
+        "重力只是普通力的直觉"
+      ],
+      "supersededBy": [
+        "广义相对论"
+      ],
+      "leadsTo": [
+        "时空弯曲",
+        "引力红移",
+        "精密等效原理检验"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        365.101,
+        103.366,
+        -382.005
+      ],
+      "timeline": [
+        982.4,
+        -24.119,
+        61.287
+      ],
+      "scale": [
+        0,
+        -69.97,
+        80.35
+      ]
+    }
+  },
+  {
+    "id": "minkowski-spacetime",
+    "name": {
+      "zh": "闵可夫斯基时空",
+      "en": "Minkowski Spacetime"
+    },
+    "author": {
+      "zh": "闵可夫斯基",
+      "en": "Hermann Minkowski"
+    },
+    "year": 1908,
+    "branch": "relativity",
+    "influence": 4,
+    "frontier": false,
+    "scaleExp": 0,
+    "simId": "spacetime-geometry",
+    "oneLiner": "空间和时间合成四维舞台，事件才是基本坐标。",
+    "equation": "ds^2=c^2dt^2-dx^2-dy^2-dz^2",
+    "cardBack": {
+      "supersedes": [
+        "三维空间加独立时间"
+      ],
+      "supersededBy": [
+        "弯曲时空"
+      ],
+      "leadsTo": [
+        "光锥",
+        "张量语言",
+        "广义相对论"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        306.719,
+        15.05,
+        -225.925
+      ],
+      "timeline": [
+        985.6,
+        21.588,
+        68.376
+      ],
+      "scale": [
+        0,
+        36.84,
+        49.287
+      ]
+    }
+  },
+  {
+    "id": "general-relativity",
+    "name": {
+      "zh": "广义相对论",
+      "en": "General Relativity"
+    },
+    "author": {
+      "zh": "爱因斯坦",
+      "en": "Albert Einstein"
+    },
+    "year": 1915,
+    "branch": "relativity",
+    "influence": 5,
+    "frontier": false,
+    "scaleExp": 8,
+    "simId": "curved-spacetime",
+    "oneLiner": "重力不是拉扯，而是物质让时空弯了路。",
+    "equation": "G_{\\mu\\nu}=\\frac{8\\pi G}{c^4}T_{\\mu\\nu}",
+    "cardBack": {
+      "supersedes": [
+        "牛顿万有引力的瞬时作用"
+      ],
+      "supersededBy": [
+        "量子引力候选理论"
+      ],
+      "leadsTo": [
+        "黑洞",
+        "宇宙学",
+        "引力波"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        279.072,
+        32.363,
+        -325.168
+      ],
+      "timeline": [
+        1008,
+        42.907,
+        50.811
+      ],
+      "scale": [
+        440,
+        25.396,
+        60.188
+      ]
+    }
+  },
+  {
+    "id": "schwarzschild-black-hole",
+    "name": {
+      "zh": "史瓦西黑洞解",
+      "en": "Schwarzschild Black Hole"
+    },
+    "author": {
+      "zh": "史瓦西",
+      "en": "Karl Schwarzschild"
+    },
+    "year": 1916,
+    "branch": "relativity",
+    "influence": 4,
+    "frontier": true,
+    "scaleExp": 9,
+    "simId": "black-hole",
+    "oneLiner": "方程允许一个连光都逃不出的边界，黑洞从数学里冒出。",
+    "equation": "r_s=\\frac{2GM}{c^2}",
+    "cardBack": {
+      "supersedes": [
+        "恒星坍缩没有相对论边界的想法"
+      ],
+      "supersededBy": [
+        "克尔黑洞",
+        "量子黑洞研究"
+      ],
+      "leadsTo": [
+        "事件视界",
+        "黑洞热力学",
+        "引力波源"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        401.337,
+        -0.734,
+        -253.953
+      ],
+      "timeline": [
+        1011.2,
+        -22.097,
+        52.044
+      ],
+      "scale": [
+        495,
+        27.45,
+        82.888
+      ]
+    }
+  },
+  {
+    "id": "gravitational-redshift",
+    "name": {
+      "zh": "引力红移",
+      "en": "Gravitational Redshift"
+    },
+    "author": {
+      "zh": "爱因斯坦",
+      "en": "Albert Einstein"
+    },
+    "year": 1911,
+    "branch": "relativity",
+    "influence": 2,
+    "frontier": false,
+    "scaleExp": 7,
+    "oneLiner": "光爬出重力井会变红，连频率也要付能量账。",
+    "equation": "\\frac{\\Delta f}{f}\\approx\\frac{\\Delta\\Phi}{c^2}",
+    "cardBack": {
+      "supersedes": [
+        "光频率不受重力影响的直觉"
+      ],
+      "supersededBy": [
+        "广义相对论精确预言"
+      ],
+      "leadsTo": [
+        "Pound-Rebka实验",
+        "GPS校正",
+        "白矮星观测"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        338.716,
+        107.752,
+        -279.115
+      ],
+      "timeline": [
+        995.2,
+        -14.402,
+        79.264
+      ],
+      "scale": [
+        385,
+        54.781,
+        72.173
+      ]
+    }
+  },
+  {
+    "id": "gravitational-lensing",
+    "name": {
+      "zh": "引力透镜",
+      "en": "Gravitational Lensing"
+    },
+    "author": {
+      "zh": "爱因斯坦",
+      "en": "Albert Einstein"
+    },
+    "year": 1919,
+    "branch": "relativity",
+    "influence": 3,
+    "frontier": true,
+    "scaleExp": 21,
+    "oneLiner": "质量把远方星光弯成弧，宇宙自己成了望远镜。",
+    "equation": "\\alpha=\\frac{4GM}{c^2b}",
+    "cardBack": {
+      "supersedes": [
+        "光只被介质折射的观念"
+      ],
+      "supersededBy": [],
+      "leadsTo": [
+        "暗物质测绘",
+        "星系团质量",
+        "系外行星微透镜"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        469.91,
+        20.484,
+        -391.925
+      ],
+      "timeline": [
+        1020.8,
+        2.97,
+        59.277
+      ],
+      "scale": [
+        1155,
+        -3.467,
+        79.896
+      ]
+    }
+  },
+  {
+    "id": "frame-dragging",
+    "name": {
+      "zh": "参考系拖拽",
+      "en": "Frame Dragging"
+    },
+    "author": {
+      "zh": "伦泽、蒂林",
+      "en": "Lense and Thirring"
+    },
+    "year": 1918,
+    "branch": "relativity",
+    "influence": 2,
+    "frontier": false,
+    "scaleExp": 7,
+    "oneLiner": "旋转天体会轻轻拧动周围时空，像拖着水流。",
+    "equation": "\\vec{\\Omega}_{LT}\\propto\\frac{\\vec{J}}{r^3}",
+    "cardBack": {
+      "supersedes": [
+        "时空几何静止不动的图景"
+      ],
+      "supersededBy": [
+        "克尔时空"
+      ],
+      "leadsTo": [
+        "陀螺实验",
+        "黑洞喷流",
+        "相对论导航"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        391.743,
+        81.217,
+        -447.586
+      ],
+      "timeline": [
+        1017.6,
+        1.63,
+        68.763
+      ],
+      "scale": [
+        385,
+        -54.75,
+        62.325
+      ]
+    }
+  },
+  {
+    "id": "friedmann-equations",
+    "name": {
+      "zh": "弗里德曼方程",
+      "en": "Friedmann Equations"
+    },
+    "author": {
+      "zh": "弗里德曼",
+      "en": "Alexander Friedmann"
+    },
+    "year": 1922,
+    "branch": "relativity",
+    "influence": 3,
+    "frontier": false,
+    "scaleExp": 26,
+    "oneLiner": "把广义相对论放到整个宇宙，空间可以膨胀或收缩。",
+    "equation": "H^2=\\frac{8\\pi G}{3}\\rho-\\frac{kc^2}{a^2}+\\frac{\\Lambda c^2}{3}",
+    "cardBack": {
+      "supersedes": [
+        "静态宇宙模型"
+      ],
+      "supersededBy": [
+        "ΛCDM宇宙学"
+      ],
+      "leadsTo": [
+        "大爆炸模型",
+        "哈勃膨胀",
+        "暗能量"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        582.764,
+        35.175,
+        -343.439
+      ],
+      "timeline": [
+        1030.4,
+        -10.393,
+        67.408
+      ],
+      "scale": [
+        1430,
+        0.902,
+        74.67
+      ]
+    }
+  },
+  {
+    "id": "pound-rebka",
+    "name": {
+      "zh": "庞德-雷布卡实验",
+      "en": "Pound-Rebka Experiment"
+    },
+    "author": {
+      "zh": "庞德、雷布卡",
+      "en": "Robert Pound and Glen Rebka"
+    },
+    "year": 1959,
+    "branch": "relativity",
+    "influence": 2,
+    "frontier": false,
+    "scaleExp": 1,
+    "oneLiner": "在实验楼高度里测到红移，广义相对论落到地面。",
+    "equation": "\\frac{\\Delta f}{f}=\\frac{gh}{c^2}",
+    "cardBack": {
+      "supersedes": [
+        "引力红移只在天文尺度可测的想法"
+      ],
+      "supersededBy": [
+        "原子钟精密检验"
+      ],
+      "leadsTo": [
+        "GPS时间校正",
+        "精密频率计量",
+        "等效原理测试"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        351.887,
+        1.02,
+        -437.373
+      ],
+      "timeline": [
+        1148.8,
+        24.859,
+        49.059
+      ],
+      "scale": [
+        55,
+        4.43,
+        68.697
+      ]
+    }
+  },
+  {
+    "id": "binary-pulsar",
+    "name": {
+      "zh": "双脉冲星轨道衰减",
+      "en": "Binary Pulsar Orbital Decay"
+    },
+    "author": {
+      "zh": "赫尔斯、泰勒",
+      "en": "Russell Hulse and Joseph Taylor"
+    },
+    "year": 1974,
+    "branch": "relativity",
+    "influence": 3,
+    "frontier": false,
+    "scaleExp": 10,
+    "oneLiner": "两颗脉冲星越绕越近，能量正悄悄变成引力波。",
+    "equation": "\\dot{P}_b<0",
+    "cardBack": {
+      "supersedes": [
+        "引力波只停留在方程里的状态"
+      ],
+      "supersededBy": [
+        "LIGO直接探测"
+      ],
+      "leadsTo": [
+        "强场检验",
+        "引力波天文学",
+        "中子星物理"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        495.197,
+        111.492,
+        -384.174
+      ],
+      "timeline": [
+        1196.8,
+        -5.827,
+        54.561
+      ],
+      "scale": [
+        550,
+        -3.613,
+        47.922
+      ]
+    }
+  },
+  {
+    "id": "hawking-radiation",
+    "name": {
+      "zh": "霍金辐射",
+      "en": "Hawking Radiation"
+    },
+    "author": {
+      "zh": "霍金",
+      "en": "Stephen Hawking"
+    },
+    "year": 1974,
+    "branch": "relativity",
+    "influence": 3,
+    "frontier": true,
+    "scaleExp": 3,
+    "oneLiner": "黑洞并非绝对黑，量子效应让它慢慢冒热光。",
+    "equation": "T_H=\\frac{\\hbar c^3}{8\\pi GMk_B}",
+    "cardBack": {
+      "supersedes": [
+        "黑洞只吞不吐的经典图景"
+      ],
+      "supersededBy": [],
+      "leadsTo": [
+        "黑洞信息问题",
+        "量子引力",
+        "全息原理"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        129.495,
+        -14.439,
+        -147.322
+      ],
+      "timeline": [
+        1196.8,
+        1.293,
+        57.753
+      ],
+      "scale": [
+        165,
+        6.485,
+        64.231
+      ]
+    }
+  },
+  {
+    "id": "gravitational-waves",
+    "name": {
+      "zh": "引力波直接探测",
+      "en": "Direct Detection of Gravitational Waves"
+    },
+    "author": {
+      "zh": "LIGO合作组",
+      "en": "LIGO Scientific Collaboration"
+    },
+    "year": 2015,
+    "branch": "relativity",
+    "influence": 4,
+    "frontier": true,
+    "scaleExp": 21,
+    "simId": "spacetime-ripples",
+    "oneLiner": "两个黑洞合并时，时空皱纹穿过地球，被激光量到。",
+    "equation": "h=\\frac{\\Delta L}{L}",
+    "cardBack": {
+      "supersedes": [
+        "引力波只有间接证据"
+      ],
+      "supersededBy": [],
+      "leadsTo": [
+        "黑洞人口统计",
+        "多信使天文学",
+        "强引力检验"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        512.495,
+        -7.473,
+        -299.467
+      ],
+      "timeline": [
+        1328,
+        -10.192,
+        72.904
+      ],
+      "scale": [
+        1155,
+        -4.528,
+        51.219
+      ]
+    }
+  },
+  {
+    "id": "planck-blackbody",
+    "name": {
+      "zh": "普朗克黑体辐射",
+      "en": "Planck's Blackbody Radiation Law"
+    },
+    "author": {
+      "zh": "普朗克",
+      "en": "Max Planck"
+    },
+    "year": 1900,
+    "branch": "quantum",
+    "influence": 4,
+    "frontier": false,
+    "scaleExp": -10,
+    "simId": "energy-quanta",
+    "oneLiner": "为修好黑体曲线，能量被迫一份一份地发出。",
+    "equation": "E=h\\nu",
+    "cardBack": {
+      "supersedes": [
+        "经典热辐射的紫外灾难"
+      ],
+      "supersededBy": [
+        "量子力学"
+      ],
+      "leadsTo": [
+        "量子论",
+        "光子概念",
+        "宇宙微波背景谱"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        334.551,
+        -36.242,
+        133.083
+      ],
+      "timeline": [
+        960,
+        24.902,
+        182.55
+      ],
+      "scale": [
+        -550,
+        68.704,
+        185.08
+      ]
+    }
+  },
+  {
+    "id": "photoelectric-effect",
+    "name": {
+      "zh": "光电效应",
+      "en": "Photoelectric Effect"
+    },
+    "author": {
+      "zh": "爱因斯坦",
+      "en": "Albert Einstein"
+    },
+    "year": 1905,
+    "branch": "quantum",
+    "influence": 4,
+    "frontier": false,
+    "scaleExp": -10,
+    "simId": "photoelectric-light",
+    "oneLiner": "光不只像波照来，也能一粒一粒把电子敲出。",
+    "equation": "K_{\\max}=h\\nu-\\phi",
+    "cardBack": {
+      "supersedes": [
+        "光能只由强度决定的经典图景"
+      ],
+      "supersededBy": [
+        "量子电动力学"
+      ],
+      "leadsTo": [
+        "光子",
+        "太阳能电池",
+        "光电探测器"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        289.957,
+        -45.62,
+        -9.053
+      ],
+      "timeline": [
+        976,
+        -17.701,
+        202.07
+      ],
+      "scale": [
+        -550,
+        34.786,
+        187.979
+      ]
+    }
+  },
+  {
+    "id": "bohr-atom",
+    "name": {
+      "zh": "玻尔原子模型",
+      "en": "Bohr Model of the Atom"
+    },
+    "author": {
+      "zh": "玻尔",
+      "en": "Niels Bohr"
+    },
+    "year": 1913,
+    "branch": "quantum",
+    "influence": 3,
+    "frontier": false,
+    "scaleExp": -10,
+    "oneLiner": "电子只能站在特定轨道上，原子光谱有了台阶。",
+    "equation": "mvr=n\\hbar",
+    "cardBack": {
+      "supersedes": [
+        "卢瑟福原子会塌缩的难题"
+      ],
+      "supersededBy": [
+        "薛定谔方程"
+      ],
+      "leadsTo": [
+        "能级",
+        "量子跃迁",
+        "原子钟"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        507.258,
+        -21.741,
+        194.557
+      ],
+      "timeline": [
+        1001.6,
+        -3.556,
+        183.085
+      ],
+      "scale": [
+        -550,
+        -165.766,
+        206.393
+      ]
+    }
+  },
+  {
+    "id": "franck-hertz",
+    "name": {
+      "zh": "弗兰克-赫兹实验",
+      "en": "Franck-Hertz Experiment"
+    },
+    "author": {
+      "zh": "弗兰克、赫兹",
+      "en": "James Franck and Gustav Hertz"
+    },
+    "year": 1914,
+    "branch": "quantum",
+    "influence": 2,
+    "frontier": false,
+    "scaleExp": -10,
+    "oneLiner": "电子撞原子时只丢固定能量，能级不是想象。",
+    "equation": "eV=E_2-E_1",
+    "cardBack": {
+      "supersedes": [
+        "原子可连续吸收任意能量的想法"
+      ],
+      "supersededBy": [
+        "量子散射理论"
+      ],
+      "leadsTo": [
+        "能级验证",
+        "电子碰撞谱",
+        "等离子体诊断"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        623.491,
+        -69.833,
+        257.871
+      ],
+      "timeline": [
+        1004.8,
+        -18.476,
+        202.367
+      ],
+      "scale": [
+        -550,
+        -61.251,
+        203.217
+      ]
+    }
+  },
+  {
+    "id": "de-broglie-waves",
+    "name": {
+      "zh": "德布罗意物质波",
+      "en": "de Broglie Matter Waves"
+    },
+    "author": {
+      "zh": "德布罗意",
+      "en": "Louis de Broglie"
+    },
+    "year": 1924,
+    "branch": "quantum",
+    "influence": 3,
+    "frontier": false,
+    "scaleExp": -10,
+    "oneLiner": "不只是光有波性，电子和你我也有一条隐形波长。",
+    "equation": "\\lambda=\\frac{h}{p}",
+    "cardBack": {
+      "supersedes": [
+        "粒子和波完全分家的观念"
+      ],
+      "supersededBy": [
+        "波函数力学"
+      ],
+      "leadsTo": [
+        "电子衍射",
+        "量子显微",
+        "波粒二象性"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        247.256,
+        5.902,
+        71.111
+      ],
+      "timeline": [
+        1036.8,
+        -8.881,
+        189.506
+      ],
+      "scale": [
+        -550,
+        -133.535,
+        200.212
+      ]
+    }
+  },
+  {
+    "id": "pauli-exclusion",
+    "name": {
+      "zh": "泡利不相容原理",
+      "en": "Pauli Exclusion Principle"
+    },
+    "author": {
+      "zh": "泡利",
+      "en": "Wolfgang Pauli"
+    },
+    "year": 1925,
+    "branch": "quantum",
+    "influence": 3,
+    "frontier": false,
+    "scaleExp": -10,
+    "oneLiner": "两个费米子不能挤进同一状态，物质因此有结构。",
+    "equation": "\\psi(1,2)=-\\psi(2,1)",
+    "cardBack": {
+      "supersedes": [
+        "电子可任意堆叠的模型"
+      ],
+      "supersededBy": [
+        "自旋-统计定理"
+      ],
+      "leadsTo": [
+        "元素周期表",
+        "白矮星压强",
+        "半导体能带"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        453.496,
+        -2.727,
+        285.191
+      ],
+      "timeline": [
+        1040,
+        22.244,
+        194.504
+      ],
+      "scale": [
+        -550,
+        -0.508,
+        189.785
+      ]
+    }
+  },
+  {
+    "id": "matrix-mechanics",
+    "name": {
+      "zh": "矩阵力学",
+      "en": "Matrix Mechanics"
+    },
+    "author": {
+      "zh": "海森堡等",
+      "en": "Werner Heisenberg et al."
+    },
+    "year": 1925,
+    "branch": "quantum",
+    "influence": 5,
+    "frontier": false,
+    "scaleExp": -10,
+    "simId": "quantum-matrix",
+    "oneLiner": "可观测量不再普通相乘，顺序本身会改变结果。",
+    "equation": "[\\hat{x},\\hat{p}]=i\\hbar",
+    "cardBack": {
+      "supersedes": [
+        "经典轨道变量"
+      ],
+      "supersededBy": [
+        "现代量子力学表述"
+      ],
+      "leadsTo": [
+        "算符代数",
+        "不确定性原理",
+        "量子信息"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        531.477,
+        -50.337,
+        323.204
+      ],
+      "timeline": [
+        1040,
+        -42.336,
+        203.625
+      ],
+      "scale": [
+        -550,
+        -52.526,
+        177.368
+      ]
+    }
+  },
+  {
+    "id": "schrodinger-equation",
+    "name": {
+      "zh": "薛定谔方程",
+      "en": "Schrodinger Equation"
+    },
+    "author": {
+      "zh": "薛定谔",
+      "en": "Erwin Schrodinger"
+    },
+    "year": 1926,
+    "branch": "quantum",
+    "influence": 5,
+    "frontier": false,
+    "scaleExp": -10,
+    "simId": "wavefunction",
+    "oneLiner": "粒子状态化成会演化的波函数，概率从此登场。",
+    "equation": "i\\hbar\\partial_t\\psi=\\hat{H}\\psi",
+    "cardBack": {
+      "supersedes": [
+        "玻尔轨道模型"
+      ],
+      "supersededBy": [
+        "量子场论的相对论推广"
+      ],
+      "leadsTo": [
+        "化学键",
+        "半导体",
+        "量子模拟"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        539.249,
+        -40.937,
+        305.382
+      ],
+      "timeline": [
+        1043.2,
+        36.472,
+        210.889
+      ],
+      "scale": [
+        -550,
+        100.496,
+        185.513
+      ]
+    }
+  },
+  {
+    "id": "born-rule",
+    "name": {
+      "zh": "玻恩概率诠释",
+      "en": "Born Rule"
+    },
+    "author": {
+      "zh": "玻恩",
+      "en": "Max Born"
+    },
+    "year": 1926,
+    "branch": "quantum",
+    "influence": 3,
+    "frontier": false,
+    "scaleExp": -10,
+    "oneLiner": "波函数不是物质云，而是结果出现概率的平方根。",
+    "equation": "P=|\\psi|^2",
+    "cardBack": {
+      "supersedes": [
+        "波函数必须是实体波的解释"
+      ],
+      "supersededBy": [
+        "量子测量理论"
+      ],
+      "leadsTo": [
+        "量子统计",
+        "散射截面",
+        "量子信息"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        532.224,
+        -128.394,
+        391.665
+      ],
+      "timeline": [
+        1043.2,
+        -16.309,
+        208.011
+      ],
+      "scale": [
+        -550,
+        -130.362,
+        198.89
+      ]
+    }
+  },
+  {
+    "id": "uncertainty-principle",
+    "name": {
+      "zh": "不确定性原理",
+      "en": "Uncertainty Principle"
+    },
+    "author": {
+      "zh": "海森堡",
+      "en": "Werner Heisenberg"
+    },
+    "year": 1927,
+    "branch": "quantum",
+    "influence": 4,
+    "frontier": false,
+    "scaleExp": -10,
+    "simId": "uncertainty-cloud",
+    "oneLiner": "有些物理量不能同时问得太准，这不是仪器太差。",
+    "equation": "\\Delta x\\Delta p\\ge\\frac{\\hbar}{2}",
+    "cardBack": {
+      "supersedes": [
+        "测量只受技术限制的经典信念"
+      ],
+      "supersededBy": [
+        "量子测量与退相干理论"
+      ],
+      "leadsTo": [
+        "隧穿",
+        "零点能",
+        "量子密码"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        627.772,
+        10.019,
+        336.463
+      ],
+      "timeline": [
+        1046.4,
+        -17.82,
+        198.552
+      ],
+      "scale": [
+        -550,
+        195.464,
+        184.448
+      ]
+    }
+  },
+  {
+    "id": "dirac-equation",
+    "name": {
+      "zh": "狄拉克方程",
+      "en": "Dirac Equation"
+    },
+    "author": {
+      "zh": "狄拉克",
+      "en": "Paul Dirac"
+    },
+    "year": 1928,
+    "branch": "quantum",
+    "influence": 3,
+    "frontier": false,
+    "scaleExp": -15,
+    "oneLiner": "量子力学和相对论握手，反物质从方程里跳出。",
+    "equation": "(i\\hbar\\gamma^\\mu\\partial_\\mu-mc)\\psi=0",
+    "cardBack": {
+      "supersedes": [
+        "非相对论电子方程"
+      ],
+      "supersededBy": [
+        "量子场论"
+      ],
+      "leadsTo": [
+        "正电子预言",
+        "自旋",
+        "相对论量子化学"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        438.497,
+        -22.254,
+        91.735
+      ],
+      "timeline": [
+        1049.6,
+        -15.735,
+        198.311
+      ],
+      "scale": [
+        -825,
+        -67.16,
+        193.693
+      ]
+    }
+  },
+  {
+    "id": "qed-renormalization",
+    "name": {
+      "zh": "量子电动力学",
+      "en": "Quantum Electrodynamics"
+    },
+    "author": {
+      "zh": "费曼、施温格、朝永等",
+      "en": "Feynman, Schwinger, Tomonaga et al."
+    },
+    "year": 1948,
+    "branch": "quantum",
+    "influence": 4,
+    "frontier": false,
+    "scaleExp": -15,
+    "simId": "qed-interaction",
+    "oneLiner": "光和电子不断交换虚光子，精度高到令人发怵。",
+    "equation": "\\mathcal{L}_{\\mathrm{QED}}=\\bar{\\psi}(i\\gamma^\\mu D_\\mu-m)\\psi-\\frac{1}{4}F_{\\mu\\nu}F^{\\mu\\nu}",
+    "cardBack": {
+      "supersedes": [
+        "经典电磁场加粒子的拼接"
+      ],
+      "supersededBy": [
+        "电弱统一与标准模型"
+      ],
+      "leadsTo": [
+        "费曼图",
+        "反常磁矩",
+        "量子场论"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        150.303,
+        -3.104,
+        -49.988
+      ],
+      "timeline": [
+        1113.6,
+        -2.483,
+        194.634
+      ],
+      "scale": [
+        -825,
+        2.639,
+        187.831
+      ]
+    }
+  },
+  {
+    "id": "bell-inequality",
+    "name": {
+      "zh": "贝尔不等式",
+      "en": "Bell's Inequality"
+    },
+    "author": {
+      "zh": "贝尔",
+      "en": "John Stewart Bell"
+    },
+    "year": 1964,
+    "branch": "quantum",
+    "influence": 3,
+    "frontier": false,
+    "scaleExp": -6,
+    "oneLiner": "纠缠不是藏好的答案，而是自然真的违背局域直觉。",
+    "equation": "|S|\\le 2",
+    "cardBack": {
+      "supersedes": [
+        "局域隐变量的直觉退路"
+      ],
+      "supersededBy": [
+        "无漏洞贝尔实验"
+      ],
+      "leadsTo": [
+        "量子纠缠",
+        "量子密码",
+        "量子网络"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        658.921,
+        -70.503,
+        365.382
+      ],
+      "timeline": [
+        1164.8,
+        -58.08,
+        207.563
+      ],
+      "scale": [
+        -330,
+        -20.948,
+        197.664
+      ]
+    }
+  },
+  {
+    "id": "standard-model",
+    "name": {
+      "zh": "粒子物理标准模型",
+      "en": "Standard Model of Particle Physics"
+    },
+    "author": {
+      "zh": "格拉肖、温伯格、萨拉姆等",
+      "en": "Glashow, Weinberg, Salam et al."
+    },
+    "year": 1975,
+    "branch": "quantum",
+    "influence": 3,
+    "frontier": true,
+    "scaleExp": -18,
+    "oneLiner": "基本粒子被归进一张表，三种相互作用写成规范理论。",
+    "equation": "SU(3)\\times SU(2)\\times U(1)",
+    "cardBack": {
+      "supersedes": [
+        "粒子动物园的零散分类"
+      ],
+      "supersededBy": [
+        "超出标准模型的候选理论"
+      ],
+      "leadsTo": [
+        "希格斯机制",
+        "对撞机物理",
+        "中微子质量问题"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        280.867,
+        -46.703,
+        215.294
+      ],
+      "timeline": [
+        1200,
+        11.97,
+        180.349
+      ],
+      "scale": [
+        -990,
+        67.97,
+        207.426
+      ]
+    }
+  },
+  {
+    "id": "quantum-hall-effect",
+    "name": {
+      "zh": "量子霍尔效应",
+      "en": "Quantum Hall Effect"
+    },
+    "author": {
+      "zh": "冯·克利青",
+      "en": "Klaus von Klitzing"
+    },
+    "year": 1980,
+    "branch": "quantum",
+    "influence": 2,
+    "frontier": true,
+    "scaleExp": -6,
+    "oneLiner": "二维电子在强磁场里，把电阻锁成精确台阶。",
+    "equation": "R_{xy}=\\frac{h}{\\nu e^2}",
+    "cardBack": {
+      "supersedes": [
+        "电阻只能连续变化的图景"
+      ],
+      "supersededBy": [
+        "拓扑物态理论"
+      ],
+      "leadsTo": [
+        "电阻基准",
+        "拓扑序",
+        "分数量子霍尔效应"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        373.673,
+        -22.742,
+        355.439
+      ],
+      "timeline": [
+        1216,
+        -21.832,
+        196.103
+      ],
+      "scale": [
+        -330,
+        22.269,
+        190.583
+      ]
+    }
+  },
+  {
+    "id": "quantum-information",
+    "name": {
+      "zh": "量子信息",
+      "en": "Quantum Information"
+    },
+    "author": {
+      "zh": "舒尔、贝内特等",
+      "en": "Shor, Bennett et al."
+    },
+    "year": 1994,
+    "branch": "quantum",
+    "influence": 3,
+    "frontier": true,
+    "scaleExp": -9,
+    "oneLiner": "叠加和纠缠从哲学难题，变成可编程资源。",
+    "equation": "|\\psi\\rangle=\\alpha|0\\rangle+\\beta|1\\rangle",
+    "cardBack": {
+      "supersedes": [
+        "信息只能按经典比特处理"
+      ],
+      "supersededBy": [],
+      "leadsTo": [
+        "量子计算",
+        "量子通信",
+        "量子纠错"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        430.089,
+        -97.199,
+        351.835
+      ],
+      "timeline": [
+        1260.8,
+        11.375,
+        179.088
+      ],
+      "scale": [
+        -495,
+        -17.674,
+        206.917
+      ]
+    }
+  },
+  {
+    "id": "topological-insulators",
+    "name": {
+      "zh": "拓扑绝缘体",
+      "en": "Topological Insulators"
+    },
+    "author": {
+      "zh": "凯恩、梅勒、张首晟等",
+      "en": "Kane, Mele, Zhang et al."
+    },
+    "year": 2007,
+    "branch": "quantum",
+    "influence": 2,
+    "frontier": true,
+    "scaleExp": -9,
+    "oneLiner": "内部像绝缘体，边界却被拓扑保护着导电。",
+    "equation": "\\nu_{\\mathbb{Z}_2}=0,1",
+    "cardBack": {
+      "supersedes": [
+        "能带只按是否有隙分类"
+      ],
+      "supersededBy": [],
+      "leadsTo": [
+        "拓扑量子材料",
+        "自旋电子学",
+        "马约拉纳平台"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        242.018,
+        -52.115,
+        336.973
+      ],
+      "timeline": [
+        1302.4,
+        13.117,
+        179.193
+      ],
+      "scale": [
+        -495,
+        37.164,
+        202.512
+      ]
+    }
+  },
+  {
+    "id": "galileo-moons-jupiter",
+    "name": {
+      "zh": "木星卫星发现",
+      "en": "Discovery of Jupiter's Moons"
+    },
+    "author": {
+      "zh": "伽利略",
+      "en": "Galileo Galilei"
+    },
+    "year": 1610,
+    "branch": "cosmology",
+    "influence": 2,
+    "frontier": false,
+    "scaleExp": 9,
+    "oneLiner": "有天体不绕地球转，宇宙中心的老规矩裂开了。",
+    "equation": "T^2\\propto a^3",
+    "cardBack": {
+      "supersedes": [
+        "一切天体绕地球转的图景"
+      ],
+      "supersededBy": [
+        "日心体系"
+      ],
+      "leadsTo": [
+        "望远镜天文学",
+        "行星系统观念",
+        "卫星轨道研究"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        535.214,
+        72.757,
+        -193.36
+      ],
+      "timeline": [
+        32,
+        -24.805,
+        318.626
+      ],
+      "scale": [
+        495,
+        -23.462,
+        335.474
+      ]
+    }
+  },
+  {
+    "id": "stellar-parallax",
+    "name": {
+      "zh": "恒星视差",
+      "en": "Stellar Parallax"
+    },
+    "author": {
+      "zh": "贝塞尔",
+      "en": "Friedrich Bessel"
+    },
+    "year": 1838,
+    "branch": "cosmology",
+    "influence": 2,
+    "frontier": false,
+    "scaleExp": 16,
+    "oneLiner": "恒星一年里微微摆动，人类第一次量到星际距离。",
+    "equation": "d=\\frac{1}{p}",
+    "cardBack": {
+      "supersedes": [
+        "恒星距离只能猜测"
+      ],
+      "supersededBy": [
+        "标准烛光距离梯"
+      ],
+      "leadsTo": [
+        "银河尺度",
+        "天体测量",
+        "宇宙距离阶梯"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        1115.605,
+        90.139,
+        -324.242
+      ],
+      "timeline": [
+        761.6,
+        1.382,
+        330.28
+      ],
+      "scale": [
+        880,
+        -26.933,
+        338.283
+      ]
+    }
+  },
+  {
+    "id": "stellar-spectroscopy",
+    "name": {
+      "zh": "恒星光谱学",
+      "en": "Stellar Spectroscopy"
+    },
+    "author": {
+      "zh": "基尔霍夫、本生",
+      "en": "Kirchhoff and Bunsen"
+    },
+    "year": 1859,
+    "branch": "cosmology",
+    "influence": 2,
+    "frontier": false,
+    "scaleExp": 16,
+    "oneLiner": "星光的暗线透露成分，远方恒星也能被化验。",
+    "equation": "\\lambda^{-1}=R\\left(\\frac{1}{n_1^2}-\\frac{1}{n_2^2}\\right)",
+    "cardBack": {
+      "supersedes": [
+        "恒星成分不可知的看法"
+      ],
+      "supersededBy": [
+        "量子光谱理论"
+      ],
+      "leadsTo": [
+        "恒星分类",
+        "红移测量",
+        "化学丰度"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        665.475,
+        102.969,
+        -290.222
+      ],
+      "timeline": [
+        828.8,
+        19.55,
+        317.131
+      ],
+      "scale": [
+        880,
+        40.645,
+        336.064
+      ]
+    }
+  },
+  {
+    "id": "cepheid-law",
+    "name": {
+      "zh": "造父变星周光关系",
+      "en": "Cepheid Period-Luminosity Relation"
+    },
+    "author": {
+      "zh": "勒维特",
+      "en": "Henrietta Swan Leavitt"
+    },
+    "year": 1912,
+    "branch": "cosmology",
+    "influence": 3,
+    "frontier": false,
+    "scaleExp": 21,
+    "oneLiner": "一颗星闪烁的节奏，能告诉我们它到底有多远。",
+    "equation": "M=a\\log P+b",
+    "cardBack": {
+      "supersedes": [
+        "星系外距离缺少可靠标尺"
+      ],
+      "supersededBy": [
+        "Ia型超新星距离法"
+      ],
+      "leadsTo": [
+        "宇宙距离阶梯",
+        "哈勃定律",
+        "星系尺度"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        1079.054,
+        190.025,
+        -298.795
+      ],
+      "timeline": [
+        998.4,
+        -24.271,
+        338.833
+      ],
+      "scale": [
+        1155,
+        -44.966,
+        307.191
+      ]
+    }
+  },
+  {
+    "id": "hubble-expansion",
+    "name": {
+      "zh": "哈勃宇宙膨胀",
+      "en": "Hubble Expansion"
+    },
+    "author": {
+      "zh": "哈勃",
+      "en": "Edwin Hubble"
+    },
+    "year": 1929,
+    "branch": "cosmology",
+    "influence": 4,
+    "frontier": false,
+    "scaleExp": 26,
+    "simId": "expanding-universe",
+    "oneLiner": "越远的星系退得越快，宇宙不是静态背景。",
+    "equation": "v=H_0d",
+    "cardBack": {
+      "supersedes": [
+        "静态宇宙观"
+      ],
+      "supersededBy": [
+        "ΛCDM精密宇宙学"
+      ],
+      "leadsTo": [
+        "大爆炸理论",
+        "宇宙年龄",
+        "暗能量问题"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        818.161,
+        135.778,
+        -294.32
+      ],
+      "timeline": [
+        1052.8,
+        -22.696,
+        334.874
+      ],
+      "scale": [
+        1430,
+        36.961,
+        324.588
+      ]
+    }
+  },
+  {
+    "id": "big-bang-nucleosynthesis",
+    "name": {
+      "zh": "大爆炸核合成",
+      "en": "Big Bang Nucleosynthesis"
+    },
+    "author": {
+      "zh": "阿尔弗、伽莫夫等",
+      "en": "Alpher, Gamow et al."
+    },
+    "year": 1948,
+    "branch": "cosmology",
+    "influence": 3,
+    "frontier": false,
+    "scaleExp": 26,
+    "oneLiner": "早期宇宙像核反应炉，轻元素丰度留下出生记录。",
+    "equation": "Y_p\\approx0.25",
+    "cardBack": {
+      "supersedes": [
+        "轻元素只由恒星制造的想法"
+      ],
+      "supersededBy": [
+        "精密宇宙学丰度约束"
+      ],
+      "leadsTo": [
+        "大爆炸证据",
+        "重子密度",
+        "早期宇宙温度"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        896.768,
+        58.53,
+        -155.054
+      ],
+      "timeline": [
+        1113.6,
+        -9.829,
+        313.011
+      ],
+      "scale": [
+        1430,
+        -86.208,
+        342.233
+      ]
+    }
+  },
+  {
+    "id": "cosmic-microwave-background",
+    "name": {
+      "zh": "宇宙微波背景",
+      "en": "Cosmic Microwave Background"
+    },
+    "author": {
+      "zh": "彭齐亚斯、威尔逊",
+      "en": "Arno Penzias and Robert Wilson"
+    },
+    "year": 1965,
+    "branch": "cosmology",
+    "influence": 4,
+    "frontier": true,
+    "scaleExp": 26,
+    "simId": "cmb-afterglow",
+    "oneLiner": "天空处处有一层冷光，是宇宙婴儿时期的余温。",
+    "equation": "T_{\\mathrm{CMB}}\\approx2.725\\,\\mathrm{K}",
+    "cardBack": {
+      "supersedes": [
+        "稳恒态宇宙的主要预期"
+      ],
+      "supersededBy": [
+        "CMB各向异性精密测量"
+      ],
+      "leadsTo": [
+        "宇宙参数",
+        "暴胀证据",
+        "早期涨落"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        789.338,
+        70.003,
+        -204.334
+      ],
+      "timeline": [
+        1168,
+        -23.606,
+        312.089
+      ],
+      "scale": [
+        1430,
+        -39.402,
+        335.957
+      ]
+    }
+  },
+  {
+    "id": "pulsars",
+    "name": {
+      "zh": "脉冲星",
+      "en": "Pulsars"
+    },
+    "author": {
+      "zh": "贝尔、休伊什",
+      "en": "Jocelyn Bell Burnell and Antony Hewish"
+    },
+    "year": 1967,
+    "branch": "cosmology",
+    "influence": 2,
+    "frontier": true,
+    "scaleExp": 4,
+    "oneLiner": "宇宙里有像灯塔般扫过地球的中子星时钟。",
+    "equation": "P=\\mathrm{const.}",
+    "cardBack": {
+      "supersedes": [
+        "规则射电脉冲的人造信号猜想"
+      ],
+      "supersededBy": [
+        "中子星磁层模型"
+      ],
+      "leadsTo": [
+        "强磁场物理",
+        "引力波间接证据",
+        "脉冲星计时阵"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        924.86,
+        162.734,
+        -328.791
+      ],
+      "timeline": [
+        1174.4,
+        22.917,
+        340.431
+      ],
+      "scale": [
+        220,
+        -6.55,
+        313.121
+      ]
+    }
+  },
+  {
+    "id": "dark-matter-rotation",
+    "name": {
+      "zh": "星系旋转暗物质证据",
+      "en": "Galaxy Rotation Evidence for Dark Matter"
+    },
+    "author": {
+      "zh": "维拉·鲁宾等",
+      "en": "Vera Rubin et al."
+    },
+    "year": 1970,
+    "branch": "cosmology",
+    "influence": 3,
+    "frontier": true,
+    "scaleExp": 21,
+    "oneLiner": "星系外圈转得太快，像有看不见的质量在托住。",
+    "equation": "v(r)\\approx\\mathrm{const.}",
+    "cardBack": {
+      "supersedes": [
+        "星系质量主要由可见物质解释"
+      ],
+      "supersededBy": [],
+      "leadsTo": [
+        "暗物质晕",
+        "星系形成",
+        "直接探测实验"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        1031.824,
+        21.703,
+        -292.824
+      ],
+      "timeline": [
+        1184,
+        20.093,
+        323.12
+      ],
+      "scale": [
+        1155,
+        -23.484,
+        330.45
+      ]
+    }
+  },
+  {
+    "id": "inflation",
+    "name": {
+      "zh": "宇宙暴胀",
+      "en": "Cosmic Inflation"
+    },
+    "author": {
+      "zh": "古斯等",
+      "en": "Alan Guth et al."
+    },
+    "year": 1980,
+    "branch": "cosmology",
+    "influence": 3,
+    "frontier": true,
+    "scaleExp": 26,
+    "oneLiner": "宇宙早期一次暴烈拉伸，把平坦和均匀解释得通。",
+    "equation": "a(t)\\propto e^{Ht}",
+    "cardBack": {
+      "supersedes": [
+        "大爆炸模型中的视界和平坦性难题"
+      ],
+      "supersededBy": [],
+      "leadsTo": [
+        "原初涨落",
+        "CMB偏振",
+        "多重宇宙讨论"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        968.322,
+        54.999,
+        -327.256
+      ],
+      "timeline": [
+        1216,
+        -19.298,
+        313.086
+      ],
+      "scale": [
+        1430,
+        75.359,
+        312.096
+      ]
+    }
+  },
+  {
+    "id": "exoplanet-detection",
+    "name": {
+      "zh": "系外行星探测",
+      "en": "Exoplanet Detection"
+    },
+    "author": {
+      "zh": "梅耶、奎洛兹等",
+      "en": "Mayor, Queloz et al."
+    },
+    "year": 1995,
+    "branch": "cosmology",
+    "influence": 2,
+    "frontier": true,
+    "scaleExp": 12,
+    "oneLiner": "恒星的轻微摇摆泄露出旁边看不见的行星。",
+    "equation": "\\Delta v_*\\sim \\frac{m_p}{M_*}v_p",
+    "cardBack": {
+      "supersedes": [
+        "太阳系可能独一无二的怀疑"
+      ],
+      "supersededBy": [],
+      "leadsTo": [
+        "凌星法",
+        "宜居带统计",
+        "行星大气光谱"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        437.997,
+        89.942,
+        -200.755
+      ],
+      "timeline": [
+        1264,
+        -19.554,
+        323.175
+      ],
+      "scale": [
+        660,
+        16.072,
+        323.434
+      ]
+    }
+  },
+  {
+    "id": "dark-energy",
+    "name": {
+      "zh": "暗能量",
+      "en": "Dark Energy"
+    },
+    "author": {
+      "zh": "超新星宇宙学团队",
+      "en": "Supernova Cosmology Project and High-Z Team"
+    },
+    "year": 1998,
+    "branch": "cosmology",
+    "influence": 4,
+    "frontier": true,
+    "scaleExp": 26,
+    "simId": "accelerating-cosmos",
+    "oneLiner": "宇宙膨胀不但没慢下来，反而像被无形压力推着加速。",
+    "equation": "w\\approx -1",
+    "cardBack": {
+      "supersedes": [
+        "引力会持续减慢宇宙膨胀的预期"
+      ],
+      "supersededBy": [],
+      "leadsTo": [
+        "宇宙常数问题",
+        "暗能量巡天",
+        "精密超新星宇宙学"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        981.509,
+        62.368,
+        -215.142
+      ],
+      "timeline": [
+        1273.6,
+        2.368,
+        323.879
+      ],
+      "scale": [
+        1430,
+        -14.208,
+        324.523
+      ]
+    }
+  },
+  {
+    "id": "lambda-cdm",
+    "name": {
+      "zh": "ΛCDM模型",
+      "en": "Lambda-CDM Model"
+    },
+    "author": {
+      "zh": "多项宇宙学观测",
+      "en": "Multiple Cosmological Surveys"
+    },
+    "year": 2003,
+    "branch": "cosmology",
+    "influence": 3,
+    "frontier": true,
+    "scaleExp": 26,
+    "oneLiner": "暗物质、暗能量和普通物质拼成当前宇宙标准配方。",
+    "equation": "\\Omega_m+\\Omega_\\Lambda+\\Omega_r\\approx1",
+    "cardBack": {
+      "supersedes": [
+        "单一观测支撑的宇宙模型"
+      ],
+      "supersededBy": [],
+      "leadsTo": [
+        "宇宙参数测量",
+        "结构形成模拟",
+        "哈勃张力"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        965.413,
+        175.536,
+        -229.162
+      ],
+      "timeline": [
+        1289.6,
+        34.92,
+        322.828
+      ],
+      "scale": [
+        1430,
+        119.783,
+        307.464
+      ]
+    }
+  },
+  {
+    "id": "baryon-acoustic-oscillations",
+    "name": {
+      "zh": "重子声学振荡",
+      "en": "Baryon Acoustic Oscillations"
+    },
+    "author": {
+      "zh": "SDSS等巡天",
+      "en": "SDSS and other surveys"
+    },
+    "year": 2005,
+    "branch": "cosmology",
+    "influence": 2,
+    "frontier": true,
+    "scaleExp": 24,
+    "oneLiner": "早期宇宙的声波，在星系分布里留下标准尺。",
+    "equation": "r_s\\approx150\\,\\mathrm{Mpc}",
+    "cardBack": {
+      "supersedes": [
+        "只靠超新星测宇宙膨胀"
+      ],
+      "supersededBy": [],
+      "leadsTo": [
+        "暗能量约束",
+        "大尺度结构",
+        "精密宇宙距离"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        1071.584,
+        80.049,
+        -146.09
+      ],
+      "timeline": [
+        1296,
+        -7.422,
+        337.146
+      ],
+      "scale": [
+        1320,
+        -31.961,
+        316.653
+      ]
+    }
+  },
+  {
+    "id": "multi-messenger-astronomy",
+    "name": {
+      "zh": "多信使天文学",
+      "en": "Multi-Messenger Astronomy"
+    },
+    "author": {
+      "zh": "LIGO/Virgo及多台望远镜",
+      "en": "LIGO/Virgo and partner observatories"
+    },
+    "year": 2017,
+    "branch": "cosmology",
+    "influence": 3,
+    "frontier": true,
+    "scaleExp": 21,
+    "oneLiner": "同一次宇宙事件，同时送来引力波、光和粒子线索。",
+    "equation": "t_{\\mathrm{GW}}\\approx t_\\gamma",
+    "cardBack": {
+      "supersedes": [
+        "单一信使观测宇宙"
+      ],
+      "supersededBy": [],
+      "leadsTo": [
+        "中子星并合",
+        "重元素起源",
+        "独立哈勃常数测量"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        924.194,
+        5.282,
+        -255.301
+      ],
+      "timeline": [
+        1334.4,
+        -3.735,
+        328.861
+      ],
+      "scale": [
+        1155,
+        42.878,
+        340.416
+      ]
+    }
+  },
+  {
+    "id": "black-hole-image",
+    "name": {
+      "zh": "黑洞阴影成像",
+      "en": "Black Hole Shadow Imaging"
+    },
+    "author": {
+      "zh": "事件视界望远镜合作组",
+      "en": "Event Horizon Telescope Collaboration"
+    },
+    "year": 2019,
+    "branch": "cosmology",
+    "influence": 2,
+    "frontier": true,
+    "scaleExp": 13,
+    "oneLiner": "全球望远镜合成一只眼，终于拍到黑洞的暗影。",
+    "equation": "\\theta\\sim\\frac{r_s}{D}",
+    "cardBack": {
+      "supersedes": [
+        "黑洞只能间接成像的阶段"
+      ],
+      "supersededBy": [],
+      "leadsTo": [
+        "强场成像",
+        "喷流物理",
+        "毫米波干涉"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        760.577,
+        41.517,
+        -286.899
+      ],
+      "timeline": [
+        1340.8,
+        17.622,
+        327.431
+      ],
+      "scale": [
+        715,
+        -3.966,
+        333.639
+      ]
+    }
+  },
+  {
+    "id": "cosmic-reionization",
+    "name": {
+      "zh": "宇宙再电离",
+      "en": "Cosmic Reionization"
+    },
+    "author": {
+      "zh": "深空巡天与CMB观测",
+      "en": "Deep surveys and CMB observations"
+    },
+    "year": 2003,
+    "branch": "cosmology",
+    "influence": 1,
+    "frontier": true,
+    "scaleExp": 25,
+    "oneLiner": "第一批恒星点亮后，宇宙雾气被重新电离。",
+    "equation": "\\tau=\\int n_e\\sigma_T c\\,dt",
+    "cardBack": {
+      "supersedes": [
+        "黑暗时代之后历史空白"
+      ],
+      "supersededBy": [],
+      "leadsTo": [
+        "第一代星系",
+        "JWST深场",
+        "21厘米宇宙学"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        1027.764,
+        110.797,
+        -242.94
+      ],
+      "timeline": [
+        1289.6,
+        -28.911,
+        331.809
+      ],
+      "scale": [
+        1375,
+        -60.92,
+        336.945
+      ]
+    }
+  },
+  {
+    "id": "archimedes-buoyancy",
+    "name": {
+      "zh": "阿基米德浮力原理",
+      "en": "Archimedes' Principle"
+    },
+    "author": {
+      "zh": "阿基米德",
+      "en": "Archimedes"
+    },
+    "year": -250,
+    "branch": "mechanics",
+    "influence": 3,
+    "frontier": false,
+    "scaleExp": 0,
+    "oneLiner": "物体在流体中失去的重量，等于排开流体的重量。",
+    "equation": "F_b=\\rho gV",
+    "cardBack": {
+      "supersedes": [
+        "把漂浮只当经验现象的判断"
+      ],
+      "supersededBy": [
+        "连续介质静力学",
+        "船舶稳性理论"
+      ],
+      "leadsTo": [
+        "流体静力学",
+        "密度测量",
+        "浮沉工程"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -804.341,
+        -15.537,
+        -19.109
+      ],
+      "timeline": [
+        -5920,
+        8.905,
+        -338.858
+      ],
+      "scale": [
+        0,
+        -337.64,
+        -314.94
+      ]
+    }
+  },
+  {
+    "id": "hooke-law",
+    "name": {
+      "zh": "胡克弹性定律",
+      "en": "Hooke's Law"
+    },
+    "author": {
+      "zh": "胡克",
+      "en": "Robert Hooke"
+    },
+    "year": 1678,
+    "branch": "mechanics",
+    "influence": 2,
+    "frontier": false,
+    "scaleExp": 0,
+    "oneLiner": "小形变里，弹簧拉多远，反抗力就按比例变大。",
+    "equation": "F=-kx",
+    "cardBack": {
+      "supersedes": [
+        "材料响应只能逐件试验的经验做法"
+      ],
+      "supersededBy": [
+        "线弹性理论",
+        "连续介质力学"
+      ],
+      "leadsTo": [
+        "弹簧振子",
+        "弹性模量",
+        "固体力学"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -769.423,
+        -69.62,
+        -104.808
+      ],
+      "timeline": [
+        249.6,
+        -9.766,
+        -337.262
+      ],
+      "scale": [
+        0,
+        -51.783,
+        -340.614
+      ]
+    }
+  },
+  {
+    "id": "bernoulli-equation",
+    "name": {
+      "zh": "伯努利方程",
+      "en": "Bernoulli's Equation"
+    },
+    "author": {
+      "zh": "丹尼尔·伯努利",
+      "en": "Daniel Bernoulli"
+    },
+    "year": 1738,
+    "branch": "mechanics",
+    "influence": 2,
+    "frontier": false,
+    "scaleExp": 0,
+    "oneLiner": "流体越快，静压越低，能量账本沿流线守恒。",
+    "equation": "p+\\frac{1}{2}\\rho v^2+\\rho gh=\\mathrm{const.}",
+    "cardBack": {
+      "supersedes": [
+        "只凭水力经验估压的做法"
+      ],
+      "supersededBy": [
+        "欧拉流体方程",
+        "纳维-斯托克斯方程"
+      ],
+      "leadsTo": [
+        "文丘里管",
+        "升力估算",
+        "管流诊断"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -947.039,
+        56.753,
+        -58.754
+      ],
+      "timeline": [
+        441.6,
+        -12.477,
+        -321.782
+      ],
+      "scale": [
+        0,
+        -301.466,
+        -322.11
+      ]
+    }
+  },
+  {
+    "id": "poisson-brackets",
+    "name": {
+      "zh": "泊松括号",
+      "en": "Poisson Brackets"
+    },
+    "author": {
+      "zh": "泊松",
+      "en": "Siméon Denis Poisson"
+    },
+    "year": 1809,
+    "branch": "mechanics",
+    "influence": 2,
+    "frontier": false,
+    "scaleExp": 0,
+    "oneLiner": "把相空间里的量怎样随时间变，写成一套代数规则。",
+    "equation": "\\{f,g\\}=\\sum_i\\left(\\frac{\\partial f}{\\partial q_i}\\frac{\\partial g}{\\partial p_i}-\\frac{\\partial f}{\\partial p_i}\\frac{\\partial g}{\\partial q_i}\\right)",
+    "cardBack": {
+      "supersedes": [
+        "只用坐标方程追踪轨道的表述"
+      ],
+      "supersededBy": [
+        "哈密顿力学",
+        "量子对易子"
+      ],
+      "leadsTo": [
+        "正则变换",
+        "辛几何",
+        "量子力学形式化"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -423.641,
+        -22.679,
+        46.584
+      ],
+      "timeline": [
+        668.8,
+        4.13,
+        -323.718
+      ],
+      "scale": [
+        0,
+        320.011,
+        -326.333
+      ]
+    }
+  },
+  {
+    "id": "cauchy-continuum-mechanics",
+    "name": {
+      "zh": "连续介质应力理论",
+      "en": "Cauchy Continuum Mechanics"
+    },
+    "author": {
+      "zh": "柯西",
+      "en": "Augustin-Louis Cauchy"
+    },
+    "year": 1822,
+    "branch": "mechanics",
+    "influence": 2,
+    "frontier": false,
+    "scaleExp": 0,
+    "oneLiner": "把材料切开看内力，才有了应力张量这本账。",
+    "equation": "\\sigma_{ij}n_j=t_i",
+    "cardBack": {
+      "supersedes": [
+        "杆梁板各自为政的受力模型"
+      ],
+      "supersededBy": [
+        "弹性力学",
+        "流体力学张量形式"
+      ],
+      "leadsTo": [
+        "有限元方法",
+        "材料强度",
+        "连续介质模拟"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -763.857,
+        93.973,
+        -133.343
+      ],
+      "timeline": [
+        710.4,
+        -7.454,
+        -310.38
+      ],
+      "scale": [
+        0,
+        -273.334,
+        -310.779
+      ]
+    }
+  },
+  {
+    "id": "action-principal-function",
+    "name": {
+      "zh": "作用量主函数",
+      "en": "Hamilton's Principal Function"
+    },
+    "author": {
+      "zh": "哈密顿",
+      "en": "William Rowan Hamilton"
+    },
+    "year": 1837,
+    "branch": "mechanics",
+    "influence": 3,
+    "frontier": false,
+    "scaleExp": 0,
+    "oneLiner": "把一整条运动轨迹，压进一个满足偏微分方程的函数。",
+    "equation": "H(q,\\partial S/\\partial q,t)+\\partial S/\\partial t=0",
+    "cardBack": {
+      "supersedes": [
+        "逐点求解运动方程的单一路径"
+      ],
+      "supersededBy": [
+        "波动力学",
+        "路径积分"
+      ],
+      "leadsTo": [
+        "几何光学类比",
+        "WKB近似",
+        "半经典量子论"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -197.851,
+        -5.556,
+        86.267
+      ],
+      "timeline": [
+        758.4,
+        1.189,
+        -330.261
+      ],
+      "scale": [
+        0,
+        -390.194,
+        -332.597
+      ]
+    }
+  },
+  {
+    "id": "lyapunov-stability",
+    "name": {
+      "zh": "李雅普诺夫稳定性",
+      "en": "Lyapunov Stability"
+    },
+    "author": {
+      "zh": "李雅普诺夫",
+      "en": "Aleksandr Lyapunov"
+    },
+    "year": 1892,
+    "branch": "mechanics",
+    "influence": 2,
+    "frontier": false,
+    "scaleExp": 0,
+    "oneLiner": "不求精确解，也能判断微小扰动会不会被放大。",
+    "equation": "|\\delta x(t)|\\le C|\\delta x(0)|",
+    "cardBack": {
+      "supersedes": [
+        "只看显式轨道是否可解的稳定判断"
+      ],
+      "supersededBy": [
+        "非线性动力系统",
+        "混沌理论"
+      ],
+      "leadsTo": [
+        "控制理论",
+        "天体轨道稳定",
+        "李雅普诺夫指数"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -691.23,
+        -39.812,
+        -31.69
+      ],
+      "timeline": [
+        934.4,
+        18.235,
+        -325.105
+      ],
+      "scale": [
+        0,
+        103.437,
+        -327.127
+      ]
+    }
+  },
+  {
+    "id": "korteweg-de-vries",
+    "name": {
+      "zh": "Korteweg-de Vries方程",
+      "en": "Korteweg-de Vries Equation"
+    },
+    "author": {
+      "zh": "科特韦赫与德弗里斯",
+      "en": "Diederik Korteweg and Gustav de Vries"
+    },
+    "year": 1895,
+    "branch": "mechanics",
+    "influence": 2,
+    "frontier": false,
+    "scaleExp": 0,
+    "oneLiner": "非线性和色散互相抵住，让浅水波能独自前行。",
+    "equation": "u_t+6uu_x+u_{xxx}=0",
+    "cardBack": {
+      "supersedes": [
+        "只用线性波描述浅水扰动"
+      ],
+      "supersededBy": [
+        "孤子理论",
+        "可积系统"
+      ],
+      "leadsTo": [
+        "浅水波",
+        "非线性波",
+        "反散射方法"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -766.06,
+        37.461,
+        -205.985
+      ],
+      "timeline": [
+        944,
+        4.891,
+        -334.17
+      ],
+      "scale": [
+        0,
+        3.486,
+        -326.888
+      ]
+    }
+  },
+  {
+    "id": "tsiolkovsky-rocket-equation",
+    "name": {
+      "zh": "齐奥尔科夫斯基火箭方程",
+      "en": "Tsiolkovsky Rocket Equation"
+    },
+    "author": {
+      "zh": "齐奥尔科夫斯基",
+      "en": "Konstantin Tsiolkovsky"
+    },
+    "year": 1903,
+    "branch": "mechanics",
+    "influence": 2,
+    "frontier": false,
+    "scaleExp": 6,
+    "oneLiner": "火箭能多快，取决于排气速度和质量比的对数。",
+    "equation": "\\Delta v=v_e\\ln(m_0/m_f)",
+    "cardBack": {
+      "supersedes": [
+        "把航天只当炮弹外推的设想"
+      ],
+      "supersededBy": [
+        "多级火箭设计",
+        "轨道发射工程"
+      ],
+      "leadsTo": [
+        "航天力学",
+        "推进剂预算",
+        "深空任务规划"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -904.092,
+        -22.253,
+        -185.684
+      ],
+      "timeline": [
+        969.6,
+        -14.173,
+        -337.608
+      ],
+      "scale": [
+        330,
+        14.461,
+        -318.228
+      ]
+    }
+  },
+  {
+    "id": "soliton-recurrence",
+    "name": {
+      "zh": "孤子数值发现",
+      "en": "Numerical Discovery of Solitons"
+    },
+    "author": {
+      "zh": "扎布斯基与克鲁斯卡尔",
+      "en": "Norman Zabusky and Martin Kruskal"
+    },
+    "year": 1965,
+    "branch": "mechanics",
+    "influence": 2,
+    "frontier": false,
+    "scaleExp": 0,
+    "oneLiner": "波包相撞后几乎原样穿过，非线性不只会制造混乱。",
+    "equation": "u(x,t)=A\\,\\mathrm{sech}^2(kx-\\omega t)",
+    "cardBack": {
+      "supersedes": [
+        "非线性波必然破碎耗散的直觉"
+      ],
+      "supersededBy": [
+        "现代可积系统",
+        "光纤孤子"
+      ],
+      "leadsTo": [
+        "等离子体波",
+        "非线性光学",
+        "数值实验传统"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -840.554,
+        77.993,
+        -38.962
+      ],
+      "timeline": [
+        1168,
+        -7.095,
+        -332.832
+      ],
+      "scale": [
+        0,
+        349.97,
+        -334.591
+      ]
+    }
+  },
+  {
+    "id": "poisson-spot-test",
+    "name": {
+      "zh": "泊松亮斑检验",
+      "en": "Poisson Spot Test"
+    },
+    "author": {
+      "zh": "菲涅耳与阿拉戈",
+      "en": "Augustin-Jean Fresnel and François Arago"
+    },
+    "year": 1818,
+    "branch": "em",
+    "influence": 2,
+    "frontier": false,
+    "scaleExp": -6,
+    "oneLiner": "圆盘阴影中心反而有亮点，波动光学赢下关键一局。",
+    "equation": "I(0)>0",
+    "cardBack": {
+      "supersedes": [
+        "光只沿直线投影的粒子图像"
+      ],
+      "supersededBy": [
+        "菲涅耳衍射理论",
+        "经典波动光学"
+      ],
+      "leadsTo": [
+        "衍射实验",
+        "干涉仪",
+        "波前重建"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -342.176,
+        71.163,
+        -569.728
+      ],
+      "timeline": [
+        697.6,
+        -2.762,
+        -181.547
+      ],
+      "scale": [
+        -330,
+        71.827,
+        -183.995
+      ]
+    }
+  },
+  {
+    "id": "biot-savart-field",
+    "name": {
+      "zh": "电流元磁场定律",
+      "en": "Biot-Savart Law"
+    },
+    "author": {
+      "zh": "毕奥与萨伐尔",
+      "en": "Jean-Baptiste Biot and Félix Savart"
+    },
+    "year": 1820,
+    "branch": "em",
+    "influence": 2,
+    "frontier": false,
+    "scaleExp": -2,
+    "oneLiner": "电流每一小段都贡献磁场，方向由叉乘给出。",
+    "equation": "d\\vec B=\\frac{\\mu_0}{4\\pi}\\frac{I\\,d\\vec l\\times \\hat r}{r^2}",
+    "cardBack": {
+      "supersedes": [
+        "电与磁相互独立的旧分类"
+      ],
+      "supersededBy": [
+        "安培定律",
+        "麦克斯韦方程组"
+      ],
+      "leadsTo": [
+        "线圈磁场计算",
+        "电磁铁",
+        "磁偶极模型"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -286.359,
+        5.074,
+        -491.897
+      ],
+      "timeline": [
+        704,
+        -5.65,
+        -194.341
+      ],
+      "scale": [
+        -110,
+        14.767,
+        -180.543
+      ]
+    }
+  },
+  {
+    "id": "lenz-law",
+    "name": {
+      "zh": "楞次定律",
+      "en": "Lenz's Law"
+    },
+    "author": {
+      "zh": "楞次",
+      "en": "Heinrich Lenz"
+    },
+    "year": 1834,
+    "branch": "em",
+    "influence": 2,
+    "frontier": false,
+    "scaleExp": -1,
+    "oneLiner": "感应电流总是反抗磁通变化，能量不会凭空出现。",
+    "equation": "\\mathcal E=-\\frac{d\\Phi_B}{dt}",
+    "cardBack": {
+      "supersedes": [
+        "只知有感应、不知方向的经验规则"
+      ],
+      "supersededBy": [
+        "法拉第-麦克斯韦感应定律"
+      ],
+      "leadsTo": [
+        "发电机",
+        "涡流制动",
+        "变压器极性"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -389.08,
+        41.903,
+        -486.938
+      ],
+      "timeline": [
+        748.8,
+        -3.131,
+        -191.039
+      ],
+      "scale": [
+        -55,
+        -14.993,
+        -207.45
+      ]
+    }
+  },
+  {
+    "id": "doppler-effect",
+    "name": {
+      "zh": "多普勒效应",
+      "en": "Doppler Effect"
+    },
+    "author": {
+      "zh": "多普勒",
+      "en": "Christian Doppler"
+    },
+    "year": 1842,
+    "branch": "em",
+    "influence": 2,
+    "frontier": false,
+    "scaleExp": 0,
+    "oneLiner": "源和观测者相对运动，会把波的频率拉高或压低。",
+    "equation": "f'=f\\frac{v\\pm v_o}{v\\mp v_s}",
+    "cardBack": {
+      "supersedes": [
+        "频率只由光源本身决定的看法"
+      ],
+      "supersededBy": [
+        "相对论多普勒效应",
+        "宇宙红移测量"
+      ],
+      "leadsTo": [
+        "雷达测速",
+        "恒星视向速度",
+        "医学超声"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        16.132,
+        98.22,
+        -399.319
+      ],
+      "timeline": [
+        774.4,
+        -2.922,
+        -207.712
+      ],
+      "scale": [
+        0,
+        -113.109,
+        -179.802
+      ]
+    }
+  },
+  {
+    "id": "kirchhoff-circuit-rules",
+    "name": {
+      "zh": "基尔霍夫节点回路定律",
+      "en": "Kirchhoff's Circuit Rules"
+    },
+    "author": {
+      "zh": "基尔霍夫",
+      "en": "Gustav Kirchhoff"
+    },
+    "year": 1845,
+    "branch": "em",
+    "influence": 2,
+    "frontier": false,
+    "scaleExp": -1,
+    "oneLiner": "节点不攒电荷，回路不凭空增能，电路可系统求解。",
+    "equation": "\\sum I=0,\\quad \\sum V=0",
+    "cardBack": {
+      "supersedes": [
+        "只会逐段估算电路的做法"
+      ],
+      "supersededBy": [
+        "网络分析",
+        "交流电路理论"
+      ],
+      "leadsTo": [
+        "电桥测量",
+        "集总电路",
+        "电子工程"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -325.002,
+        46.651,
+        -679.855
+      ],
+      "timeline": [
+        784,
+        -19.089,
+        -184.714
+      ],
+      "scale": [
+        -55,
+        -40.258,
+        -195.904
+      ]
+    }
+  },
+  {
+    "id": "fizeau-light-speed",
+    "name": {
+      "zh": "斐索齿轮测光速",
+      "en": "Fizeau's Toothed-Wheel Measurement"
+    },
+    "author": {
+      "zh": "斐索",
+      "en": "Hippolyte Fizeau"
+    },
+    "year": 1849,
+    "branch": "em",
+    "influence": 2,
+    "frontier": false,
+    "scaleExp": 8,
+    "oneLiner": "用旋转齿轮截断光束，第一次在地面量出光速。",
+    "equation": "c=4Ndf",
+    "cardBack": {
+      "supersedes": [
+        "只能靠天文尺度估算光速的方法"
+      ],
+      "supersededBy": [
+        "迈克耳孙干涉测光速",
+        "现代计量光学"
+      ],
+      "leadsTo": [
+        "光速常数",
+        "以光定义米",
+        "相对论实验背景"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -187.069,
+        97.589,
+        -509.237
+      ],
+      "timeline": [
+        796.8,
+        8.92,
+        -179.611
+      ],
+      "scale": [
+        440,
+        22.74,
+        -179.042
+      ]
+    }
+  },
+  {
+    "id": "kirchhoff-radiation-law",
+    "name": {
+      "zh": "基尔霍夫热辐射定律",
+      "en": "Kirchhoff's Law of Thermal Radiation"
+    },
+    "author": {
+      "zh": "基尔霍夫",
+      "en": "Gustav Kirchhoff"
+    },
+    "year": 1859,
+    "branch": "em",
+    "influence": 2,
+    "frontier": false,
+    "scaleExp": -6,
+    "oneLiner": "好吸收者也是好发射者，黑体问题由此成形。",
+    "equation": "\\frac{E_\\nu}{A_\\nu}=B_\\nu(T)",
+    "cardBack": {
+      "supersedes": [
+        "把发光和吸收分开处理的热辐射观"
+      ],
+      "supersededBy": [
+        "普朗克黑体公式"
+      ],
+      "leadsTo": [
+        "光谱分析",
+        "恒星温度",
+        "量子论起点"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        87.703,
+        63.525,
+        -329.668
+      ],
+      "timeline": [
+        828.8,
+        -16.886,
+        -185.466
+      ],
+      "scale": [
+        -330,
+        -79.096,
+        -187.26
+      ]
+    }
+  },
+  {
+    "id": "poynting-theorem",
+    "name": {
+      "zh": "电磁能流定理",
+      "en": "Poynting Theorem"
+    },
+    "author": {
+      "zh": "坡印廷",
+      "en": "John Henry Poynting"
+    },
+    "year": 1884,
+    "branch": "em",
+    "influence": 2,
+    "frontier": false,
+    "scaleExp": -1,
+    "oneLiner": "电磁场也会携带能量，并沿坡印廷矢量流动。",
+    "equation": "\\frac{\\partial u}{\\partial t}+\\nabla\\cdot\\vec S=-\\vec J\\cdot\\vec E",
+    "cardBack": {
+      "supersedes": [
+        "能量只在导线中流动的直觉"
+      ],
+      "supersededBy": [
+        "场论能动量张量",
+        "辐射压理论"
+      ],
+      "leadsTo": [
+        "天线工程",
+        "激光功率",
+        "电磁场能量守恒"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -103.792,
+        30.844,
+        -458.229
+      ],
+      "timeline": [
+        908.8,
+        2.754,
+        -207.615
+      ],
+      "scale": [
+        -55,
+        38.61,
+        -177.585
+      ]
+    }
+  },
+  {
+    "id": "x-ray-discovery",
+    "name": {
+      "zh": "X射线发现",
+      "en": "Discovery of X-rays"
+    },
+    "author": {
+      "zh": "伦琴",
+      "en": "Wilhelm Röntgen"
+    },
+    "year": 1895,
+    "branch": "em",
+    "influence": 2,
+    "frontier": false,
+    "scaleExp": -10,
+    "oneLiner": "穿透软组织的未知射线，让不可见结构变成影像。",
+    "equation": "E=h\\nu",
+    "cardBack": {
+      "supersedes": [
+        "可见光才适合成像的限制"
+      ],
+      "supersededBy": [
+        "X射线晶体学",
+        "康普顿散射"
+      ],
+      "leadsTo": [
+        "医学影像",
+        "材料探伤",
+        "高能光子物理"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -100.162,
+        97.734,
+        -383.439
+      ],
+      "timeline": [
+        944,
+        1.37,
+        -186.047
+      ],
+      "scale": [
+        -550,
+        28.664,
+        -180.035
+      ]
+    }
+  },
+  {
+    "id": "meissner-effect",
+    "name": {
+      "zh": "迈斯纳效应",
+      "en": "Meissner Effect"
+    },
+    "author": {
+      "zh": "迈斯纳与奥克森菲尔德",
+      "en": "Walther Meissner and Robert Ochsenfeld"
+    },
+    "year": 1933,
+    "branch": "em",
+    "influence": 2,
+    "frontier": false,
+    "scaleExp": -6,
+    "oneLiner": "超导体不只是零电阻，还会把内部磁场排出去。",
+    "equation": "\\vec B=0\\quad (T<T_c)",
+    "cardBack": {
+      "supersedes": [
+        "把超导只看作完美导体的解释"
+      ],
+      "supersededBy": [
+        "伦敦方程",
+        "BCS理论"
+      ],
+      "leadsTo": [
+        "磁悬浮",
+        "超导磁体",
+        "凝聚态量子相"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -171.368,
+        51.898,
+        -305.105
+      ],
+      "timeline": [
+        1065.6,
+        -23.276,
+        -198.971
+      ],
+      "scale": [
+        -330,
+        33.459,
+        -186.816
+      ]
+    }
+  },
+  {
+    "id": "fourier-heat-equation",
+    "name": {
+      "zh": "傅里叶热方程",
+      "en": "Fourier Heat Equation"
+    },
+    "author": {
+      "zh": "傅里叶",
+      "en": "Joseph Fourier"
+    },
+    "year": 1822,
+    "branch": "thermo",
+    "influence": 3,
+    "frontier": false,
+    "scaleExp": 0,
+    "oneLiner": "温度差会被扩散抹平，热传导可写成偏微分方程。",
+    "equation": "\\frac{\\partial T}{\\partial t}=\\alpha\\nabla^2T",
+    "cardBack": {
+      "supersedes": [
+        "只凭热质流动图像解释传热"
+      ],
+      "supersededBy": [
+        "扩散方程族",
+        "非平衡统计物理"
+      ],
+      "leadsTo": [
+        "傅里叶分析",
+        "热工程",
+        "扩散模型"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -422.432,
+        -80.213,
+        305.96
+      ],
+      "timeline": [
+        710.4,
+        -0.621,
+        -55.686
+      ],
+      "scale": [
+        0,
+        3.442,
+        -71.83
+      ]
+    }
+  },
+  {
+    "id": "ideal-gas-equation",
+    "name": {
+      "zh": "理想气体状态方程",
+      "en": "Ideal Gas Law"
+    },
+    "author": {
+      "zh": "克拉佩龙",
+      "en": "Émile Clapeyron"
+    },
+    "year": 1834,
+    "branch": "thermo",
+    "influence": 2,
+    "frontier": false,
+    "scaleExp": -9,
+    "oneLiner": "压强、体积、温度和物质的量，被压进一个简单乘积。",
+    "equation": "pV=nRT",
+    "cardBack": {
+      "supersedes": [
+        "分散的波义耳、查理和阿伏伽德罗定律"
+      ],
+      "supersededBy": [
+        "真实气体状态方程",
+        "统计力学气体模型"
+      ],
+      "leadsTo": [
+        "热机计算",
+        "气体温标",
+        "分子运动论"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -460.31,
+        -30.484,
+        366.44
+      ],
+      "timeline": [
+        748.8,
+        19.654,
+        -60.215
+      ],
+      "scale": [
+        -495,
+        -56.555,
+        -57.24
+      ]
+    }
+  },
+  {
+    "id": "van-der-waals-real-gas",
+    "name": {
+      "zh": "真实气体状态方程",
+      "en": "van der Waals Equation of State"
+    },
+    "author": {
+      "zh": "范德瓦耳斯",
+      "en": "Johannes Diderik van der Waals"
+    },
+    "year": 1873,
+    "branch": "thermo",
+    "influence": 2,
+    "frontier": false,
+    "scaleExp": -9,
+    "oneLiner": "分子有大小也会相吸，气液相变才进了方程。",
+    "equation": "\\left(p+\\frac{a}{V_m^2}\\right)(V_m-b)=RT",
+    "cardBack": {
+      "supersedes": [
+        "把气体都当无相互作用点粒子的近似"
+      ],
+      "supersededBy": [
+        "临界现象理论",
+        "现代状态方程"
+      ],
+      "leadsTo": [
+        "相变曲线",
+        "临界点",
+        "分子相互作用模型"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -312.842,
+        -88.399,
+        469.431
+      ],
+      "timeline": [
+        873.6,
+        3.552,
+        -70.768
+      ],
+      "scale": [
+        -495,
+        68.632,
+        -53.433
+      ]
+    }
+  },
+  {
+    "id": "gibbs-phase-equilibrium",
+    "name": {
+      "zh": "吉布斯相平衡",
+      "en": "Gibbs Phase Equilibrium"
+    },
+    "author": {
+      "zh": "吉布斯",
+      "en": "Josiah Willard Gibbs"
+    },
+    "year": 1876,
+    "branch": "thermo",
+    "influence": 3,
+    "frontier": false,
+    "scaleExp": -9,
+    "oneLiner": "相变不是经验图谱，而是自由能取极小的结果。",
+    "equation": "dG=-S\\,dT+V\\,dp+\\sum_i\\mu_i\\,dN_i",
+    "cardBack": {
+      "supersedes": [
+        "只按实验曲线记忆相变的做法"
+      ],
+      "supersededBy": [
+        "统计系综",
+        "相图计算"
+      ],
+      "leadsTo": [
+        "化学势",
+        "相律",
+        "材料热力学"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -375.478,
+        16.657,
+        371.811
+      ],
+      "timeline": [
+        883.2,
+        18.16,
+        -51.203
+      ],
+      "scale": [
+        -495,
+        -104.538,
+        -49.238
+      ]
+    }
+  },
+  {
+    "id": "third-law-absolute-zero",
+    "name": {
+      "zh": "绝对零度热定理",
+      "en": "Nernst Heat Theorem"
+    },
+    "author": {
+      "zh": "能斯特",
+      "en": "Walther Nernst"
+    },
+    "year": 1906,
+    "branch": "thermo",
+    "influence": 2,
+    "frontier": false,
+    "scaleExp": -10,
+    "oneLiner": "温度趋近绝对零度时，熵的变化也趋于消失。",
+    "equation": "\\lim_{T\\to0}S=S_0",
+    "cardBack": {
+      "supersedes": [
+        "低温热化学缺少统一边界条件的状态"
+      ],
+      "supersededBy": [
+        "量子统计低温理论"
+      ],
+      "leadsTo": [
+        "低温物理",
+        "绝热去磁",
+        "熵标定"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -304.158,
+        -56.444,
+        238.259
+      ],
+      "timeline": [
+        979.2,
+        -1.288,
+        -68.149
+      ],
+      "scale": [
+        -550,
+        32.432,
+        -64.411
+      ]
+    }
+  },
+  {
+    "id": "landau-superfluidity",
+    "name": {
+      "zh": "朗道超流理论",
+      "en": "Landau Theory of Superfluidity"
+    },
+    "author": {
+      "zh": "朗道",
+      "en": "Lev Landau"
+    },
+    "year": 1941,
+    "branch": "thermo",
+    "influence": 2,
+    "frontier": false,
+    "scaleExp": -10,
+    "oneLiner": "液氦能无黏流动，是因为低能激发被量子规则限制。",
+    "equation": "v_c=\\min_p\\frac{\\epsilon(p)}{p}",
+    "cardBack": {
+      "supersedes": [
+        "把低温液体仍当普通黏性流体的想法"
+      ],
+      "supersededBy": [
+        "量子流体理论",
+        "玻色凝聚实验"
+      ],
+      "leadsTo": [
+        "声子与旋子",
+        "临界速度",
+        "量子涡旋"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -192.429,
+        8.354,
+        345.169
+      ],
+      "timeline": [
+        1091.2,
+        2.501,
+        -56.405
+      ],
+      "scale": [
+        -550,
+        -19.239,
+        -63.953
+      ]
+    }
+  },
+  {
+    "id": "onsager-ising-solution",
+    "name": {
+      "zh": "二维伊辛精确解",
+      "en": "Onsager's Exact Solution of the 2D Ising Model"
+    },
+    "author": {
+      "zh": "昂萨格",
+      "en": "Lars Onsager"
+    },
+    "year": 1944,
+    "branch": "thermo",
+    "influence": 2,
+    "frontier": false,
+    "scaleExp": -9,
+    "oneLiner": "一个简单格点模型，第一次精确展示相变奇异性。",
+    "equation": "T_c=\\frac{2J}{k_B\\ln(1+\\sqrt2)}",
+    "cardBack": {
+      "supersedes": [
+        "只能用平均场近似看相变的局面"
+      ],
+      "supersededBy": [
+        "临界指数理论",
+        "重整化群"
+      ],
+      "leadsTo": [
+        "格点模型",
+        "相变数学",
+        "统计物理可解模型"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -280.77,
+        -12.917,
+        410.609
+      ],
+      "timeline": [
+        1100.8,
+        -21.204,
+        -75.491
+      ],
+      "scale": [
+        -495,
+        64.603,
+        -47.522
+      ]
+    }
+  },
+  {
+    "id": "fermi-liquid-theory",
+    "name": {
+      "zh": "费米液体理论",
+      "en": "Fermi Liquid Theory"
+    },
+    "author": {
+      "zh": "朗道",
+      "en": "Lev Landau"
+    },
+    "year": 1956,
+    "branch": "thermo",
+    "influence": 2,
+    "frontier": false,
+    "scaleExp": -10,
+    "oneLiner": "强相互作用电子可被准粒子改写，像气体一样算。",
+    "equation": "E=\\sum_p \\epsilon_p n_p+\\frac{1}{2}\\sum_{pp'}f_{pp'}n_pn_{p'}",
+    "cardBack": {
+      "supersedes": [
+        "把金属电子只当自由粒子的图像"
+      ],
+      "supersededBy": [
+        "非费米液体",
+        "强关联电子理论"
+      ],
+      "leadsTo": [
+        "低温金属",
+        "液氦三",
+        "凝聚态准粒子"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -59.284,
+        -50.315,
+        310.71
+      ],
+      "timeline": [
+        1139.2,
+        14.051,
+        -64.329
+      ],
+      "scale": [
+        -550,
+        -37.62,
+        -74.541
+      ]
+    }
+  },
+  {
+    "id": "kosterlitz-thouless-vortices",
+    "name": {
+      "zh": "二维涡旋相变",
+      "en": "Kosterlitz-Thouless Vortex Transition"
+    },
+    "author": {
+      "zh": "科斯特利茨与索利斯",
+      "en": "John Kosterlitz and David Thouless"
+    },
+    "year": 1973,
+    "branch": "thermo",
+    "influence": 2,
+    "frontier": false,
+    "scaleExp": -9,
+    "oneLiner": "二维系统也能靠涡旋成对或解绑定发生相变。",
+    "equation": "\\xi\\sim e^{b/\\sqrt{T-T_c}}",
+    "cardBack": {
+      "supersedes": [
+        "二维短程有序系统不能相变的简单判断"
+      ],
+      "supersededBy": [
+        "拓扑相变",
+        "二维超流薄膜实验"
+      ],
+      "leadsTo": [
+        "拓扑缺陷",
+        "临界动力学",
+        "量子霍尔思想"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        -210.313,
+        -53.714,
+        299.743
+      ],
+      "timeline": [
+        1193.6,
+        20.506,
+        -53.2
+      ],
+      "scale": [
+        -495,
+        -10.07,
+        -48.633
+      ]
+    }
+  },
+  {
+    "id": "einstein-field-equations",
+    "name": {
+      "zh": "爱因斯坦场方程",
+      "en": "Einstein Field Equations"
+    },
+    "author": {
+      "zh": "爱因斯坦",
+      "en": "Albert Einstein"
+    },
+    "year": 1915,
+    "branch": "relativity",
+    "influence": 3,
+    "frontier": false,
+    "scaleExp": 8,
+    "oneLiner": "物质告诉时空怎样弯曲，时空告诉物质怎样运动。",
+    "equation": "G_{\\mu\\nu}+\\Lambda g_{\\mu\\nu}=\\frac{8\\pi G}{c^4}T_{\\mu\\nu}",
+    "cardBack": {
+      "supersedes": [
+        "牛顿引力的瞬时作用图像"
+      ],
+      "supersededBy": [
+        "黑洞解",
+        "宇宙学模型",
+        "量子引力尝试"
+      ],
+      "leadsTo": [
+        "弯曲时空",
+        "引力波",
+        "相对论宇宙学"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        391.815,
+        -51.362,
+        -379.842
+      ],
+      "timeline": [
+        1008,
+        -40.983,
+        74.072
+      ],
+      "scale": [
+        440,
+        -10.218,
+        77.148
+      ]
+    }
+  },
+  {
+    "id": "cosmological-constant",
+    "name": {
+      "zh": "宇宙学常数",
+      "en": "Cosmological Constant"
+    },
+    "author": {
+      "zh": "爱因斯坦",
+      "en": "Albert Einstein"
+    },
+    "year": 1917,
+    "branch": "relativity",
+    "influence": 2,
+    "frontier": false,
+    "scaleExp": 26,
+    "oneLiner": "给真空本身放进能量密度，宇宙可静止也可加速。",
+    "equation": "\\Lambda g_{\\mu\\nu}",
+    "cardBack": {
+      "supersedes": [
+        "场方程只能给出动态宇宙的早期困惑"
+      ],
+      "supersededBy": [
+        "暗能量",
+        "ΛCDM模型"
+      ],
+      "leadsTo": [
+        "真空能问题",
+        "宇宙加速",
+        "精密宇宙学"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        559.304,
+        98.022,
+        -291.313
+      ],
+      "timeline": [
+        1014.4,
+        9.83,
+        77.117
+      ],
+      "scale": [
+        1430,
+        -32.363,
+        76.426
+      ]
+    }
+  },
+  {
+    "id": "eddington-light-deflection",
+    "name": {
+      "zh": "日食光线偏折观测",
+      "en": "Eddington Eclipse Light Deflection"
+    },
+    "author": {
+      "zh": "爱丁顿团队",
+      "en": "Arthur Eddington and collaborators"
+    },
+    "year": 1919,
+    "branch": "relativity",
+    "influence": 2,
+    "frontier": false,
+    "scaleExp": 9,
+    "oneLiner": "日食时恒星位置偏了，广义相对论第一次全球出圈。",
+    "equation": "\\Delta\\theta=\\frac{4GM}{c^2b}",
+    "cardBack": {
+      "supersedes": [
+        "只在水星近日点上检验广义相对论的阶段"
+      ],
+      "supersededBy": [
+        "现代引力透镜观测"
+      ],
+      "leadsTo": [
+        "太阳引力检验",
+        "透镜测质量",
+        "强场天体物理"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        288.243,
+        60.681,
+        -459.321
+      ],
+      "timeline": [
+        1020.8,
+        -4.591,
+        80.356
+      ],
+      "scale": [
+        495,
+        -29.884,
+        52.601
+      ]
+    }
+  },
+  {
+    "id": "kerr-black-hole",
+    "name": {
+      "zh": "旋转黑洞Kerr解",
+      "en": "Kerr Rotating Black Hole Solution"
+    },
+    "author": {
+      "zh": "克尔",
+      "en": "Roy Kerr"
+    },
+    "year": 1963,
+    "branch": "relativity",
+    "influence": 3,
+    "frontier": false,
+    "scaleExp": 6,
+    "oneLiner": "真实黑洞会旋转，事件视界外还有可提取能量的区域。",
+    "equation": "r_\\pm=\\frac{GM}{c^2}\\pm\\sqrt{\\left(\\frac{GM}{c^2}\\right)^2-a^2}",
+    "cardBack": {
+      "supersedes": [
+        "只研究静态球对称黑洞的阶段"
+      ],
+      "supersededBy": [
+        "吸积盘与喷流模型",
+        "黑洞阴影理论"
+      ],
+      "leadsTo": [
+        "能层",
+        "准正规模",
+        "强场引力观测"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        444.485,
+        90.137,
+        -311.526
+      ],
+      "timeline": [
+        1161.6,
+        21.693,
+        51.132
+      ],
+      "scale": [
+        330,
+        -6.056,
+        73.234
+      ]
+    }
+  },
+  {
+    "id": "shapiro-time-delay",
+    "name": {
+      "zh": "雷达回波时延检验",
+      "en": "Shapiro Time Delay Test"
+    },
+    "author": {
+      "zh": "夏皮罗",
+      "en": "Irwin Shapiro"
+    },
+    "year": 1964,
+    "branch": "relativity",
+    "influence": 2,
+    "frontier": false,
+    "scaleExp": 11,
+    "oneLiner": "雷达信号掠过太阳会晚一点回来，因为时空路径变长。",
+    "equation": "\\Delta t\\simeq \\frac{2GM}{c^3}\\ln\\frac{4r_Er_R}{b^2}",
+    "cardBack": {
+      "supersedes": [
+        "只靠光线偏折和红移检验引力的阶段"
+      ],
+      "supersededBy": [
+        "行星雷达精密测距",
+        "Cassini相对论检验"
+      ],
+      "leadsTo": [
+        "太阳系测距",
+        "PPN参数",
+        "深空导航校正"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        291.501,
+        142.303,
+        -393.29
+      ],
+      "timeline": [
+        1164.8,
+        11.335,
+        78.163
+      ],
+      "scale": [
+        605,
+        -21.058,
+        71.82
+      ]
+    }
+  },
+  {
+    "id": "penrose-singularity-theorem-star",
+    "name": {
+      "zh": "引力坍缩奇点定理",
+      "en": "Penrose Singularity Theorem"
+    },
+    "author": {
+      "zh": "彭罗斯",
+      "en": "Roger Penrose"
+    },
+    "year": 1965,
+    "branch": "relativity",
+    "influence": 2,
+    "frontier": false,
+    "scaleExp": 6,
+    "oneLiner": "黑洞奇点不是球对称特例，而是坍缩的普遍后果。",
+    "equation": "\\theta\\to-\\infty",
+    "cardBack": {
+      "supersedes": [
+        "奇点只是理想化解中瑕疵的怀疑"
+      ],
+      "supersededBy": [
+        "霍金宇宙奇点定理",
+        "量子引力问题"
+      ],
+      "leadsTo": [
+        "困陷面",
+        "宇宙监督猜想",
+        "黑洞内部结构"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        225.399,
+        -39.462,
+        -278.304
+      ],
+      "timeline": [
+        1168,
+        22.335,
+        74.53
+      ],
+      "scale": [
+        330,
+        13.625,
+        68.121
+      ]
+    }
+  },
+  {
+    "id": "black-hole-entropy",
+    "name": {
+      "zh": "黑洞熵与温度",
+      "en": "Black Hole Entropy and Temperature"
+    },
+    "author": {
+      "zh": "贝肯斯坦与霍金",
+      "en": "Jacob Bekenstein and Stephen Hawking"
+    },
+    "year": 1973,
+    "branch": "relativity",
+    "influence": 3,
+    "frontier": false,
+    "scaleExp": 6,
+    "oneLiner": "黑洞有熵，面积像微观状态数一样给热力学记账。",
+    "equation": "S_{\\rm BH}=\\frac{k_BA}{4\\ell_P^2}",
+    "cardBack": {
+      "supersedes": [
+        "黑洞只吞不吐、没有热性质的图像"
+      ],
+      "supersededBy": [
+        "霍金辐射",
+        "全息原理"
+      ],
+      "leadsTo": [
+        "信息悖论",
+        "量子引力",
+        "引力热力学"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        316.354,
+        -58.957,
+        -313.888
+      ],
+      "timeline": [
+        1193.6,
+        21.889,
+        80.28
+      ],
+      "scale": [
+        330,
+        -26.621,
+        57.463
+      ]
+    }
+  },
+  {
+    "id": "unruh-thermal-bath",
+    "name": {
+      "zh": "加速观者热浴",
+      "en": "Unruh Thermal Bath"
+    },
+    "author": {
+      "zh": "安鲁",
+      "en": "William Unruh"
+    },
+    "year": 1976,
+    "branch": "relativity",
+    "influence": 2,
+    "frontier": false,
+    "scaleExp": 0,
+    "oneLiner": "同一个真空，对匀加速观者看起来像有温度。",
+    "equation": "T=\\frac{\\hbar a}{2\\pi ck_B}",
+    "cardBack": {
+      "supersedes": [
+        "真空对所有观者都等价的朴素看法"
+      ],
+      "supersededBy": [
+        "量子场论曲时空研究"
+      ],
+      "leadsTo": [
+        "霍金辐射类比",
+        "Rindler视界",
+        "真空探测器模型"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        188.972,
+        18.244,
+        -350.693
+      ],
+      "timeline": [
+        1203.2,
+        12.204,
+        66.982
+      ],
+      "scale": [
+        0,
+        95.95,
+        51.217
+      ]
+    }
+  },
+  {
+    "id": "gps-relativity-correction",
+    "name": {
+      "zh": "GPS相对论校正",
+      "en": "Relativistic Corrections in GPS"
+    },
+    "author": {
+      "zh": "GPS工程与相对论团队",
+      "en": "GPS engineering and relativity teams"
+    },
+    "year": 1978,
+    "branch": "relativity",
+    "influence": 1,
+    "frontier": false,
+    "scaleExp": 7,
+    "oneLiner": "卫星钟若不修正相对论效应，定位每天都会跑偏。",
+    "equation": "\\Delta t/t\\simeq \\Delta\\Phi/c^2-\\frac{v^2}{2c^2}",
+    "cardBack": {
+      "supersedes": [
+        "把相对论只当高能或天文效应的误解"
+      ],
+      "supersededBy": [
+        "全球导航精密授时"
+      ],
+      "leadsTo": [
+        "卫星定位",
+        "时间频率计量",
+        "工程相对论"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        230.538,
+        118.079,
+        -296.04
+      ],
+      "timeline": [
+        1209.6,
+        -5.762,
+        75.378
+      ],
+      "scale": [
+        385,
+        7.989,
+        54.492
+      ]
+    }
+  },
+  {
+    "id": "rutherford-nucleus",
+    "name": {
+      "zh": "卢瑟福原子核模型",
+      "en": "Rutherford Nuclear Atom"
+    },
+    "author": {
+      "zh": "卢瑟福",
+      "en": "Ernest Rutherford"
+    },
+    "year": 1911,
+    "branch": "quantum",
+    "influence": 3,
+    "frontier": false,
+    "scaleExp": -15,
+    "oneLiner": "少数α粒子大角度反弹，说明原子质量集中在小核里。",
+    "equation": "\\frac{d\\sigma}{d\\Omega}\\propto \\frac{1}{\\sin^4(\\theta/2)}",
+    "cardBack": {
+      "supersedes": [
+        "汤姆孙葡萄干布丁原子模型"
+      ],
+      "supersededBy": [
+        "玻尔原子",
+        "核物理"
+      ],
+      "leadsTo": [
+        "散射实验",
+        "原子核半径",
+        "粒子探测器"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        701.956,
+        -3.109,
+        240.003
+      ],
+      "timeline": [
+        995.2,
+        11.507,
+        203.942
+      ],
+      "scale": [
+        -825,
+        61.396,
+        212.854
+      ]
+    }
+  },
+  {
+    "id": "space-quantization",
+    "name": {
+      "zh": "空间量子化实验",
+      "en": "Space Quantization Experiment"
+    },
+    "author": {
+      "zh": "斯特恩与盖拉赫",
+      "en": "Otto Stern and Walther Gerlach"
+    },
+    "year": 1922,
+    "branch": "quantum",
+    "influence": 3,
+    "frontier": false,
+    "scaleExp": -10,
+    "oneLiner": "银原子束分成两束，角动量方向不是连续可取。",
+    "equation": "m_s=\\pm\\frac{1}{2}",
+    "cardBack": {
+      "supersedes": [
+        "磁矩方向可连续分布的经典图像"
+      ],
+      "supersededBy": [
+        "电子自旋",
+        "量子测量理论"
+      ],
+      "leadsTo": [
+        "自旋物理",
+        "核磁共振",
+        "量子比特"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        599.332,
+        -128.026,
+        325.615
+      ],
+      "timeline": [
+        1030.4,
+        6.795,
+        201.009
+      ],
+      "scale": [
+        -550,
+        142.496,
+        195.643
+      ]
+    }
+  },
+  {
+    "id": "photon-momentum-compton",
+    "name": {
+      "zh": "光子动量散射",
+      "en": "Compton Photon Momentum Scattering"
+    },
+    "author": {
+      "zh": "康普顿",
+      "en": "Arthur Compton"
+    },
+    "year": 1923,
+    "branch": "quantum",
+    "influence": 3,
+    "frontier": false,
+    "scaleExp": -12,
+    "oneLiner": "X射线撞电子后波长变长，光真的带着粒子动量。",
+    "equation": "\\Delta\\lambda=\\frac{h}{m_ec}(1-\\cos\\theta)",
+    "cardBack": {
+      "supersedes": [
+        "只把光看成连续电磁波的解释"
+      ],
+      "supersededBy": [
+        "量子电动力学",
+        "高能散射物理"
+      ],
+      "leadsTo": [
+        "光子概念",
+        "伽马探测",
+        "散射截面"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        356.118,
+        43.59,
+        59.191
+      ],
+      "timeline": [
+        1033.6,
+        10.999,
+        189.654
+      ],
+      "scale": [
+        -660,
+        -1.488,
+        196.455
+      ]
+    }
+  },
+  {
+    "id": "quantum-tunneling",
+    "name": {
+      "zh": "量子隧穿效应",
+      "en": "Quantum Tunneling"
+    },
+    "author": {
+      "zh": "伽莫夫、古尔尼与康登",
+      "en": "George Gamow, Ronald Gurney, and Edward Condon"
+    },
+    "year": 1928,
+    "branch": "quantum",
+    "influence": 3,
+    "frontier": false,
+    "scaleExp": -15,
+    "oneLiner": "粒子能以波的方式穿过经典上翻不过去的势垒。",
+    "equation": "T\\sim e^{-2\\int \\kappa(x)\\,dx}",
+    "cardBack": {
+      "supersedes": [
+        "能量不足就绝对过不了势垒的经典判断"
+      ],
+      "supersededBy": [
+        "半导体隧穿器件",
+        "核衰变理论"
+      ],
+      "leadsTo": [
+        "扫描隧道显微镜",
+        "约瑟夫森结",
+        "量子器件"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        356.166,
+        -1.89,
+        247.043
+      ],
+      "timeline": [
+        1049.6,
+        24.18,
+        195.992
+      ],
+      "scale": [
+        -825,
+        45.316,
+        208.982
+      ]
+    }
+  },
+  {
+    "id": "fermi-beta-decay",
+    "name": {
+      "zh": "费米β衰变理论",
+      "en": "Fermi's Theory of Beta Decay"
+    },
+    "author": {
+      "zh": "费米",
+      "en": "Enrico Fermi"
+    },
+    "year": 1934,
+    "branch": "quantum",
+    "influence": 3,
+    "frontier": false,
+    "scaleExp": -15,
+    "oneLiner": "弱相互作用第一次有了可计算模型，中微子进入方程。",
+    "equation": "n\\to p+e^-+\\bar\\nu_e",
+    "cardBack": {
+      "supersedes": [
+        "β谱能量不守恒的表面困境"
+      ],
+      "supersededBy": [
+        "电弱统一",
+        "标准模型弱相互作用"
+      ],
+      "leadsTo": [
+        "中微子物理",
+        "核反应率",
+        "弱相互作用实验"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        623.108,
+        -7.638,
+        156.992
+      ],
+      "timeline": [
+        1068.8,
+        22.178,
+        182.541
+      ],
+      "scale": [
+        -825,
+        -41.095,
+        205.518
+      ]
+    }
+  },
+  {
+    "id": "nuclear-fission",
+    "name": {
+      "zh": "核裂变发现",
+      "en": "Discovery of Nuclear Fission"
+    },
+    "author": {
+      "zh": "哈恩、斯特拉斯曼、迈特纳与弗里施",
+      "en": "Otto Hahn, Fritz Strassmann, Lise Meitner, and Otto Frisch"
+    },
+    "year": 1938,
+    "branch": "quantum",
+    "influence": 3,
+    "frontier": false,
+    "scaleExp": -15,
+    "oneLiner": "重核吸收中子后会裂开，并释放巨大的结合能差。",
+    "equation": "{}^{235}\\mathrm U+n\\to \\mathrm{fragments}+3n+E",
+    "cardBack": {
+      "supersedes": [
+        "以为中子轰击只会造更重元素的判断"
+      ],
+      "supersededBy": [
+        "链式反应理论",
+        "核反应堆"
+      ],
+      "leadsTo": [
+        "核能",
+        "核武器",
+        "裂变产物物理"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        551.854,
+        53.029,
+        296.32
+      ],
+      "timeline": [
+        1081.6,
+        8.1,
+        200.435
+      ],
+      "scale": [
+        -825,
+        -22.07,
+        188.034
+      ]
+    }
+  },
+  {
+    "id": "nuclear-magnetic-resonance",
+    "name": {
+      "zh": "核磁共振",
+      "en": "Nuclear Magnetic Resonance"
+    },
+    "author": {
+      "zh": "布洛赫与珀塞尔",
+      "en": "Felix Bloch and Edward Purcell"
+    },
+    "year": 1946,
+    "branch": "quantum",
+    "influence": 3,
+    "frontier": false,
+    "scaleExp": -10,
+    "oneLiner": "原子核自旋在磁场中共振，物质内部结构可被读出。",
+    "equation": "\\omega_0=\\gamma B_0",
+    "cardBack": {
+      "supersedes": [
+        "只靠化学反应识别分子结构的限制"
+      ],
+      "supersededBy": [
+        "磁共振成像",
+        "量子控制实验"
+      ],
+      "leadsTo": [
+        "MRI",
+        "谱学分析",
+        "自旋量子信息"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        588.238,
+        -33.047,
+        424.915
+      ],
+      "timeline": [
+        1107.2,
+        -20.343,
+        201.231
+      ],
+      "scale": [
+        -550,
+        4.172,
+        177.265
+      ]
+    }
+  },
+  {
+    "id": "microscopic-superconductivity",
+    "name": {
+      "zh": "微观超导理论",
+      "en": "BCS Microscopic Theory of Superconductivity"
+    },
+    "author": {
+      "zh": "巴丁、库珀与施里弗",
+      "en": "John Bardeen, Leon Cooper, and John Robert Schrieffer"
+    },
+    "year": 1957,
+    "branch": "quantum",
+    "influence": 3,
+    "frontier": false,
+    "scaleExp": -9,
+    "oneLiner": "电子成对凝聚，能隙解释了零电阻和磁场排斥。",
+    "equation": "\\Delta\\simeq1.76\\,k_BT_c",
+    "cardBack": {
+      "supersedes": [
+        "只用唯象方程描述超导的阶段"
+      ],
+      "supersededBy": [
+        "强耦合超导理论",
+        "非常规超导研究"
+      ],
+      "leadsTo": [
+        "约瑟夫森效应",
+        "超导量子比特",
+        "凝聚态场论"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        197.002,
+        -5.165,
+        196.402
+      ],
+      "timeline": [
+        1142.4,
+        -0.657,
+        182.08
+      ],
+      "scale": [
+        -495,
+        -18.362,
+        185.914
+      ]
+    }
+  },
+  {
+    "id": "quark-model-hadrons",
+    "name": {
+      "zh": "强子夸克分类",
+      "en": "Quark Model of Hadrons"
+    },
+    "author": {
+      "zh": "盖尔曼与茨威格",
+      "en": "Murray Gell-Mann and George Zweig"
+    },
+    "year": 1964,
+    "branch": "quantum",
+    "influence": 3,
+    "frontier": false,
+    "scaleExp": -18,
+    "oneLiner": "繁杂强子谱被少数夸克组合整理出清晰家谱。",
+    "equation": "q=(u,d,s,\\ldots)",
+    "cardBack": {
+      "supersedes": [
+        "把每个强子都当基本粒子的粒子园局面"
+      ],
+      "supersededBy": [
+        "量子色动力学",
+        "标准模型"
+      ],
+      "leadsTo": [
+        "八重道",
+        "深度非弹性散射",
+        "强相互作用"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        431.332,
+        -72.522,
+        208.565
+      ],
+      "timeline": [
+        1164.8,
+        58.571,
+        188.456
+      ],
+      "scale": [
+        -990,
+        3.089,
+        200.529
+      ]
+    }
+  },
+  {
+    "id": "higgs-mechanism-breaking",
+    "name": {
+      "zh": "自发对称性破缺赋质量",
+      "en": "Higgs Mechanism via Spontaneous Symmetry Breaking"
+    },
+    "author": {
+      "zh": "布劳特、恩格勒、希格斯等",
+      "en": "Brout, Englert, Higgs, and others"
+    },
+    "year": 1964,
+    "branch": "quantum",
+    "influence": 3,
+    "frontier": false,
+    "scaleExp": -18,
+    "oneLiner": "规范场不必显式破坏对称性，也能获得质量。",
+    "equation": "m_W=\\frac{1}{2}gv",
+    "cardBack": {
+      "supersedes": [
+        "质量项会破坏规范对称性的障碍"
+      ],
+      "supersededBy": [
+        "电弱标准模型",
+        "希格斯玻色子发现"
+      ],
+      "leadsTo": [
+        "粒子质量起源",
+        "大型强子对撞机",
+        "真空期望值"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        509.149,
+        -122.634,
+        267.292
+      ],
+      "timeline": [
+        1164.8,
+        0.592,
+        209.275
+      ],
+      "scale": [
+        -990,
+        -31.1,
+        196.082
+      ]
+    }
+  },
+  {
+    "id": "neutrino-oscillation-evidence",
+    "name": {
+      "zh": "太阳和大气中微子振荡",
+      "en": "Solar and Atmospheric Neutrino Oscillation Evidence"
+    },
+    "author": {
+      "zh": "超级神冈与SNO团队",
+      "en": "Super-Kamiokande and SNO collaborations"
+    },
+    "year": 1998,
+    "branch": "quantum",
+    "influence": 3,
+    "frontier": false,
+    "scaleExp": -18,
+    "oneLiner": "中微子会在味之间转换，说明它们并非完全无质量。",
+    "equation": "P_{\\alpha\\to\\beta}\\sim\\sin^2(2\\theta)\\sin^2\\frac{\\Delta m^2L}{4E}",
+    "cardBack": {
+      "supersedes": [
+        "标准模型中中微子无质量的最小设定"
+      ],
+      "supersededBy": [
+        "中微子质量模型",
+        "PMNS混合矩阵"
+      ],
+      "leadsTo": [
+        "地下探测器",
+        "太阳中微子问题",
+        "超新星中微子"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        495.337,
+        0.103,
+        376.048
+      ],
+      "timeline": [
+        1273.6,
+        -17.767,
+        203.345
+      ],
+      "scale": [
+        -990,
+        3.94,
+        186.253
+      ]
+    }
+  },
+  {
+    "id": "herschel-galaxy-model",
+    "name": {
+      "zh": "银河恒星体系模型",
+      "en": "Herschel's Stellar System Model"
+    },
+    "author": {
+      "zh": "威廉·赫歇尔",
+      "en": "William Herschel"
+    },
+    "year": 1785,
+    "branch": "cosmology",
+    "influence": 2,
+    "frontier": false,
+    "scaleExp": 20,
+    "oneLiner": "数星星也能画出银河形状，宇宙结构开始可测量。",
+    "equation": "N(r)\\to \\rho_\\star(r)",
+    "cardBack": {
+      "supersedes": [
+        "把银河只当肉眼光带的看法"
+      ],
+      "supersededBy": [
+        "恒星巡天",
+        "现代银河模型"
+      ],
+      "leadsTo": [
+        "星计数",
+        "银河结构",
+        "天体测光"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        909.397,
+        109.039,
+        -243.165
+      ],
+      "timeline": [
+        592,
+        -10.819,
+        332.508
+      ],
+      "scale": [
+        1100,
+        -0.85,
+        341.593
+      ]
+    }
+  },
+  {
+    "id": "andromeda-cepheids",
+    "name": {
+      "zh": "仙女座造父变星测距",
+      "en": "Cepheid Distance to Andromeda"
+    },
+    "author": {
+      "zh": "哈勃",
+      "en": "Edwin Hubble"
+    },
+    "year": 1924,
+    "branch": "cosmology",
+    "influence": 3,
+    "frontier": false,
+    "scaleExp": 22,
+    "oneLiner": "仙女座远在银河之外，宇宙尺度突然被放大。",
+    "equation": "\\mu=m-M=5\\log_{10}(d/10\\mathrm{pc})",
+    "cardBack": {
+      "supersedes": [
+        "星云是否属于银河内部的争论"
+      ],
+      "supersededBy": [
+        "河外星系宇宙观",
+        "哈勃膨胀测量"
+      ],
+      "leadsTo": [
+        "距离阶梯",
+        "星系天文学",
+        "宇宙膨胀"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        1078.248,
+        169.666,
+        -193.88
+      ],
+      "timeline": [
+        1036.8,
+        0.998,
+        315.885
+      ],
+      "scale": [
+        1210,
+        -7.169,
+        330.362
+      ]
+    }
+  },
+  {
+    "id": "hydrogen-21cm-line",
+    "name": {
+      "zh": "氢21厘米线",
+      "en": "Hydrogen 21 cm Line"
+    },
+    "author": {
+      "zh": "范德胡尔斯特、尤恩与珀塞尔",
+      "en": "Hendrik van de Hulst, Harold Ewen, and Edward Purcell"
+    },
+    "year": 1951,
+    "branch": "cosmology",
+    "influence": 2,
+    "frontier": false,
+    "scaleExp": 20,
+    "oneLiner": "中性氢会发出21厘米射电线，银河气体能被地图化。",
+    "equation": "\\lambda=21.1\\,\\mathrm{cm}",
+    "cardBack": {
+      "supersedes": [
+        "尘埃遮挡下难以看清银河盘的限制"
+      ],
+      "supersededBy": [
+        "射电巡天",
+        "21厘米宇宙学"
+      ],
+      "leadsTo": [
+        "银河旋转曲线",
+        "暗物质证据",
+        "再电离探测"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        744.579,
+        94.062,
+        -365.824
+      ],
+      "timeline": [
+        1123.2,
+        -0.229,
+        327.9
+      ],
+      "scale": [
+        1100,
+        -3.923,
+        320.731
+      ]
+    }
+  },
+  {
+    "id": "stellar-nucleosynthesis",
+    "name": {
+      "zh": "恒星核合成理论",
+      "en": "Stellar Nucleosynthesis"
+    },
+    "author": {
+      "zh": "伯比奇、伯比奇、福勒与霍伊尔",
+      "en": "Burbidge, Burbidge, Fowler, and Hoyle"
+    },
+    "year": 1957,
+    "branch": "cosmology",
+    "influence": 3,
+    "frontier": false,
+    "scaleExp": 8,
+    "oneLiner": "重元素不是原初给定，而是在恒星内部和爆炸中炼成。",
+    "equation": "4p\\to{}^4\\mathrm{He}+2e^++2\\nu_e",
+    "cardBack": {
+      "supersedes": [
+        "元素丰度缺少天体物理来源的局面"
+      ],
+      "supersededBy": [
+        "超新星核合成",
+        "星系化学演化"
+      ],
+      "leadsTo": [
+        "恒星演化",
+        "金属丰度",
+        "宇宙化学史"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        946.586,
+        62.139,
+        -58.116
+      ],
+      "timeline": [
+        1142.4,
+        -5.093,
+        330.565
+      ],
+      "scale": [
+        440,
+        -8.866,
+        331.34
+      ]
+    }
+  },
+  {
+    "id": "quasar-redshift",
+    "name": {
+      "zh": "类星体高红移识别",
+      "en": "High-Redshift Quasar Identification"
+    },
+    "author": {
+      "zh": "马丁·施密特",
+      "en": "Maarten Schmidt"
+    },
+    "year": 1963,
+    "branch": "cosmology",
+    "influence": 2,
+    "frontier": false,
+    "scaleExp": 25,
+    "oneLiner": "看似恒星的射电源，原来是极远极亮的活动星系核。",
+    "equation": "1+z=\\lambda_{\\rm obs}/\\lambda_{\\rm em}",
+    "cardBack": {
+      "supersedes": [
+        "把强射电点源当近邻奇异恒星的解释"
+      ],
+      "supersededBy": [
+        "活动星系核模型",
+        "黑洞吸积理论"
+      ],
+      "leadsTo": [
+        "高红移宇宙",
+        "吸积盘",
+        "星际介质吸收线"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        1003.95,
+        124.521,
+        -318.909
+      ],
+      "timeline": [
+        1161.6,
+        -15.785,
+        315.287
+      ],
+      "scale": [
+        1375,
+        -4.123,
+        312.543
+      ]
+    }
+  },
+  {
+    "id": "double-quasar-lens",
+    "name": {
+      "zh": "双类星体引力透镜",
+      "en": "Double Quasar Gravitational Lens"
+    },
+    "author": {
+      "zh": "沃尔什、卡斯韦尔与韦曼",
+      "en": "Dennis Walsh, Robert Carswell, and Ray Weymann"
+    },
+    "year": 1979,
+    "branch": "cosmology",
+    "influence": 2,
+    "frontier": false,
+    "scaleExp": 24,
+    "oneLiner": "同一个类星体被前景星系分成双像，透镜宇宙学落地。",
+    "equation": "\\theta_E=\\sqrt{\\frac{4GM}{c^2}\\frac{D_{LS}}{D_LD_S}}",
+    "cardBack": {
+      "supersedes": [
+        "引力透镜主要停留在太阳系检验的阶段"
+      ],
+      "supersededBy": [
+        "强透镜巡天",
+        "弱透镜宇宙学"
+      ],
+      "leadsTo": [
+        "暗物质质量图",
+        "哈勃常数测量",
+        "星系团透镜"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        889.885,
+        65.72,
+        -337.537
+      ],
+      "timeline": [
+        1212.8,
+        -9.237,
+        317.71
+      ],
+      "scale": [
+        1320,
+        34.783,
+        317.099
+      ]
+    }
+  },
+  {
+    "id": "cmb-anisotropy-map",
+    "name": {
+      "zh": "CMB各向异性探测",
+      "en": "CMB Anisotropy Detection"
+    },
+    "author": {
+      "zh": "COBE团队",
+      "en": "COBE collaboration"
+    },
+    "year": 1992,
+    "branch": "cosmology",
+    "influence": 3,
+    "frontier": false,
+    "scaleExp": 26,
+    "oneLiner": "微波背景不是完全平滑，十万分之一涨落种下结构。",
+    "equation": "\\Delta T/T\\sim10^{-5}",
+    "cardBack": {
+      "supersedes": [
+        "只能确认宇宙有热余辉的阶段"
+      ],
+      "supersededBy": [
+        "WMAP与Planck精密宇宙学"
+      ],
+      "leadsTo": [
+        "暴胀检验",
+        "ΛCDM参数",
+        "声学峰"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        1104.743,
+        56.198,
+        -239.462
+      ],
+      "timeline": [
+        1254.4,
+        20.541,
+        327.404
+      ],
+      "scale": [
+        1430,
+        -73.806,
+        335.381
+      ]
+    }
+  },
+  {
+    "id": "type-ia-standard-candles",
+    "name": {
+      "zh": "Ia型标准烛光",
+      "en": "Type Ia Supernova Standard Candles"
+    },
+    "author": {
+      "zh": "两个超新星宇宙学团队",
+      "en": "Supernova Cosmology Project and High-Z Supernova Search Team"
+    },
+    "year": 1998,
+    "branch": "cosmology",
+    "influence": 3,
+    "frontier": false,
+    "scaleExp": 25,
+    "oneLiner": "远方Ia型超新星偏暗，宇宙膨胀不是减速而是加速。",
+    "equation": "\\mu=m-M",
+    "cardBack": {
+      "supersedes": [
+        "物质引力让膨胀逐渐减速的默认预期"
+      ],
+      "supersededBy": [
+        "暗能量模型",
+        "精密距离阶梯"
+      ],
+      "leadsTo": [
+        "宇宙加速",
+        "暗能量",
+        "大尺度巡天"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        1169.486,
+        131.192,
+        -206.426
+      ],
+      "timeline": [
+        1273.6,
+        42.47,
+        321.123
+      ],
+      "scale": [
+        1375,
+        71.105,
+        342.34
+      ]
+    }
+  },
+  {
+    "id": "fast-radio-bursts",
+    "name": {
+      "zh": "快速射电暴",
+      "en": "Fast Radio Bursts"
+    },
+    "author": {
+      "zh": "洛里默等",
+      "en": "Duncan Lorimer and collaborators"
+    },
+    "year": 2007,
+    "branch": "cosmology",
+    "influence": 1,
+    "frontier": true,
+    "scaleExp": 25,
+    "oneLiner": "毫秒射电脉冲来自宇宙深处，成因和用途仍在打开。",
+    "equation": "\\Delta t\\propto \\mathrm{DM}\\,\\nu^{-2}",
+    "cardBack": {
+      "supersedes": [
+        "射电瞬变样本稀少、难以定位的阶段"
+      ],
+      "supersededBy": [],
+      "leadsTo": [
+        "星际介质探针",
+        "磁星模型",
+        "时域天文学"
+      ]
+    },
+    "pos": {
+      "galaxy": [
+        1208.32,
+        89.081,
+        -282.409
+      ],
+      "timeline": [
+        1302.4,
+        21.608,
+        330.157
+      ],
+      "scale": [
+        1375,
+        6.561,
+        333.093
+      ]
+    }
+  }
+]

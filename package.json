@@ -1,0 +1,20 @@
+{
+  "name": "physics-star-atlas",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "layout": "node tools/layout.mjs",
+    "validate": "node tools/validate.mjs"
+  },
+  "dependencies": {
+    "katex": "^0.16.11",
+    "three": "^0.166.1"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0"
+  }
+}

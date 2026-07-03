@@ -1,0 +1,124 @@
+[
+  {
+    "id": "what-is-light",
+    "title": "光是什么：两千年之争",
+    "stops": [
+      {
+        "starId": "newton-opticks",
+        "caption": "牛顿把白光拆成彩虹，也把光想成一颗颗飞行的微粒。这个图景解释了直线传播，却在干涉面前留下裂缝。"
+      },
+      {
+        "starId": "huygens-wave-light",
+        "caption": "惠更斯换了一个想象：光不是小弹丸，而是一层层推进的波面。折射和反射开始像水波一样可被理解。"
+      },
+      {
+        "starId": "young-double-slit",
+        "caption": "两条狭缝让光自己和自己相遇，屏幕上出现明暗条纹。微粒说最稳固的堡垒，被一串细纹慢慢攻破。"
+      },
+      {
+        "starId": "fresnel-wave-optics",
+        "caption": "菲涅耳把衍射算到阴影深处，连反直觉的亮斑也被预言出来。光的波动性不再只是好看的类比。"
+      },
+      {
+        "starId": "maxwell-equations",
+        "caption": "麦克斯韦把电和磁合成同一张方程网，光速从方程里自然冒出。光终于有了身份：它是电磁场的波。"
+      },
+      {
+        "starId": "photoelectric-effect",
+        "caption": "可光又一次不听话：低频强光打不出电子，高频弱光却可以。爱因斯坦把光量子带回舞台，旧争论变成新问题。"
+      },
+      {
+        "starId": "de-broglie-waves",
+        "caption": "德布罗意把问题反过来问：如果光能像粒子，粒子会不会也像波？从此波粒二象性不再只属于光。"
+      },
+      {
+        "starId": "qed-renormalization",
+        "caption": "量子电动力学收束了这场争吵：光和电子以量子场的方式相互作用。波和粒子都不是全部答案，只是我们观察时的两种影子。"
+      }
+    ]
+  },
+  {
+    "id": "falling-to-black-holes",
+    "title": "从落体到黑洞",
+    "stops": [
+      {
+        "starId": "galileo-falling-bodies",
+        "caption": "故事从斜面和落体开始。伽利略发现，下落不是重物的特权，而是所有物体共同服从的加速运动。"
+      },
+      {
+        "starId": "galileo-inertia",
+        "caption": "惯性让运动摆脱了“总要停下”的古老直觉。只要没有外力，物体会把自己的运动状态带下去。"
+      },
+      {
+        "starId": "newton-second-law",
+        "caption": "牛顿第二定律把力、质量和加速度压成一条公式：合力决定运动怎样改变。落体、炮弹、机器和行星轨道，从这里进入同一种可计算语言。"
+      },
+      {
+        "starId": "newton-gravitation",
+        "caption": "万有引力把苹果和月亮连到一起。宇宙不再分成地上和天上，只剩同一条平方反比的吸引律。"
+      },
+      {
+        "starId": "lagrangian-mechanics",
+        "caption": "拉格朗日换了视角：不必逐个画出受力，只要写下能量和路径。复杂系统由此变得像一条可优化的轨迹。"
+      },
+      {
+        "starId": "hamiltonian-mechanics",
+        "caption": "哈密顿把运动搬进相空间，位置和动量一起流动。这个语言后来会穿过经典力学，进入量子世界。"
+      },
+      {
+        "starId": "general-relativity",
+        "caption": "爱因斯坦再一次改写重力：物体不是被神秘力量拉着走，而是在弯曲时空中沿最自然的路前进。"
+      },
+      {
+        "starId": "schwarzschild-black-hole",
+        "caption": "广义相对论很快给出一个极端答案：如果质量压得足够紧，连光也逃不出边界。黑洞先作为方程结果出现。"
+      },
+      {
+        "starId": "gravitational-waves",
+        "caption": "一百年后，两个黑洞合并的涟漪穿过地球。落体问题的尽头，变成了人类直接聆听时空震动的仪器。"
+      }
+    ]
+  },
+  {
+    "id": "certainty-to-randomness",
+    "title": "从确定到随机：量子革命",
+    "stops": [
+      {
+        "starId": "planck-blackbody",
+        "caption": "普朗克原本只是想修好黑体辐射曲线，却被迫让能量一份一份出现。量子革命从一次不情愿的数学补丁开始。"
+      },
+      {
+        "starId": "photoelectric-effect",
+        "caption": "爱因斯坦把这个补丁推向光本身：光像粒子一样交出整份能量。经典波动图景第一次被迫让位。"
+      },
+      {
+        "starId": "bohr-atom",
+        "caption": "玻尔让电子只能待在离散轨道上，原子光谱终于有了台阶。稳定的物质结构，靠的是不连续。"
+      },
+      {
+        "starId": "de-broglie-waves",
+        "caption": "德布罗意把波性送给所有物质。电子不再只是小球，它也带着能在晶体中衍射的波长。"
+      },
+      {
+        "starId": "matrix-mechanics",
+        "caption": "海森堡抛开看不见的轨道，只保留能测到的量。量子世界里，先量什么、后量什么，会改变答案。"
+      },
+      {
+        "starId": "schrodinger-equation",
+        "caption": "薛定谔给出另一种语言：波函数随时间流动。它看似连续优雅，却把概率推到物理核心。"
+      },
+      {
+        "starId": "uncertainty-principle",
+        "caption": "不确定性原理宣布，模糊不是技术缺陷，而是自然的底层规则。确定轨道的旧梦到这里真正破碎。"
+      },
+      {
+        "starId": "bell-inequality",
+        "caption": "贝尔把哲学争论变成实验判据。纠缠不是预先藏好的答案，而是现实本身比局域直觉更奇怪。"
+      },
+      {
+        "starId": "quantum-information",
+        "caption": "今天，叠加和纠缠不只让人困惑，也能被工程化使用。量子革命从解释世界，走向重新设计计算与通信。"
+      }
+    ]
+  }
+]
