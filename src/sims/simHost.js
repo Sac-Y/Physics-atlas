@@ -3,6 +3,8 @@
 //   createSim(canvas, statsEl) → { start(), destroy() }
 // 模拟自带 rAF 循环（卡片关闭即销毁，不与主场景循环耦合）。
 
+import { simHint as localizedSimHint } from '../i18n.js'
+
 const REGISTRY = {
   'gravity-orbit': () => import('./gravityOrbit.js'),
   'maxwell-field': () => import('./maxwellField.js'),
@@ -13,23 +15,12 @@ const REGISTRY = {
   'newton-motion': () => import('./newtonMotion.js')
 }
 
-// 卡片预览区的交互提示语
-const HINTS = {
-  'gravity-orbit': '抓住行星 · 甩出去',
-  'maxwell-field': '抓住电荷 · 摇一摇',
-  'entropy-arrow': '看它自己变乱',
-  'double-slit': '一次一个光子',
-  'light-cone': '把速度推向光速',
-  'induction-field': '抓住磁铁 · 抽一下',
-  'newton-motion': '甩它 · 按住推它'
-}
-
 export function hasSim(simId) {
   return Boolean(REGISTRY[simId])
 }
 
 export function simHint(simId) {
-  return HINTS[simId] ?? ''
+  return localizedSimHint(simId)
 }
 
 export async function loadSimModule(simId) {

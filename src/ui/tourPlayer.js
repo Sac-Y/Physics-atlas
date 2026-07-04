@@ -2,6 +2,8 @@
 // 选一条航线 → 相机逐站飞行，每站点亮该星的传承脉络，底部字幕讲故事。
 // 自动前进按阅读时长计；用户任何拖拽/滚轮立即打断接管——星空是他的了。
 
+import { onLanguageChange, routeCaption, routeShortTitle, routeTitle, t } from '../i18n.js'
+
 const STOP_RADIUS = 460 // 每站的观看距离
 const LINGER_END = 4 // 最后一站停留
 
@@ -12,12 +14,13 @@ export function createTourPlayer({ routes, rig, hover, canvas, onStart }) {
   menu.id = 'tourMenu'
   const label = document.createElement('span')
   label.className = 'tour-label'
-  label.textContent = '导览'
+  label.textContent = t('tour.label')
   menu.appendChild(label)
   routes.forEach((route) => {
     const b = document.createElement('button')
-    b.textContent = route.title.split('：')[0] // 菜单里用短题
-    b.title = route.title
+    b.textContent = routeShortTitle(route)
+    b.title = routeTitle(route)
+    b.dataset.routeId = route.id
     b.addEventListener('click', () => start(route))
     menu.appendChild(b)
   })
@@ -30,12 +33,12 @@ export function createTourPlayer({ routes, rig, hover, canvas, onStart }) {
     <div class="tour-head">
       <span class="tour-route"></span>
       <span class="tour-progress"></span>
-      <button class="tour-exit" aria-label="退出导览">×</button>
+      <button class="tour-exit" aria-label="">×</button>
     </div>
     <p class="tour-caption"></p>
     <div class="tour-nav">
-      <button class="tour-prev">‹ 上一站</button>
-      <button class="tour-next">下一站 ›</button>
+      <button class="tour-prev"></button>
+      <button class="tour-next"></button>
     </div>
     <div class="tour-timer"></div>`
   document.body.appendChild(bar)
@@ -51,7 +54,7 @@ export function createTourPlayer({ routes, rig, hover, canvas, onStart }) {
   function goToStop(i) {
     const stop = active.route.stops[i]
     active.stop = i
-    active.total = readSeconds(stop.caption) + 1.2 // 加上飞行前摇
+    active.total = readSeconds(routeCaption(active.route, i)) + 1.2 // 加上飞行前摇
     active.wait = active.total
     active.lingering = false
     hover.lock(stop.starId)
@@ -61,16 +64,16 @@ export function createTourPlayer({ routes, rig, hover, canvas, onStart }) {
     captionTimer = 0.35
     q('.tour-progress').textContent = `${i + 1} / ${active.route.stops.length}`
     q('.tour-prev').disabled = i === 0
-    q('.tour-next').textContent = i + 1 === active.route.stops.length ? '结束 ›' : '下一站 ›'
+    q('.tour-next').textContent = i + 1 === active.route.stops.length ? t('tour.end') : t('tour.next')
   }
 
   function start(route) {
     onStart?.() // 让主装配收拾现场（关卡片/演示台、回星系透镜）
     active = { route, stop: -1, wait: 0 }
-    q('.tour-route').textContent = route.title
+    q('.tour-route').textContent = routeTitle(route)
     bar.classList.add('open')
     menu.querySelectorAll('button').forEach((b) => {
-      b.classList.toggle('active', b.title === route.title)
+      b.classList.toggle('active', b.dataset.routeId === route.id)
     })
     goToStop(0)
   }
@@ -107,7 +110,7 @@ export function createTourPlayer({ routes, rig, hover, canvas, onStart }) {
     if (captionTimer > 0) {
       captionTimer -= dt
       if (captionTimer <= 0) {
-        q('.tour-caption').textContent = active.route.stops[active.stop].caption
+        q('.tour-caption').textContent = routeCaption(active.route, active.stop)
         bar.classList.remove('swap')
       }
     }
@@ -126,6 +129,28 @@ export function createTourPlayer({ routes, rig, hover, canvas, onStart }) {
       }
     }
   }
+
+  function renderLanguage() {
+    label.textContent = t('tour.label')
+    q('.tour-exit').setAttribute('aria-label', t('tour.exit'))
+    q('.tour-prev').textContent = t('tour.prev')
+    routes.forEach((route) => {
+      const btn = menu.querySelector(`button[data-route-id="${route.id}"]`)
+      if (!btn) return
+      btn.textContent = routeShortTitle(route)
+      btn.title = routeTitle(route)
+    })
+    if (active) {
+      q('.tour-route').textContent = routeTitle(active.route)
+      q('.tour-caption').textContent = routeCaption(active.route, active.stop)
+      q('.tour-next').textContent =
+        active.stop + 1 === active.route.stops.length ? t('tour.end') : t('tour.next')
+    } else {
+      q('.tour-next').textContent = t('tour.next')
+    }
+  }
+  onLanguageChange(renderLanguage)
+  renderLanguage()
 
   return {
     update,

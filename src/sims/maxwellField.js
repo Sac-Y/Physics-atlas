@@ -2,49 +2,63 @@
 // 一个可以摇的电荷：扰动以恒定速度 c 向外传播；
 // 沿传播轴画出 E（青，垂直）与 B（暖白，⊙/⊗）交替相生——这就是光。
 
+import { getLanguage, localize } from '../i18n.js'
+
 const C = 180 // 波速（画布 px/s），全程恒定——这是重点
 const HIST_DT = 1 / 120 // 加速度历史采样步长
 
 export const stageConfig = {
   steps: [
     {
-      title: '摇一摇电荷',
-      text: '抓住电荷上下摇。看清楚：场不是瞬间跟上的——你制造的扰动以一个有限的速度向外跑。电磁作用不是超距的，这个认识本身就是革命。',
+      title: { zh: '摇一摇电荷', en: 'Shake a Charge' },
+      text: {
+        zh: '抓住电荷上下摇。看清楚：场不是瞬间跟上的——你制造的扰动以一个有限的速度向外跑。电磁作用不是超距的，这个认识本身就是革命。',
+        en: 'Grab the charge and shake it. The field does not update instantly: the disturbance travels outward at a finite speed. Electromagnetic action is not action at a distance.'
+      },
       scenario: 'manual',
       annotations: { rings: true }
     },
     {
-      title: '电与磁互相孕育',
-      text: '变化的电场产生磁场，变化的磁场又产生电场——青色箭头是电场 E，⊙ 与 ⊗ 是垂直屏幕进出的磁场 B。它们互为因果、彼此推着往前跑，谁也离不开谁。',
+      title: { zh: '电与磁互相孕育', en: 'Electric and Magnetic Fields' },
+      text: {
+        zh: '变化的电场产生磁场，变化的磁场又产生电场——青色箭头是电场 E，⊙ 与 ⊗ 是垂直屏幕进出的磁场 B。它们互为因果、彼此推着往前跑，谁也离不开谁。',
+        en: 'A changing electric field creates a magnetic field, and a changing magnetic field creates an electric field. They sustain each other as the wave moves.'
+      },
       scenario: 'auto',
       annotations: { E: true, B: true, rings: true }
     },
     {
-      title: '这就是光',
-      text: '拖动频率滑杆：波长跟着变，但波速永远不变——c = fλ。麦克斯韦算出这个速度恰好等于光速的那一刻，人类才知道：光，就是电磁波。',
+      title: { zh: '这就是光', en: 'This Is Light' },
+      text: {
+        zh: '拖动频率滑杆：波长跟着变，但波速永远不变——c = fλ。麦克斯韦算出这个速度恰好等于光速的那一刻，人类才知道：光，就是电磁波。',
+        en: 'Move the frequency slider. Wavelength changes, but wave speed stays fixed: c = fλ. Maxwell found that this speed was the speed of light.'
+      },
       scenario: 'auto',
       annotations: { E: true, measure: true }
     },
     {
-      title: '整个频谱',
-      text: '从无线电到伽马射线，差别只有频率。你的眼睛只看得见中间窄窄的一段。把滑杆从左推到右，你正在扫过整个电磁频谱。',
+      title: { zh: '整个频谱', en: 'The Whole Spectrum' },
+      text: {
+        zh: '从无线电到伽马射线，差别只有频率。你的眼睛只看得见中间窄窄的一段。把滑杆从左推到右，你正在扫过整个电磁频谱。',
+        en: 'Radio waves and gamma rays differ by frequency. Your eyes see only a narrow middle band. Slide across the control to sweep the electromagnetic spectrum.'
+      },
       scenario: 'auto',
       annotations: { E: true, spectrum: true }
     }
   ],
   params: [
-    { key: 'freq', label: '频率', min: 0.35, max: 2.4, step: 0.01, value: 0.9 }
+    { key: 'freq', label: { zh: '频率', en: 'Frequency' }, min: 0.35, max: 2.4, step: 0.01, value: 0.9 }
   ]
 }
 
 const BANDS = [
-  [0.55, '无线电', '#c9a27a'],
-  [0.85, '微波', '#d8b06a'],
-  [1.15, '红外', '#e0755a'],
-  [1.55, '可见光', '#7ae08a'],
-  [1.85, '紫外', '#8a7dff'],
-  [2.15, 'X 射线', '#6fb7ff'],
-  [Infinity, '伽马射线', '#e8f0ff']
+  [0.55, { zh: '无线电', en: 'radio' }, '#c9a27a'],
+  [0.85, { zh: '微波', en: 'microwave' }, '#d8b06a'],
+  [1.15, { zh: '红外', en: 'infrared' }, '#e0755a'],
+  [1.55, { zh: '可见光', en: 'visible light' }, '#7ae08a'],
+  [1.85, { zh: '紫外', en: 'ultraviolet' }, '#8a7dff'],
+  [2.15, { zh: 'X 射线', en: 'X-rays' }, '#6fb7ff'],
+  [Infinity, { zh: '伽马射线', en: 'gamma rays' }, '#e8f0ff']
 ]
 
 export function createSim(canvas, statsEl) {
@@ -242,10 +256,12 @@ export function createSim(canvas, statsEl) {
 
     if (statsEl) {
       const lambda = C / freq
-      const bandInfo = spec ? `　${spec.name}` : ''
+      const bandInfo = spec ? `　${localize(spec.name)}` : ''
       statsEl.textContent = grabbed
-        ? '上下摇，看扰动跑出去'
-        : `f = ${freq.toFixed(2)}　λ = ${lambda.toFixed(0)}　c = f·λ = ${C}（恒定）${bandInfo}`
+        ? getLanguage() === 'en' ? 'shake up and down - watch the disturbance run outward' : '上下摇，看扰动跑出去'
+        : `f = ${freq.toFixed(2)}　λ = ${lambda.toFixed(0)}　c = f·λ = ${C} ${
+          getLanguage() === 'en' ? '(constant)' : '（恒定）'
+        }${bandInfo}`
     }
   }
 

@@ -3,6 +3,7 @@ import {
   CSS2DRenderer,
   CSS2DObject
 } from 'three/examples/jsm/renderers/CSS2DRenderer.js'
+import { dustName, onLanguageChange, starName } from '../i18n.js'
 
 // 星名标签：随缩放逐层浮现——先超巨星，再亮星，最后微光星。
 // 纯 DOM/CSS，与 HUD 同一套字体语言。
@@ -49,7 +50,7 @@ export function createLabels(stars, container) {
             : 'dust'
     const el = document.createElement('div')
     el.className = `star-label star-label--${tier}`
-    el.textContent = s.name.zh
+    el.textContent = s.dust ? dustName(s) : starName(s)
     // 同支大星先做基础错位，减少需要避让的碰撞对
     if (tier === 'high') {
       const k = highPerBranch.get(s.branch) ?? 0
@@ -164,6 +165,14 @@ export function createLabels(stars, container) {
   function render(scene, camera) {
     renderer.render(scene, camera)
   }
+
+  function renderLanguage() {
+    items.forEach((item) => {
+      item.el.textContent = item.src.dust ? dustName(item.src) : starName(item.src)
+    })
+    frameCount = 3
+  }
+  onLanguageChange(renderLanguage)
 
   // —— 透镜切换：标签跟随星飞行 ——
   function beginLens(lensKey) {

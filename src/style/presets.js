@@ -37,4 +37,4 @@ export const PRESETS = {
   }
 }
 
-export const DEFAULT_PRESET = 'interstellar'
+export const DEFAULT_PRESET = 'deepfield'

@@ -1,38 +1,52 @@
 // 杨氏双缝实验 · 演示台课程
 // 惊讶时刻：一次只发一个光子，点一个个落下——成千上万个点自己画出干涉条纹。
 
+import { getLanguage } from '../i18n.js'
+
 const SLIT_W = 6 // 缝宽（衍射包络用）
 
 export const stageConfig = {
   steps: [
     {
-      title: '波的相遇',
-      text: '两条缝各自漾出一圈圈波。波峰遇波峰变亮、波峰遇波谷抵消——右边屏幕上出现明暗相间的条纹。这是波独有的签名，弹丸做不到。',
+      title: { zh: '波的相遇', en: 'Waves Meeting' },
+      text: {
+        zh: '两条缝各自漾出一圈圈波。波峰遇波峰变亮、波峰遇波谷抵消——右边屏幕上出现明暗相间的条纹。这是波独有的签名，弹丸做不到。',
+        en: 'Each slit sends out waves. Crest meeting crest brightens; crest meeting trough cancels. The bright and dark bands on the screen are a signature only waves can make.'
+      },
       scenario: 'wave',
       annotations: { rings: true }
     },
     {
-      title: '调一调',
-      text: '拖下面的滑杆：缝距越小、波长越长，条纹间距越宽——Δy = λL/d。杨用这条关系第一次量出了光的波长，不到一微米。',
+      title: { zh: '调一调', en: 'Tune the Pattern' },
+      text: {
+        zh: '拖下面的滑杆：缝距越小、波长越长，条纹间距越宽——Δy = λL/d。杨用这条关系第一次量出了光的波长，不到一微米。',
+        en: 'Move the sliders: smaller slit spacing or longer wavelength makes wider fringes, Δy = λL/d. Young used this relation to measure light’s tiny wavelength.'
+      },
       scenario: 'wave',
       annotations: { rings: true, measure: true }
     },
     {
-      title: '一次一个光子',
-      text: '把光调暗到一次只有一个光子。每个光子只在屏上打出一个点——但看着点慢慢积累：条纹又出现了。单个光子，似乎同时穿过了两条缝。',
+      title: { zh: '一次一个光子', en: 'One Photon at a Time' },
+      text: {
+        zh: '把光调暗到一次只有一个光子。每个光子只在屏上打出一个点——但看着点慢慢积累：条纹又出现了。单个光子，似乎同时穿过了两条缝。',
+        en: 'Dim the light until photons arrive one by one. Each photon leaves a single dot, yet the dots slowly build the same interference pattern.'
+      },
       scenario: 'photons',
       annotations: {}
     },
     {
-      title: '看它走哪条缝',
-      text: '在缝上装探测器，弄清每个光子到底走了哪条。条纹立刻消失，只剩两团。"知道路径"本身就杀死了干涉——这就是量子力学最深的怪。',
+      title: { zh: '看它走哪条缝', en: 'Which Path?' },
+      text: {
+        zh: '在缝上装探测器，弄清每个光子到底走了哪条。条纹立刻消失，只剩两团。"知道路径"本身就杀死了干涉——这就是量子力学最深的怪。',
+        en: 'Add detectors at the slits and learn which path each photon took. The fringes disappear, leaving two clumps. Knowing the path destroys interference.'
+      },
       scenario: 'observed',
       annotations: {}
     }
   ],
   params: [
-    { key: 'd', label: '缝距', min: 26, max: 90, step: 1, value: 48 },
-    { key: 'lambda', label: '波长', min: 9, max: 24, step: 0.5, value: 14 }
+    { key: 'd', label: { zh: '缝距', en: 'Slit spacing' }, min: 26, max: 90, step: 1, value: 48 },
+    { key: 'lambda', label: { zh: '波长', en: 'Wavelength' }, min: 9, max: 24, step: 0.5, value: 14 }
   ]
 }
 
@@ -158,7 +172,7 @@ export function createSim(canvas, statsEl) {
       ctx.font = '10px "Songti SC", serif'
       ctx.fillStyle = 'rgba(255, 170, 130, 0.7)'
       ctx.textAlign = 'left'
-      ctx.fillText('探测器', barrierX + 16, s1 - 6)
+      ctx.fillText(getLanguage() === 'en' ? 'detector' : '探测器', barrierX + 16, s1 - 6)
     }
 
     // 波纹环（从两缝漾出，波长间距）
@@ -254,8 +268,12 @@ export function createSim(canvas, statsEl) {
         scenario === 'wave'
           ? `d = ${d}　λ = ${lambda.toFixed(1)}　Δy = λL/d = ${dy}`
           : scenario === 'photons'
-            ? `已落下 ${hits.length} 个光子——条纹正在自己长出来`
-            : `路径已知：干涉消失，只剩两团（${hits.length} 个光子）`
+            ? getLanguage() === 'en'
+              ? `${hits.length} photons landed - the fringes are growing`
+              : `已落下 ${hits.length} 个光子——条纹正在自己长出来`
+            : getLanguage() === 'en'
+              ? `Path known: interference vanishes into two clumps (${hits.length} photons)`
+              : `路径已知：干涉消失，只剩两团（${hits.length} 个光子）`
     }
   }
 

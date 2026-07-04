@@ -2,6 +2,8 @@
 // 卡片模式：抓住行星甩出去，预测椭圆浮现。
 // 演示台模式：四步课程——圆轨道受力 → 甩出椭圆 → 等面积定律 → 逃逸。
 
+import { getLanguage } from '../i18n.js'
+
 const G = 12000
 const SUN_R = 10
 const TRAIL_MAX = 320
@@ -10,32 +12,44 @@ const SWEEP_WINDOW = 1.7 // 等面积着色的时间窗（秒）
 export const stageConfig = {
   steps: [
     {
-      title: '引力与圆轨道',
-      text: '行星每时每刻都在向太阳"坠落"（白色箭头是引力），只是它横向跑得足够快（青色箭头是速度），坠落刚好变成绕圈。苹果和月亮，服从的是同一条定律。',
+      title: { zh: '引力与圆轨道', en: 'Gravity and Circular Orbits' },
+      text: {
+        zh: '行星每时每刻都在向太阳"坠落"（白色箭头是引力），只是它横向跑得足够快（青色箭头是速度），坠落刚好变成绕圈。苹果和月亮，服从的是同一条定律。',
+        en: 'A planet is constantly falling toward the Sun: the white arrow is gravity. It also moves sideways fast enough that falling becomes orbiting. Apples and moons obey the same law.'
+      },
       scenario: 'circular',
       annotations: { force: true, velocity: true }
     },
     {
-      title: '亲手甩出椭圆',
-      text: '抓住行星，甩出去。松手的瞬间，未来的整条轨道就已经定了——虚线就是它。太阳不在椭圆中心，而在焦点上：这是开普勒第一定律，牛顿用引力把它证了出来。',
+      title: { zh: '亲手甩出椭圆', en: 'Throw an Ellipse' },
+      text: {
+        zh: '抓住行星，甩出去。松手的瞬间，未来的整条轨道就已经定了——虚线就是它。太阳不在椭圆中心，而在焦点上：这是开普勒第一定律，牛顿用引力把它证了出来。',
+        en: 'Grab the planet and throw it. The moment you release, its future orbit is set: the dashed curve shows it. The Sun sits at a focus, not the center of the ellipse.'
+      },
       scenario: 'free',
       annotations: { force: true, velocity: true }
     },
     {
-      title: '等面积定律',
-      text: '看扫过的扇形：靠近太阳时行星飞快、扇形短而胖；远离时缓慢、扇形长而瘦——但相同时间扫过的面积相同。这是开普勒第二定律，本质是角动量守恒。',
+      title: { zh: '等面积定律', en: 'Equal Areas' },
+      text: {
+        zh: '看扫过的扇形：靠近太阳时行星飞快、扇形短而胖；远离时缓慢、扇形长而瘦——但相同时间扫过的面积相同。这是开普勒第二定律，本质是角动量守恒。',
+        en: 'Watch the swept wedges: near the Sun the planet moves fast and the sector is short and wide; far away it moves slowly and the sector is long and thin. Equal times sweep equal areas.'
+      },
       scenario: 'ellipse',
       annotations: { sweep: true }
     },
     {
-      title: '逃逸',
-      text: '把初速度推过临界值 √2·v圆，椭圆"啪"地破开成双曲线，行星一去不返。第一宇宙速度和第二宇宙速度的分野，就在这一下。用滑杆试试临界点。',
+      title: { zh: '逃逸', en: 'Escape' },
+      text: {
+        zh: '把初速度推过临界值 √2·v圆，椭圆"啪"地破开成双曲线，行星一去不返。第一宇宙速度和第二宇宙速度的分野，就在这一下。用滑杆试试临界点。',
+        en: 'Push the initial speed past √2 times circular speed and the ellipse opens into an escape path. The slider lets you feel the boundary between orbit and departure.'
+      },
       scenario: 'escape',
       annotations: { velocity: true }
     }
   ],
   params: [
-    { key: 'vScale', label: '初速倍率', min: 0.55, max: 1.55, step: 0.01, value: 1 }
+    { key: 'vScale', label: { zh: '初速倍率', en: 'Initial speed' }, min: 0.55, max: 1.55, step: 0.01, value: 1 }
   ]
 }
 
@@ -231,8 +245,10 @@ export function createSim(canvas, statsEl) {
     if (statsEl) {
       const F = (G / (o.r * o.r)) * 1000
       statsEl.textContent = grabbed
-        ? '松手，把它甩出去'
-        : `r = ${o.r.toFixed(0)}　v = ${o.v.toFixed(1)}　F ∝ 1/r² = ${F.toFixed(2)}　e = ${o.bound ? o.e.toFixed(2) : '≥1 逃逸'}`
+        ? getLanguage() === 'en' ? 'release to throw it' : '松手，把它甩出去'
+        : `r = ${o.r.toFixed(0)}　v = ${o.v.toFixed(1)}　F ∝ 1/r² = ${F.toFixed(2)}　e = ${
+          o.bound ? o.e.toFixed(2) : getLanguage() === 'en' ? '≥1 escape' : '≥1 逃逸'
+        }`
     }
   }
 

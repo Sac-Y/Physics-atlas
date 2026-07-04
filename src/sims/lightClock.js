@@ -2,32 +2,46 @@
 // 两台光钟：一台静止，一台随飞船移动。光速对谁都一样——
 // 移动的钟里光走斜线更长，所以它的"滴答"更慢。时间膨胀不是错觉，是几何。
 
+import { getLanguage } from '../i18n.js'
+
 const C = 150 // 光速（画布 px/s）
 const MIRROR_GAP = 120 // 镜面间距 h
 
 export const stageConfig = {
   steps: [
     {
-      title: '光速对谁都一样',
-      text: '两台一模一样的光钟：光子在上下两面镜子间弹跳，弹一个来回记一次"滴答"。爱因斯坦的全部赌注只有一句话——不管你跑多快，量到的光速都相同。',
+      title: { zh: '光速对谁都一样', en: 'Light Speed Is the Same' },
+      text: {
+        zh: '两台一模一样的光钟：光子在上下两面镜子间弹跳，弹一个来回记一次"滴答"。爱因斯坦的全部赌注只有一句话——不管你跑多快，量到的光速都相同。',
+        en: 'Two identical light clocks: a photon bounces between mirrors, one round trip per tick. Einstein’s wager was simple: every observer measures the same speed of light.'
+      },
       scenario: 'rest',
       annotations: {}
     },
     {
-      title: '移动的钟',
-      text: '让右边的钟坐上飞船。在你看来，它的光子必须走斜线才能追上移动的镜子——路程变长了，而光速不许变。唯一的出路：它的每一次滴答，都比静止的钟更久。看两个计数器慢慢拉开。',
+      title: { zh: '移动的钟', en: 'The Moving Clock' },
+      text: {
+        zh: '让右边的钟坐上飞船。在你看来，它的光子必须走斜线才能追上移动的镜子——路程变长了，而光速不许变。唯一的出路：它的每一次滴答，都比静止的钟更久。看两个计数器慢慢拉开。',
+        en: 'Put the right clock on a ship. From your view, its photon must travel diagonally to catch the moving mirror. The path is longer, but light speed cannot change.'
+      },
       scenario: 'moving',
       annotations: { path: true }
     },
     {
-      title: 'γ 因子',
-      text: '慢多少？γ = 1/√(1−v²/c²)。把速度推向光速：0.6c 时慢 25%，0.9c 时慢 2.3 倍，0.99c 时慢 7 倍——分母趋零，γ 冲向无穷。这就是为什么任何有质量的东西到不了光速。',
+      title: { zh: 'γ 因子', en: 'The γ Factor' },
+      text: {
+        zh: '慢多少？γ = 1/√(1−v²/c²)。把速度推向光速：0.6c 时慢 25%，0.9c 时慢 2.3 倍，0.99c 时慢 7 倍——分母趋零，γ 冲向无穷。这就是为什么任何有质量的东西到不了光速。',
+        en: 'How much slower? γ = 1/√(1-v²/c²). Push speed toward c and γ grows without bound. That is why massive objects cannot reach light speed.'
+      },
       scenario: 'moving',
       annotations: { path: true, gamma: true }
     },
     {
-      title: '这不是错觉',
-      text: 'GPS 卫星的钟每天要为相对论修正约 38 微秒，否则定位一天漂 10 公里；宇宙线里的 μ 子寿命只有 2.2 微秒，本该在高空死去，却因为时间膨胀活着到达地面。你每天都在用相对论。',
+      title: { zh: '这不是错觉', en: 'Not an Illusion' },
+      text: {
+        zh: 'GPS 卫星的钟每天要为相对论修正约 38 微秒，否则定位一天漂 10 公里；宇宙线里的 μ 子寿命只有 2.2 微秒，本该在高空死去，却因为时间膨胀活着到达地面。你每天都在用相对论。',
+        en: 'GPS clocks need relativistic corrections, and cosmic-ray muons survive to reach the ground because their time is dilated. Relativity is not decoration; it is infrastructure.'
+      },
       scenario: 'moving',
       annotations: { path: true, gamma: true }
     }
@@ -125,14 +139,14 @@ export function createSim(canvas, statsEl) {
     const restTicks = Math.floor(simClock / T0)
 
     if (scenario === 'rest') {
-      drawClock(restX, restPhase, '钟 A', restTicks, false)
-      drawClock(W * 0.62, restPhase, '钟 B', restTicks, false)
+      drawClock(restX, restPhase, getLanguage() === 'en' ? 'clock A' : '钟 A', restTicks, false)
+      drawClock(W * 0.62, restPhase, getLanguage() === 'en' ? 'clock B' : '钟 B', restTicks, false)
     } else {
       const Tm = T0 * gamma()
       const movPhase = (simClock / Tm) % 1
       const movTicks = Math.floor(simClock / Tm)
-      drawClock(restX, restPhase, '静止的钟', restTicks, false)
-      drawClock(shipX, movPhase, `飞船 v = ${vc.toFixed(2)}c`, movTicks, true)
+      drawClock(restX, restPhase, getLanguage() === 'en' ? 'rest clock' : '静止的钟', restTicks, false)
+      drawClock(shipX, movPhase, `${getLanguage() === 'en' ? 'ship' : '飞船'} v = ${vc.toFixed(2)}c`, movTicks, true)
     }
 
     // γ 表
@@ -152,8 +166,10 @@ export function createSim(canvas, statsEl) {
       const g = gamma()
       statsEl.textContent =
         scenario === 'rest'
-          ? '两台钟滴答完全同步'
-          : `v = ${vc.toFixed(2)}c　γ = ${g.toFixed(2)}　飞船上的 1 秒 = 你的 ${g.toFixed(2)} 秒`
+          ? getLanguage() === 'en' ? 'both clocks tick in sync' : '两台钟滴答完全同步'
+          : getLanguage() === 'en'
+            ? `v = ${vc.toFixed(2)}c　γ = ${g.toFixed(2)}　1 second on the ship = ${g.toFixed(2)} seconds for you`
+            : `v = ${vc.toFixed(2)}c　γ = ${g.toFixed(2)}　飞船上的 1 秒 = 你的 ${g.toFixed(2)} 秒`
     }
   }
 

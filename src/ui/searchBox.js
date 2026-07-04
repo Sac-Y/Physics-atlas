@@ -1,11 +1,13 @@
 // 搜索框：输入定律名 / 人名，直接飞到那颗星。
 // 快捷键 "/" 聚焦；Enter 选第一项；Esc 收起。
 
+import { onLanguageChange, starAuthor, starName, t } from '../i18n.js'
+
 export function createSearchBox({ stars, onSelect }) {
   const root = document.createElement('div')
   root.className = 'hud hud-search'
   root.innerHTML = `
-    <input class="search-input" type="text" placeholder="搜索定律 · 人名　/" spellcheck="false" />
+    <input class="search-input" type="text" spellcheck="false" />
     <ul class="search-results"></ul>`
   document.body.appendChild(root)
 
@@ -39,9 +41,9 @@ export function createSearchBox({ stars, onSelect }) {
       const li = document.createElement('li')
       li.className = i === 0 ? 'hit' : ''
       const name = document.createElement('span')
-      name.textContent = s.name.zh
+      name.textContent = starName(s)
       const meta = document.createElement('i')
-      meta.textContent = `${s.author.zh} · ${s.year}`
+      meta.textContent = `${starAuthor(s)} · ${s.year}`
       li.append(name, meta)
       li.addEventListener('click', () => select(s))
       list.appendChild(li)
@@ -77,6 +79,13 @@ export function createSearchBox({ stars, onSelect }) {
       input.focus()
     }
   })
+
+  function renderLanguage() {
+    input.placeholder = t('search.placeholder')
+    renderResults()
+  }
+  onLanguageChange(renderLanguage)
+  renderLanguage()
 
   return {
     focus: () => input.focus(),

@@ -2,35 +2,49 @@
 // 亲手拖磁铁穿过线圈：电流表只在"变化"的瞬间摆动。
 // 静止的磁铁什么也不给你——发电的从来不是磁，是变化。
 
+import { getLanguage } from '../i18n.js'
+
 export const stageConfig = {
   steps: [
     {
-      title: '磁生电？',
-      text: '抓住磁铁，推进线圈、再拔出来。盯着下面的电流表：只有磁铁在动的瞬间，指针才摆——停住就归零。法拉第盯着这个"只在变化时出现"的电流，看了十年。',
+      title: { zh: '磁生电？', en: 'Magnet Makes Current?' },
+      text: {
+        zh: '抓住磁铁，推进线圈、再拔出来。盯着下面的电流表：只有磁铁在动的瞬间，指针才摆——停住就归零。法拉第盯着这个"只在变化时出现"的电流，看了十年。',
+        en: 'Grab the magnet, push it through the coil, then pull it back. The meter swings only while the magnet moves. Stop moving and the current drops to zero.'
+      },
       scenario: 'manual',
       annotations: { meter: true }
     },
     {
-      title: '快与慢',
-      text: '同样的路程，快抽和慢抽完全不同：越快，指针甩得越猛。感应电动势正比于磁通量的变化率——ε = −dΦ/dt。看下面滚动的曲线：Φ 变得越陡，ε 的尖峰越高。',
+      title: { zh: '快与慢', en: 'Fast and Slow' },
+      text: {
+        zh: '同样的路程，快抽和慢抽完全不同：越快，指针甩得越猛。感应电动势正比于磁通量的变化率——ε = −dΦ/dt。看下面滚动的曲线：Φ 变得越陡，ε 的尖峰越高。',
+        en: 'The same motion done quickly is different from doing it slowly. Induced voltage follows the rate of change of magnetic flux: ε = -dΦ/dt.'
+      },
       scenario: 'manual',
       annotations: { meter: true, trace: true }
     },
     {
-      title: '反抗改变',
-      text: '注意电流的方向（线圈上的箭头）：磁铁靠近时电流产生的磁场把它往外推，离开时又把它往回拉——感应电流永远在反抗你。这是楞次定律，也是能量守恒在电磁世界的签名。',
+      title: { zh: '反抗改变', en: 'Opposing Change' },
+      text: {
+        zh: '注意电流的方向（线圈上的箭头）：磁铁靠近时电流产生的磁场把它往外推，离开时又把它往回拉——感应电流永远在反抗你。这是楞次定律，也是能量守恒在电磁世界的签名。',
+        en: 'Watch the current direction. As the magnet approaches, the coil pushes back; as it leaves, the coil pulls back. Induced current resists change.'
+      },
       scenario: 'manual',
       annotations: { meter: true, lenz: true }
     },
     {
-      title: '从手到电网',
-      text: '把"晃磁铁"做到极致：让它不知疲倦地往复。指针左右摆动——这就是交流电。全世界每一座发电站，本质上都是这只手，被换成了蒸汽、水流或风。',
+      title: { zh: '从手到电网', en: 'From Hand to Grid' },
+      text: {
+        zh: '把"晃磁铁"做到极致：让它不知疲倦地往复。指针左右摆动——这就是交流电。全世界每一座发电站，本质上都是这只手，被换成了蒸汽、水流或风。',
+        en: 'Make the magnet move back and forth without tiring. The meter swings both ways: alternating current. Power plants are this hand, replaced by steam, water, or wind.'
+      },
       scenario: 'auto',
       annotations: { meter: true, trace: true }
     }
   ],
   params: [
-    { key: 'freq', label: '往复频率', min: 0.2, max: 1.6, step: 0.01, value: 0.6 }
+    { key: 'freq', label: { zh: '往复频率', en: 'Oscillation frequency' }, min: 0.2, max: 1.6, step: 0.01, value: 0.6 }
   ]
 }
 
@@ -123,10 +137,16 @@ export function createSim(canvas, statsEl) {
     // 楞次：推/拒提示
     if (annotations.lenz && Math.abs(needle) > 0.1) {
       const approaching = needle > 0
-      ctx.font = '11px "Songti SC", serif'
+      ctx.font = getLanguage() === 'en' ? '11px "Avenir Next", sans-serif' : '11px "Songti SC", serif'
       ctx.fillStyle = 'rgba(255, 235, 200, 0.75)'
       ctx.textAlign = 'center'
-      ctx.fillText(approaching ? '线圈在推它 →' : '← 线圈在拉它', coilX, railY - 62)
+      ctx.fillText(
+        getLanguage() === 'en'
+          ? approaching ? 'coil pushes it →' : '← coil pulls it'
+          : approaching ? '线圈在推它 →' : '← 线圈在拉它',
+        coilX,
+        railY - 62
+      )
     }
 
     // 磁铁（N 暖 / S 冷，克制配色）
@@ -165,8 +185,8 @@ export function createSim(canvas, statsEl) {
       ctx.lineTo(gx + Math.cos(ang) * (R - 4), gy + Math.sin(ang) * (R - 4))
       ctx.stroke()
       ctx.fillStyle = 'rgba(225, 232, 250, 0.5)'
-      ctx.font = '10px "Songti SC", serif'
-      ctx.fillText('感应电流', gx, gy + 16)
+      ctx.font = getLanguage() === 'en' ? '10px "Avenir Next", sans-serif' : '10px "Songti SC", serif'
+      ctx.fillText(getLanguage() === 'en' ? 'induced current' : '感应电流', gx, gy + 16)
     }
 
     // Φ 与 ε 滚动曲线
@@ -207,8 +227,12 @@ export function createSim(canvas, statsEl) {
 
     if (statsEl) {
       statsEl.textContent = grabbed
-        ? '推进去、抽出来——看指针'
-        : `ε = −dΦ/dt = ${(emf / 5.5).toFixed(2)}　${Math.abs(needle) < 0.03 ? '磁铁不动，什么都不发生' : ''}`
+        ? getLanguage() === 'en' ? 'push in, pull out - watch the needle' : '推进去、抽出来——看指针'
+        : `ε = −dΦ/dt = ${(emf / 5.5).toFixed(2)}　${
+          Math.abs(needle) < 0.03
+            ? getLanguage() === 'en' ? 'magnet still, no current' : '磁铁不动，什么都不发生'
+            : ''
+        }`
     }
   }
 

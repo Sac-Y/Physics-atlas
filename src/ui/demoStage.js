@@ -1,6 +1,7 @@
 import katex from 'katex'
 import { BRANCHES } from '../data/branches.js'
 import { loadSimModule } from '../sims/simHost.js'
+import { formatStageMeta, localize, onLanguageChange, starName, t } from '../i18n.js'
 
 // 演示台：近全屏的"教学仪器"。
 // 左：大画布模拟；右：分步课程——每一步一段人话讲解，并把模拟切到对应场景。
@@ -35,6 +36,7 @@ export function createDemoStage() {
   let sim = null
   let config = null
   let currentMod = null
+  let currentStar = null
   let activeStep = 0
   let lastMountW = 0
   let onCloseCb = null
@@ -45,7 +47,7 @@ export function createDemoStage() {
     const step = config.steps[i]
     sim.setScenario?.(step.scenario)
     sim.setAnnotations?.(step.annotations)
-    q('.stage-text').textContent = step.text
+    q('.stage-text').textContent = localize(step.text)
     q('.stage-steps')
       .querySelectorAll('button')
       .forEach((b, k) => b.classList.toggle('active', k === i))
@@ -56,7 +58,9 @@ export function createDemoStage() {
     nav.textContent = ''
     config.steps.forEach((step, i) => {
       const b = document.createElement('button')
-      b.innerHTML = `<em>${i + 1}</em>${step.title}`
+      const em = document.createElement('em')
+      em.textContent = String(i + 1)
+      b.append(em, localize(step.title))
       b.addEventListener('click', () => applyStep(i))
       nav.appendChild(b)
     })
@@ -69,7 +73,7 @@ export function createDemoStage() {
       if (p.type === 'button') {
         const b = document.createElement('button')
         b.className = 'stage-action'
-        b.textContent = p.label
+        b.textContent = localize(p.label)
         b.addEventListener('click', () => sim?.setParam?.(p.key, 1))
         wrap.appendChild(b)
         return
@@ -79,12 +83,12 @@ export function createDemoStage() {
         const row = document.createElement('div')
         row.className = 'stage-chiprow'
         const name = document.createElement('span')
-        name.textContent = p.label
+        name.textContent = localize(p.label)
         const chips = document.createElement('div')
         chips.className = 'stage-chips'
         p.options.forEach((o) => {
           const b = document.createElement('button')
-          b.textContent = o.label
+          b.textContent = localize(o.label)
           if (o.value === p.value) b.classList.add('active')
           b.addEventListener('click', () => {
             sim?.setParam?.(p.key, o.value)
@@ -99,7 +103,7 @@ export function createDemoStage() {
       const row = document.createElement('label')
       row.className = 'stage-param'
       const name = document.createElement('span')
-      name.textContent = p.label
+      name.textContent = localize(p.label)
       const input = document.createElement('input')
       input.type = 'range'
       input.min = p.min
@@ -126,12 +130,14 @@ export function createDemoStage() {
     if (seq !== openSeq) return false // 期间又开了别的星，本次作废
 
     destroySim()
+    currentStar = star
     config = mod.stageConfig
 
     const branch = BRANCHES[star.branch]
     q('.stage-dot').style.background = branch.color
-    q('.stage-branch').textContent = `${branch.zh} · ${star.author.zh} · ${star.year}`
-    q('.stage-title').textContent = star.name.zh
+    q('.stage-branch').textContent = formatStageMeta(star)
+    q('.stage-title').textContent = starName(star)
+    q('.stage-close').setAttribute('aria-label', t('stage.close'))
     try {
       katex.render(star.equation, q('.stage-eq'), { displayMode: false, throwOnError: true })
     } catch {
@@ -194,6 +200,7 @@ export function createDemoStage() {
     if (!root.classList.contains('open')) return
     destroySim()
     currentMod = null
+    currentStar = null
     root.classList.remove('open')
     onCloseCb?.()
   }
@@ -201,6 +208,16 @@ export function createDemoStage() {
   q('.stage-close').addEventListener('click', close)
   window.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') close()
+  })
+
+  onLanguageChange(() => {
+    q('.stage-close').setAttribute('aria-label', t('stage.close'))
+    if (!root.classList.contains('open') || !config || !currentStar) return
+    q('.stage-branch').textContent = formatStageMeta(currentStar)
+    q('.stage-title').textContent = starName(currentStar)
+    buildSteps()
+    buildParams()
+    applyStep(activeStep)
   })
 
   return {

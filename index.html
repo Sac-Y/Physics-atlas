@@ -78,6 +78,26 @@
     }
 
     .hud-lenses { top: auto; bottom: 26px; left: 34px; right: auto; }
+    .hud-language { top: 76px; right: 34px; }
+    .hud-language button {
+      min-width: 44px;
+      padding-inline: 12px;
+      letter-spacing: 0.08em;
+      text-indent: 0;
+    }
+    body[data-lang="en"] {
+      font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+    }
+    body[data-lang="en"] .hud-title h1 {
+      letter-spacing: 0.08em;
+      text-indent: 0;
+    }
+    body[data-lang="en"] .hud-title span,
+    body[data-lang="en"] .hud-hint,
+    body[data-lang="en"] .tour-label {
+      letter-spacing: 0.18em;
+      text-indent: 0;
+    }
 
     /* 搜索框 */
     .hud-search { top: 92px; left: 34px; width: 240px; }
@@ -558,16 +578,17 @@
 
   <div class="hud hud-title">
     <div class="hud-title-main">
-      <h1>物理学星图</h1>
+      <h1 id="appTitle">物理学星图</h1>
       <div id="branchLegend" aria-label="学科图例"></div>
     </div>
-    <span>Physics Star Atlas</span>
+    <span id="appSubtitle">Physics Star Atlas</span>
   </div>
 
   <div class="hud hud-styles" id="styleSwitcher" aria-label="风格方案"></div>
+  <div class="hud hud-styles hud-language" id="languageSwitcher" aria-label="语言"></div>
   <div class="hud hud-styles hud-lenses" id="lensSwitcher" aria-label="透镜"></div>
 
-  <div class="hud hud-hint">拖 拽 旋 转 &nbsp;·&nbsp; 滚 轮 缩 放</div>
+  <div class="hud hud-hint" id="hudHint">拖 拽 旋 转 &nbsp;·&nbsp; 滚 轮 缩 放</div>
   <button class="hud hud-reset" id="resetView" type="button" aria-label="恢复初始视图" title="恢复初始视图">↺</button>
   <div class="hud" id="fps"></div>
 

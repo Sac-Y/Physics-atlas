@@ -4,6 +4,8 @@
 // ③ 太空互推：两名宇航员掌心相抵——你永远无法只推别人不推自己
 // ④ 永远在坠落：卫星绕行星，关掉引力沿切线飞走——轨道 = 错过地面的直线飞行
 
+import { getLanguage } from '../i18n.js'
+
 const G_ACC = 9.8
 const SCALE = 6 // px per meter
 const THRUST = 14 // 推进器推力 N
@@ -11,26 +13,38 @@ const THRUST = 14 // 推进器推力 N
 export const stageConfig = {
   steps: [
     {
-      title: '两个世界',
-      text: '同一次发射，两条冰道：上面是没有摩擦的真空带，下面铺着木板。上面的冰球永远滑下去，下面的很快停住——让东西停下的从来不是"运动会耗尽"，是摩擦这只看不见的手。亲手甩一个试试：两个世界永远同步出发。',
+      title: { zh: '两个世界', en: 'Two Worlds' },
+      text: {
+        zh: '同一次发射，两条冰道：上面是没有摩擦的真空带，下面铺着木板。上面的冰球永远滑下去，下面的很快停住——让东西停下的从来不是"运动会耗尽"，是摩擦这只看不见的手。亲手甩一个试试：两个世界永远同步出发。',
+        en: 'One launch, two tracks: the top has no friction, the bottom has a rough surface. The top puck keeps sliding; the bottom stops. Motion does not run out. Friction removes it.'
+      },
       scenario: 'worlds',
       annotations: { calc: true }
     },
     {
-      title: '点火与熄火',
-      text: '按住画布点火：尾焰喷出，速度表指针一路爬——力在，加速度就在。松手熄火：指针停在原地，不回落。太空里没有摩擦，熄火的飞船永远不会停。再拖"载荷质量"：同样的火，越重推得越慢——a = F/m。',
+      title: { zh: '点火与熄火', en: 'Thrust and Coasting' },
+      text: {
+        zh: '按住画布点火：尾焰喷出，速度表指针一路爬——力在，加速度就在。松手熄火：指针停在原地，不回落。太空里没有摩擦，熄火的飞船永远不会停。再拖"载荷质量"：同样的火，越重推得越慢——a = F/m。',
+        en: 'Hold the canvas to fire the thruster. While force acts, acceleration exists and speed climbs. Release: the engine stops, but velocity does not fall. In space, coasting continues.'
+      },
       scenario: 'thrust',
       annotations: { calc: true, gauge: true }
     },
     {
-      title: '太空互推',
-      text: '两名宇航员掌心相抵。按「互推」：两人同时向后漂开——你永远无法只推别人而不推自己。拖质量比，让一个背上重装备：重的漂得慢，但 m×v 两边永远相等。火箭喷出燃气、燃气推回火箭，就是这一下。',
+      title: { zh: '太空互推', en: 'Push Off in Space' },
+      text: {
+        zh: '两名宇航员掌心相抵。按「互推」：两人同时向后漂开——你永远无法只推别人而不推自己。拖质量比，让一个背上重装备：重的漂得慢，但 m×v 两边永远相等。火箭喷出燃气、燃气推回火箭，就是这一下。',
+        en: 'Two astronauts push palm to palm. They drift apart together: you cannot push only the other person. Change the mass ratio and momentum still balances.'
+      },
       scenario: 'push',
       annotations: { momentum: true }
     },
     {
-      title: '永远在坠落',
-      text: '卫星绕着行星转：速度大小从不变，方向却一直被引力掰弯——拐弯也是加速度，引力就是那只手。点一下画布，关掉引力：它沿切线直直飞走（第一定律！）。行星绕太阳，本质是一场永远在坠落、却永远错过的直线飞行。',
+      title: { zh: '永远在坠落', en: 'Always Falling' },
+      text: {
+        zh: '卫星绕着行星转：速度大小从不变，方向却一直被引力掰弯——拐弯也是加速度，引力就是那只手。点一下画布，关掉引力：它沿切线直直飞走（第一定律！）。行星绕太阳，本质是一场永远在坠落、却永远错过的直线飞行。',
+        en: 'A satellite keeps the same speed, but gravity bends its direction. Turning is acceleration. Click the canvas to turn gravity off and it flies straight along the tangent.'
+      },
       scenario: 'orbit',
       annotations: { calc: true }
     }
@@ -39,17 +53,17 @@ export const stageConfig = {
     {
       type: 'chips',
       key: 'mu',
-      label: '摩擦带材质（下道）',
+      label: { zh: '摩擦带材质（下道）', en: 'Friction track surface' },
       value: 0.3,
       options: [
-        { label: '冰面', value: 0.02 },
-        { label: '木板', value: 0.3 },
-        { label: '橡胶', value: 0.7 }
+        { label: { zh: '冰面', en: 'Ice' }, value: 0.02 },
+        { label: { zh: '木板', en: 'Wood' }, value: 0.3 },
+        { label: { zh: '橡胶', en: 'Rubber' }, value: 0.7 }
       ]
     },
-    { key: 'm', label: '载荷质量 m (kg)', min: 1, max: 8, step: 0.1, value: 2 },
-    { key: 'ratio', label: '质量比 m₂/m₁', min: 0.5, max: 4, step: 0.1, value: 2 },
-    { type: 'button', key: 'push', label: '互推 ⇄ / 复位' }
+    { key: 'm', label: { zh: '载荷质量 m (kg)', en: 'Payload mass m (kg)' }, min: 1, max: 8, step: 0.1, value: 2 },
+    { key: 'ratio', label: { zh: '质量比 m₂/m₁', en: 'Mass ratio m₂/m₁' }, min: 0.5, max: 4, step: 0.1, value: 2 },
+    { type: 'button', key: 'push', label: { zh: '互推 ⇄ / 复位', en: 'Push ⇄ / reset' } }
   ]
 }
 
@@ -371,7 +385,7 @@ export function createSim(canvas, statsEl) {
     ctx.moveTo(0, y)
     ctx.lineTo(W, y)
     ctx.stroke()
-    ctx.font = '10.5px "Songti SC", serif'
+    ctx.font = getLanguage() === 'en' ? '10.5px "Avenir Next", sans-serif' : '10.5px "Songti SC", serif'
     ctx.fillStyle = `rgba(${tint}, 0.6)`
     ctx.textAlign = 'left'
     ctx.fillText(label, 16, y + 16)
@@ -382,8 +396,8 @@ export function createSim(canvas, statsEl) {
     dots()
 
     if (scenario === 'worlds') {
-      lane(laneTop, '真 空 带 · μ = 0', '120, 220, 235')
-      lane(laneBot, `摩 擦 带 · μ = ${mu.toFixed(2)}`, '255, 170, 120')
+      lane(laneTop, getLanguage() === 'en' ? 'VACUUM TRACK · μ = 0' : '真 空 带 · μ = 0', '120, 220, 235')
+      lane(laneBot, `${getLanguage() === 'en' ? 'FRICTION TRACK' : '摩 擦 带'} · μ = ${mu.toFixed(2)}`, '255, 170, 120')
       // 刹车痕
       skids.forEach((s) => {
         ctx.fillStyle = `rgba(255, 150, 100, ${0.28 * (1 - s.age / 2)})`
@@ -400,9 +414,9 @@ export function createSim(canvas, statsEl) {
       ctx.fillText(`${worlds.odoBot.toFixed(1)} m`, W - 16, laneBot - 30)
       if (annotations.calc) {
         drawCalc([
-          ['真空带：ΣF = 0 → v 恒定，永不停', 'rgba(120, 220, 235, 0.9)'],
-          [`摩擦带：f = μmg = ${(mu * 1 * G_ACC).toFixed(2)} N/kg·m`, 'rgba(255, 170, 120, 0.9)'],
-          ['唯一的区别：摩擦', 'rgba(235, 240, 255, 0.75)']
+          [getLanguage() === 'en' ? 'Vacuum: ΣF = 0 → constant v' : '真空带：ΣF = 0 → v 恒定，永不停', 'rgba(120, 220, 235, 0.9)'],
+          [`${getLanguage() === 'en' ? 'Friction' : '摩擦带'}: f = μmg = ${(mu * 1 * G_ACC).toFixed(2)} N/kg·m`, 'rgba(255, 170, 120, 0.9)'],
+          [getLanguage() === 'en' ? 'Only difference: friction' : '唯一的区别：摩擦', 'rgba(235, 240, 255, 0.75)']
         ])
       }
     } else if (scenario === 'thrust') {
@@ -427,16 +441,23 @@ export function createSim(canvas, statsEl) {
       if (annotations.calc) {
         const a = ship.thrustDir !== 0 ? THRUST / mass : 0
         drawCalc([
-          [`推力 F = ${ship.thrustDir !== 0 ? THRUST : 0} N`, 'rgba(255, 240, 220, 0.9)'],
+          [`${getLanguage() === 'en' ? 'Thrust' : '推力'} F = ${ship.thrustDir !== 0 ? THRUST : 0} N`, 'rgba(255, 240, 220, 0.9)'],
           [`a = F/m = ${a.toFixed(2)} m/s²`, 'rgba(120, 220, 235, 0.9)'],
-          [`v = ${Math.abs(ship.v).toFixed(1)} m/s ${ship.thrustDir !== 0 ? '（在变）' : '（不变——熄火≠停下）'}`, 'rgba(235, 240, 255, 0.8)']
+          [
+            `v = ${Math.abs(ship.v).toFixed(1)} m/s ${
+              ship.thrustDir !== 0
+                ? getLanguage() === 'en' ? '(changing)' : '（在变）'
+                : getLanguage() === 'en' ? '(constant - engine off)' : '（不变——熄火≠停下）'
+            }`,
+            'rgba(235, 240, 255, 0.8)'
+          ]
         ])
       }
       if (ship.thrustDir === 0 && Math.abs(ship.v) < 0.2) {
-        ctx.font = '11px "Songti SC", serif'
+        ctx.font = getLanguage() === 'en' ? '11px "Avenir Next", sans-serif' : '11px "Songti SC", serif'
         ctx.fillStyle = 'rgba(235, 240, 255, 0.4)'
         ctx.textAlign = 'center'
-        ctx.fillText('按 住 画 布 左 / 右 侧 点 火', W / 2, H * 0.82)
+        ctx.fillText(getLanguage() === 'en' ? 'HOLD LEFT / RIGHT SIDE TO FIRE' : '按 住 画 布 左 / 右 侧 点 火', W / 2, H * 0.82)
       }
     } else if (scenario === 'push') {
       const m2 = M1 * ratio
@@ -454,7 +475,7 @@ export function createSim(canvas, statsEl) {
         drawCalc([
           [`m₁v₁ = ${(M1 * Math.abs(duo.v1)).toFixed(0)} kg·m/s ←`, 'rgba(120, 220, 235, 0.9)'],
           [`m₂v₂ = ${(M1 * ratio * Math.abs(duo.v2)).toFixed(0)} kg·m/s →`, 'rgba(120, 220, 235, 0.9)'],
-          ['等大 · 反向 · 同时', 'rgba(255, 235, 200, 0.85)']
+          [getLanguage() === 'en' ? 'equal · opposite · simultaneous' : '等大 · 反向 · 同时', 'rgba(255, 235, 200, 0.85)']
         ])
       }
     } else if (scenario === 'orbit') {
@@ -490,27 +511,31 @@ export function createSim(canvas, statsEl) {
         // 引力（白，指向行星）与速度（青，切向）
         arrow(bx, by, ((orbit.cx - bx) / orbit.R) * 42, ((orbit.cy - by) / orbit.R) * 42, 'rgba(255, 240, 220, 0.95)', 2)
         arrow(bx, by, -Math.sin(orbit.theta) * orbit.vT * 11, Math.cos(orbit.theta) * orbit.vT * 11, 'rgba(120, 220, 235, 0.95)')
-        ctx.font = '10px "Songti SC", serif'
+        ctx.font = getLanguage() === 'en' ? '10px "Avenir Next", sans-serif' : '10px "Songti SC", serif'
         ctx.fillStyle = 'rgba(255, 240, 220, 0.6)'
         ctx.textAlign = 'center'
-        ctx.fillText('引力', bx + ((orbit.cx - bx) / orbit.R) * 24, by + ((orbit.cy - by) / orbit.R) * 24 - 6)
+        ctx.fillText(getLanguage() === 'en' ? 'gravity' : '引力', bx + ((orbit.cx - bx) / orbit.R) * 24, by + ((orbit.cy - by) / orbit.R) * 24 - 6)
       } else {
         bx = orbit.fx
         by = orbit.fy
         arrow(bx, by, orbit.fvx * 0.36, orbit.fvy * 0.36, 'rgba(120, 220, 235, 0.95)')
-        ctx.font = '11px "Songti SC", serif'
+        ctx.font = getLanguage() === 'en' ? '11px "Avenir Next", sans-serif' : '11px "Songti SC", serif'
         ctx.fillStyle = 'rgba(255, 235, 200, 0.75)'
         ctx.textAlign = 'center'
-        ctx.fillText('引力关了——沿切线直线飞出（第一定律）', orbit.cx, orbit.cy - orbit.R - 18)
+        ctx.fillText(
+          getLanguage() === 'en' ? 'gravity off - straight tangent flight' : '引力关了——沿切线直线飞出（第一定律）',
+          orbit.cx,
+          orbit.cy - orbit.R - 18
+        )
       }
       puck(bx, by, '150, 200, 255')
 
       if (annotations.calc && !orbit.cut) {
         const Fc = (mass * orbit.vT * orbit.vT) / (orbit.R / SCALE)
         drawCalc([
-          ['|v| 不变 · 方向一直在变 = 加速度', 'rgba(120, 220, 235, 0.9)'],
-          [`F引力 = mv²/R = ${Fc.toFixed(2)} N → 指向行星`, 'rgba(255, 240, 220, 0.9)'],
-          ['点一下画布：关掉引力', 'rgba(235, 240, 255, 0.5)']
+          [getLanguage() === 'en' ? '|v| constant · direction changes = acceleration' : '|v| 不变 · 方向一直在变 = 加速度', 'rgba(120, 220, 235, 0.9)'],
+          [`${getLanguage() === 'en' ? 'Fgravity' : 'F引力'} = mv²/R = ${Fc.toFixed(2)} N → ${getLanguage() === 'en' ? 'toward planet' : '指向行星'}`, 'rgba(255, 240, 220, 0.9)'],
+          [getLanguage() === 'en' ? 'click canvas: turn gravity off' : '点一下画布：关掉引力', 'rgba(235, 240, 255, 0.5)']
         ])
       }
     }
@@ -519,17 +544,25 @@ export function createSim(canvas, statsEl) {
     if (statsEl) {
       if (scenario === 'worlds') {
         statsEl.textContent = grabbed
-          ? '甩出去——两个世界同步出发'
+          ? getLanguage() === 'en' ? 'fling it - both worlds launch together' : '甩出去——两个世界同步出发'
           : worlds.bot.v === 0
-            ? '摩擦带停了 · 真空带还在滑（即将重新发射）'
-            : '同样的出发 · 不同的世界'
+            ? getLanguage() === 'en' ? 'friction track stopped · vacuum keeps sliding' : '摩擦带停了 · 真空带还在滑（即将重新发射）'
+            : getLanguage() === 'en' ? 'same launch · different worlds' : '同样的出发 · 不同的世界'
       } else if (scenario === 'thrust') {
         statsEl.textContent =
-          ship.thrustDir !== 0 ? '点火中 · 加速度存在，速度在爬' : Math.abs(ship.v) > 0.2 ? '熄火 · 速度保持不变' : '按住画布点火'
+          ship.thrustDir !== 0
+            ? getLanguage() === 'en' ? 'thrusting · acceleration exists, speed rises' : '点火中 · 加速度存在，速度在爬'
+            : Math.abs(ship.v) > 0.2
+              ? getLanguage() === 'en' ? 'engine off · velocity stays constant' : '熄火 · 速度保持不变'
+              : getLanguage() === 'en' ? 'hold the canvas to fire' : '按住画布点火'
       } else if (scenario === 'push') {
-        statsEl.textContent = duo.released ? '总动量 = 0，和互推前一样' : '掌心相抵 · 按「互推」'
+        statsEl.textContent = duo.released
+          ? getLanguage() === 'en' ? 'total momentum = 0, same as before' : '总动量 = 0，和互推前一样'
+          : getLanguage() === 'en' ? 'palms touching · press Push' : '掌心相抵 · 按「互推」'
       } else {
-        statsEl.textContent = orbit.cut ? '没有力 · 匀速直线（第一定律）' : '引力提供向心力 · 这就是轨道'
+        statsEl.textContent = orbit.cut
+          ? getLanguage() === 'en' ? 'no force · uniform straight-line motion' : '没有力 · 匀速直线（第一定律）'
+          : getLanguage() === 'en' ? 'gravity supplies centripetal force · orbit' : '引力提供向心力 · 这就是轨道'
       }
     }
   }

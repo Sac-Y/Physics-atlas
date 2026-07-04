@@ -19,7 +19,19 @@ import edgesData from './data/edges.json'
 import dustData from './data/dust.json'
 import routesData from './data/routes.json'
 import { PRESETS, DEFAULT_PRESET } from './style/presets.js'
+import {
+  LANGUAGES,
+  applyInitialLanguage,
+  branchName,
+  dustName,
+  onLanguageChange,
+  presetLabel,
+  setLanguage,
+  t
+} from './i18n.js'
 import * as THREE from 'three'
+
+applyInitialLanguage()
 
 const app = document.getElementById('app')
 const stage = createStage(app)
@@ -37,7 +49,7 @@ const lensAxis = createLensAxes()
 // 标签：正式星 + 微尘星（influence 0 → dust 层，极近距离才浮现）
 const labelSource = [
   ...starsData,
-  ...dustData.map((d) => ({ ...d, name: { zh: d.name }, influence: 0 }))
+  ...dustData.map((d) => ({ ...d, name: { zh: d.name }, influence: 0, dust: true }))
 ]
 const labels = createLabels(labelSource, document.body)
 
@@ -54,7 +66,8 @@ Object.entries(BRANCHES).forEach(([key, b]) => {
   dot.style.background = b.color
   dot.style.boxShadow = `0 0 8px ${b.color}`
   const name = document.createElement('span')
-  name.textContent = b.zh
+  name.className = 'legend-name'
+  name.textContent = branchName(key)
   item.append(dot, name)
   branchLegend.appendChild(item)
   legendItems.set(key, item)
@@ -153,7 +166,7 @@ stage.renderer.domElement.addEventListener('pointerup', (e) => {
 
 // —— 透镜：星系 / 时间轴 / 尺度 ——
 // 三套坐标离线算好在数据里，切换 = 全场粒子 GPU 插值流动到新布局
-const LENSES = { galaxy: '星系', timeline: '时间轴', scale: '尺度' }
+const LENSES = ['galaxy', 'timeline', 'scale']
 let lensCurrent = 'galaxy'
 let lensAnim = null // { to, t }
 let lensFade = 1 // 星云/盘面在非星系布局退场
@@ -208,9 +221,9 @@ function lensViewpoint(lens) {
 }
 
 const lensSwitcher = document.getElementById('lensSwitcher')
-Object.entries(LENSES).forEach(([key, label]) => {
+LENSES.forEach((key) => {
   const btn = document.createElement('button')
-  btn.textContent = label
+  btn.textContent = t(`lens.${key}`)
   btn.dataset.key = key
   btn.classList.toggle('active', key === lensCurrent)
   btn.addEventListener('click', () => switchLens(key))
@@ -329,11 +342,45 @@ let activePreset = params.get('style') in PRESETS ? params.get('style') : DEFAUL
 const switcher = document.getElementById('styleSwitcher')
 Object.entries(PRESETS).forEach(([key, preset]) => {
   const btn = document.createElement('button')
-  btn.textContent = preset.label
+  btn.textContent = presetLabel(key)
   btn.dataset.key = key
   btn.addEventListener('click', () => applyPreset(key))
   switcher.appendChild(btn)
 })
+
+const languageSwitcher = document.getElementById('languageSwitcher')
+Object.entries(LANGUAGES).forEach(([key, meta]) => {
+  const btn = document.createElement('button')
+  btn.textContent = meta.label
+  btn.dataset.key = key
+  btn.addEventListener('click', () => setLanguage(key))
+  languageSwitcher.appendChild(btn)
+})
+
+function renderLanguageChrome() {
+  document.getElementById('appTitle').textContent = t('app.title')
+  document.getElementById('appSubtitle').textContent = t('app.subtitle')
+  document.getElementById('branchLegend').setAttribute('aria-label', t('app.branchLegend'))
+  document.getElementById('styleSwitcher').setAttribute('aria-label', t('app.styleSwitcher'))
+  document.getElementById('lensSwitcher').setAttribute('aria-label', t('app.lensSwitcher'))
+  document.getElementById('languageSwitcher').setAttribute('aria-label', t('app.languageSwitcher'))
+  document.getElementById('hudHint').textContent = t('app.hint')
+  const reset = document.getElementById('resetView')
+  reset.setAttribute('aria-label', t('app.resetView'))
+  reset.title = t('app.resetView')
+  legendItems.forEach((el, key) => {
+    el.querySelector('.legend-name').textContent = branchName(key)
+  })
+  lensSwitcher.querySelectorAll('button').forEach((btn) => {
+    btn.textContent = t(`lens.${btn.dataset.key}`)
+  })
+  switcher.querySelectorAll('button').forEach((btn) => {
+    btn.textContent = presetLabel(btn.dataset.key)
+  })
+  languageSwitcher.querySelectorAll('button').forEach((btn) => {
+    btn.classList.toggle('active', btn.dataset.key === document.documentElement.lang.replace('zh-CN', 'zh'))
+  })
+}
 
 function applyPreset(key) {
   activePreset = key
@@ -350,6 +397,8 @@ function applyPreset(key) {
   history.replaceState(null, '', url)
 }
 applyPreset(activePreset)
+renderLanguageChrome()
+onLanguageChange(renderLanguageChrome)
 
 // —— 调试帧率（?debug）——
 const fpsEl = document.getElementById('fps')

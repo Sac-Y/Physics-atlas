@@ -11,33 +11,45 @@ const GRID_Y = 8
 export const stageConfig = {
   steps: [
     {
-      title: '有序的开局',
-      text: '所有气体被压在盒子左侧——这是一个极其"有序"的状态。现在隔板抽走了。没有任何力驱赶它们，纯粹的乱撞，就足以让秩序瓦解。',
+      title: { zh: '有序的开局', en: 'An Ordered Start' },
+      text: {
+        zh: '所有气体被压在盒子左侧——这是一个极其"有序"的状态。现在隔板抽走了。没有任何力驱赶它们，纯粹的乱撞，就足以让秩序瓦解。',
+        en: 'All gas begins compressed on the left, an extremely ordered state. Remove the partition: no force drives the particles, but random collisions are enough to erase order.'
+      },
       scenario: 'release',
       annotations: {}
     },
     {
-      title: '熵在上升',
-      text: '把盒子划成小格，数每格里的粒子：分布越均匀，熵 S 越高。看左下角的曲线——S 一路爬升，然后停在平台上。它几乎从不下降，这就是时间之箭的方向。',
+      title: { zh: '熵在上升', en: 'Entropy Rises' },
+      text: {
+        zh: '把盒子划成小格，数每格里的粒子：分布越均匀，熵 S 越高。看左下角的曲线——S 一路爬升，然后停在平台上。它几乎从不下降，这就是时间之箭的方向。',
+        en: 'Divide the box into cells and count particles. The more even the distribution, the higher S. The curve climbs and then settles: that is the arrow of time.'
+      },
       scenario: 'keep',
       annotations: { grid: true, curve: true }
     },
     {
-      title: '时间反演',
-      text: '按下「时间反演」：每个粒子的速度瞬间取反。奇迹发生了——气体一路退回左侧的有序开局。牛顿定律根本不在乎时间的方向，微观世界是可逆的。',
+      title: { zh: '时间反演', en: 'Reverse Time' },
+      text: {
+        zh: '按下「时间反演」：每个粒子的速度瞬间取反。奇迹发生了——气体一路退回左侧的有序开局。牛顿定律根本不在乎时间的方向，微观世界是可逆的。',
+        en: 'Press Reverse Time: every particle velocity flips. The gas really runs back toward its ordered start. Newton’s laws do not care which way time points.'
+      },
       scenario: 'keep',
       annotations: { curve: true }
     },
     {
-      title: '为什么回不去',
-      text: '再试「带微扰反演」：反演时给每个速度加上亿分之一的误差。这次它回不去了。熵增不是定律的禁止，而是概率的碾压——乱的路径太多，有序的那条，一步走偏就再也找不到。',
+      title: { zh: '为什么回不去', en: 'Why It Fails' },
+      text: {
+        zh: '再试「带微扰反演」：反演时给每个速度加上亿分之一的误差。这次它回不去了。熵增不是定律的禁止，而是概率的碾压——乱的路径太多，有序的那条，一步走偏就再也找不到。',
+        en: 'Now reverse with a tiny disturbance. This time it cannot return. Entropy increase is not a ban written into the laws; it is probability overwhelming precision.'
+      },
       scenario: 'keep',
       annotations: { grid: true, curve: true }
     }
   ],
   params: [
-    { type: 'button', key: 'reverse', label: '时间反演 ⏪' },
-    { type: 'button', key: 'reverseNoisy', label: '带微扰反演 ⏪' }
+    { type: 'button', key: 'reverse', label: { zh: '时间反演 ⏪', en: 'Reverse time ⏪' } },
+    { type: 'button', key: 'reverseNoisy', label: { zh: '带微扰反演 ⏪', en: 'Noisy reverse ⏪' } }
   ]
 }
 

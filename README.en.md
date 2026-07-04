@@ -4,6 +4,8 @@
 
 **Live demo → [physics-atlas-sigma.vercel.app](https://physics-atlas-sigma.vercel.app/)**
 
+The app includes an in-app Chinese / English switch in the top-right controls.
+
 Four centuries of physics history rendered as a navigable galaxy of knowledge — every theory is a star, and the lines between them trace who stood on whose shoulders. Zoom and roam the star field, open any star, and find a playable real-time teaching simulation inside.
 
 ## Features

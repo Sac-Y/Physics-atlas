@@ -1,4 +1,5 @@
 import * as THREE from 'three'
+import { onLanguageChange, t } from '../i18n.js'
 
 // 透镜坐标轴：时间轴 / 尺度轴。
 // 两套轴都躺在星群下方（z=+475、y=0），随 galaxy Group 同承倾角。
@@ -207,42 +208,51 @@ function buildAxis({ x0, x1, ticks, endLabel, tickLen = TICK_LEN, tickLabelGap =
 
 export function createLensAxes() {
   const group = new THREE.Group()
+  let timeline
+  let scale
 
-  // —— 时间轴 —— x = (year-1600)*3.2，横线从 x=-30 到 2020
-  const YEAR0 = 1600
-  const SCALE_T = 3.2
-  const tx = (year) => (year - YEAR0) * SCALE_T
-  const timeline = buildAxis({
-    x0: -30,
-    x1: tx(2020),
-    ticks: [1600, 1700, 1800, 1900, 2000].map((y) => ({ x: tx(y), label: String(y) })),
-    endLabel: '时间 →',
-    tickLen: 10,
-    tickLabelGap: 2,
-    titleGap: 22
-  })
+  function rebuildAxes() {
+    group.clear()
 
-  // —— 尺度轴 —— x = scaleExp*55
-  const SX = 55
-  const scaleTicks = [
-    { exp: -18, name: '粒子' },
-    { exp: -10, name: '原子' },
-    { exp: -6, name: '物质' },
-    { exp: 0, name: '物体' },
-    { exp: 7, name: '星球' },
-    { exp: 26, name: '宇宙' }
-  ].map((t) => ({
-    x: t.exp * SX,
-    label: t.name
-  }))
-  const scale = buildAxis({
-    x0: -18 * SX - 30,
-    x1: 26 * SX,
-    ticks: scaleTicks,
-    endLabel: '空间尺度 · 微观 → 宏观'
-  })
+    // —— 时间轴 —— x = (year-1600)*3.2，横线从 x=-30 到 2020
+    const YEAR0 = 1600
+    const SCALE_T = 3.2
+    const tx = (year) => (year - YEAR0) * SCALE_T
+    timeline = buildAxis({
+      x0: -30,
+      x1: tx(2020),
+      ticks: [1600, 1700, 1800, 1900, 2000].map((y) => ({ x: tx(y), label: String(y) })),
+      endLabel: t('axis.timelineTitle'),
+      tickLen: 10,
+      tickLabelGap: 2,
+      titleGap: 22
+    })
 
-  group.add(timeline.group, scale.group)
+    // —— 尺度轴 —— x = scaleExp*55
+    const SX = 55
+    const scaleTicks = [
+      { exp: -18, key: 'particle' },
+      { exp: -10, key: 'atom' },
+      { exp: -6, key: 'matter' },
+      { exp: 0, key: 'object' },
+      { exp: 7, key: 'planet' },
+      { exp: 26, key: 'universe' }
+    ].map((tick) => ({
+      x: tick.exp * SX,
+      label: t(`axis.${tick.key}`)
+    }))
+    scale = buildAxis({
+      x0: -18 * SX - 30,
+      x1: 26 * SX,
+      ticks: scaleTicks,
+      endLabel: t('axis.scaleTitle')
+    })
+
+    group.add(timeline.group, scale.group)
+  }
+
+  rebuildAxes()
+  onLanguageChange(rebuildAxes)
   group.visible = false
 
   // 每套轴各自维护一个阻尼透明度

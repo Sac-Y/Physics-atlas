@@ -2,6 +2,16 @@ import katex from 'katex'
 import 'katex/dist/katex.min.css'
 import { BRANCHES } from '../data/branches.js'
 import { mountSim, hasSim, simHint } from '../sims/simHost.js'
+import {
+  branchName,
+  getLanguage,
+  lineageList,
+  onLanguageChange,
+  starAuthor,
+  starName,
+  starOneLiner,
+  t
+} from '../i18n.js'
 
 // 档案卡：点开一颗星的"灵魂界面"。
 // 正面 = 理论名 / 提出者·年份 / 精排方程 / 一句话 + live 模拟；
@@ -25,18 +35,18 @@ export function createStarCard() {
           <div class="card-simhint"></div>
         </div>
         <div class="card-stats"></div>
-        <button class="card-stage">进入演示台 ⤢</button>
-        <button class="card-flip">学术脉络 ⟶</button>
+        <button class="card-stage"></button>
+        <button class="card-flip card-flip-back"></button>
       </section>
       <section class="card-face card-back">
         <button class="card-close" aria-label="关闭">×</button>
         <h3 class="card-back-title"></h3>
         <div class="card-lineage">
-          <div class="card-sec"><h4>它推翻了</h4><ul class="card-supersedes"></ul></div>
-          <div class="card-sec"><h4>后被谁包含 / 修正</h4><ul class="card-supersededBy"></ul></div>
-          <div class="card-sec"><h4>通向今天</h4><ul class="card-leadsTo"></ul></div>
+          <div class="card-sec"><h4 class="card-supersedes-title"></h4><ul class="card-supersedes"></ul></div>
+          <div class="card-sec"><h4 class="card-supersededBy-title"></h4><ul class="card-supersededBy"></ul></div>
+          <div class="card-sec"><h4 class="card-leadsTo-title"></h4><ul class="card-leadsTo"></ul></div>
         </div>
-        <button class="card-flip">⟵ 正面</button>
+        <button class="card-flip card-flip-front"></button>
       </section>
     </div>`
   document.body.appendChild(root)
@@ -47,10 +57,10 @@ export function createStarCard() {
   let onStageCb = null
   let currentStar = null
 
-  function fillList(sel, items) {
+  function fillList(sel, items, field) {
     const ul = q(sel)
     ul.textContent = ''
-    const list = items?.length ? items : ['—']
+    const list = lineageList(items, field)
     list.forEach((text) => {
       const li = document.createElement('li')
       li.textContent = text
@@ -58,19 +68,30 @@ export function createStarCard() {
     })
   }
 
-  async function open(star) {
-    destroySim()
-    currentStar = star
-    root.classList.remove('flipped')
+  function renderChrome() {
+    q('.card-stage').textContent = t('card.stage')
+    q('.card-flip-back').textContent = t('card.flipBack')
+    q('.card-flip-front').textContent = t('card.flipFront')
+    q('.card-supersedes-title').textContent = t('card.supersedes')
+    q('.card-supersededBy-title').textContent = t('card.supersededBy')
+    q('.card-leadsTo-title').textContent = t('card.leadsTo')
+    root.querySelectorAll('.card-close').forEach((b) => {
+      b.setAttribute('aria-label', t('card.close'))
+    })
+  }
 
+  function renderStar(star) {
     const branch = BRANCHES[star.branch]
     q('.card-dot').style.background = branch.color
-    q('.card-branch').textContent = branch.zh
+    q('.card-branch').textContent = branchName(star.branch)
     q('.card-year').textContent = `· ${star.year}`
-    q('.card-title').textContent = star.name.zh
-    q('.card-author').textContent = `${star.author.zh} · ${star.author.en} · ${star.name.en}`
-    q('.card-oneliner').textContent = star.oneLiner
-    q('.card-back-title').textContent = star.name.zh
+    q('.card-title').textContent = starName(star)
+    q('.card-author').textContent =
+      getLanguage() === 'zh'
+        ? `${star.author.zh} · ${star.author.en} · ${star.name.en}`
+        : `${star.author.en} · ${star.year}`
+    q('.card-oneliner').textContent = starOneLiner(star)
+    q('.card-back-title').textContent = starName(star)
 
     try {
       katex.render(star.equation, q('.card-eq'), { displayMode: true, throwOnError: true })
@@ -78,9 +99,9 @@ export function createStarCard() {
       q('.card-eq').textContent = star.equation
     }
 
-    fillList('.card-supersedes', star.cardBack?.supersedes)
-    fillList('.card-supersededBy', star.cardBack?.supersededBy)
-    fillList('.card-leadsTo', star.cardBack?.leadsTo)
+    fillList('.card-supersedes', star.cardBack?.supersedes, 'supersedes')
+    fillList('.card-supersededBy', star.cardBack?.supersededBy, 'supersededBy')
+    fillList('.card-leadsTo', star.cardBack?.leadsTo, 'leadsTo')
 
     // 模拟：有则挂载，无则收起画布区
     const simwrap = q('.card-simwrap')
@@ -90,6 +111,14 @@ export function createStarCard() {
     statsEl.style.display = runnable ? '' : 'none'
     q('.card-stage').style.display = runnable ? '' : 'none'
     q('.card-simhint').textContent = runnable ? simHint(star.simId) : ''
+  }
+
+  async function open(star) {
+    destroySim()
+    currentStar = star
+    root.classList.remove('flipped')
+    renderChrome()
+    renderStar(star)
 
     root.classList.add('open')
 
@@ -124,6 +153,11 @@ export function createStarCard() {
   q('.card-stage').addEventListener('click', () => {
     if (currentStar) onStageCb?.(currentStar)
   })
+  onLanguageChange(() => {
+    renderChrome()
+    if (currentStar) renderStar(currentStar)
+  })
+  renderChrome()
   window.addEventListener('keydown', (e) => {
     // 演示台开着时 Esc 归它管
     if (e.key === 'Escape' && !document.getElementById('demoStage')?.classList.contains('open')) {
