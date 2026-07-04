@@ -2,7 +2,7 @@
 
 把四百年物理学史做成一片可漫游的知识星系——每一个理论是一颗星，星与星之间连的是"谁站在谁肩膀上"的传承。缩放漫游整片星空，点开任一颗星，里面是一个能玩的实时教学模拟。
 
-**在线体验 → [physics-star-atlas.vercel.app](https://physics-star-atlas.vercel.app/)**
+**在线体验 → [physics-atlas-sigma.vercel.app](https://physics-atlas-sigma.vercel.app/)**
 
 ## 特性
 
@@ -50,4 +50,5 @@ tools/        layout.mjs（离线布局）· validate.mjs（数据校验）
 
 ## 部署
 
-已接 Vercel 与本仓库 `main` 分支：**推送到 main 即自动构建并上线**，无需手动操作。
+部署在 Vercel（[physics-atlas-sigma.vercel.app](https://physics-atlas-sigma.vercel.app/)）。
+更新上线：`npm run build` 后用 `vercel --prod` 部署；若在 Vercel 后台连接了本 GitHub 仓库的 Git 集成，则推送到 `main` 会自动构建上线。
