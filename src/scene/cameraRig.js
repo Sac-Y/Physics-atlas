@@ -8,6 +8,8 @@ const OVERVIEW_TARGET = new THREE.Vector3(80, 0, -100)
 const OVERVIEW_DIRECTION = new THREE.Vector3(0.35, 0.52, 1).normalize()
 const INTRO_RADIUS = 5400
 const OVERVIEW_RADIUS = 1900
+const WHEEL_ZOOM_SPEED = 0.0018
+const RADIUS_DAMPING = 4.4
 
 export function createCameraRig(camera, domElement) {
   const controls = new OrbitControls(camera, domElement)
@@ -44,7 +46,7 @@ export function createCameraRig(camera, domElement) {
       desiredDirection = null
       desiredTarget.copy(controls.target)
       targetRadius = THREE.MathUtils.clamp(
-        radius * Math.exp(e.deltaY * 0.0011),
+        radius * Math.exp(e.deltaY * WHEEL_ZOOM_SPEED),
         MIN_R,
         MAX_R
       )
@@ -73,7 +75,7 @@ export function createCameraRig(camera, domElement) {
     controls.target.x = THREE.MathUtils.damp(controls.target.x, desiredTarget.x, 3.0, dt)
     controls.target.y = THREE.MathUtils.damp(controls.target.y, desiredTarget.y, 3.0, dt)
     controls.target.z = THREE.MathUtils.damp(controls.target.z, desiredTarget.z, 3.0, dt)
-    radius = THREE.MathUtils.damp(radius, targetRadius, 3.0, dt)
+    radius = THREE.MathUtils.damp(radius, targetRadius, RADIUS_DAMPING, dt)
     dir.copy(camera.position).sub(controls.target).normalize()
     if (desiredDirection) {
       dir.x = THREE.MathUtils.damp(dir.x, desiredDirection.x, 3.0, dt)

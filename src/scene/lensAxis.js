@@ -1,11 +1,12 @@
 import * as THREE from 'three'
-import { CSS2DObject } from 'three/examples/jsm/renderers/CSS2DRenderer.js'
 
 // 透镜坐标轴：时间轴 / 尺度轴。
 // 两套轴都躺在星群下方（z=+475、y=0），随 galaxy Group 同承倾角。
+// 文字为「贴地 3D 文字」：离屏 canvas 绘字 → CanvasTexture → 躺平的 PlaneGeometry，
+// 随轴一起平移/旋转/透视，像画在地面上的跑道字，而非永远正对屏幕的 CSS2D。
 // 只在对应透镜下、且切换动画过半时淡入；galaxy 透镜与切换中一律隐去。
-// 淡入淡出由阻尼透明度驱动，作用于线材质 opacity 与全部 CSS2D 标签，
-// ≈0 时 group.visible=false（CSS2DRenderer 会连同标签一起跳过）。
+// 淡入淡出由阻尼透明度驱动，乘到线材质与每个文字平面材质的 opacity 上；
+// ≈0 时 group.visible=false。
 
 const AXIS_Z = 475
 const LINE_COLOR = new THREE.Color(150 / 255, 190 / 255, 255 / 255)
@@ -14,12 +15,76 @@ const TICK_PEAK = 0.8 // 刻度短线峰值透明度
 const TICK_LEN = 16 // 短刻度线沿 -z 方向探出的长度（世界单位）
 const LABEL_GAP = 12 // 标签落在刻度短线外端更外侧的间隙
 
-function makeLabel(text, cls = '') {
-  const el = document.createElement('div')
-  el.className = `axis-label${cls ? ` ${cls}` : ''}`
-  el.textContent = text
-  el.style.opacity = '0'
-  return el
+// —— 贴地文字标定 ——
+// 俯视默认距离下，让 3D 平面投影出与迁移前 CSS2D 相近的屏幕字高。
+// 屏幕像素高 px ≈ H_world × (screenH/2) / (tan(fov/2) × dist)
+// fov=46°、以两透镜俯视默认距离之间的参考距离标定，H_world = px × tan(fov/2) × REF_DIST / (screenH/2)
+const FOV_TAN = Math.tan((46 * Math.PI) / 360) // tan(23°)
+const REF_DIST = 1700 // timeline(~1357) 与 scale(~1892) 俯视默认距离的居中参考
+const REF_SCREEN_H = 900
+const worldTextHeight = (px) => (px * FOV_TAN * REF_DIST) / (REF_SCREEN_H / 2)
+const TICK_TEXT_PX = 11.5 // 刻度名字号档（同迁移前）
+const TITLE_TEXT_PX = 15 // 轴题字号档（同迁移前）
+
+const TEXT_TINT = 'rgba(200, 225, 255, 0.95)' // 主体亮字（同迁移前 .axis-label 色）
+const TEXT_GLOW = 'rgba(150, 190, 255, 0.6)' // 蓝晕（同迁移前 text-shadow）
+const CANVAS_SCALE = 2 // 2x 超采样防糊
+
+// 离屏 canvas 绘字 → CanvasTexture → 躺平的 PlaneGeometry。
+// 辉光用 shadowBlur 烘进纹理（蓝晕 + 主体亮字）。宽度按文字实测，
+// 世界尺寸由 heightWorld 定高、按纹理宽高比定宽，保证不拉伸。
+// 返回 { mesh, material }。mesh 未定位（由调用方设置 position）。
+function makeTextPlane(text, { fontPx, font, heightWorld }) {
+  const pad = fontPx * 0.9 // 给 shadowBlur 辉光留出边距，避免被裁
+  const measureCanvas = document.createElement('canvas')
+  const mctx = measureCanvas.getContext('2d')
+  mctx.font = `${fontPx}px ${font}`
+  const textW = Math.ceil(mctx.measureText(text).width)
+
+  const cw = (textW + pad * 2) * CANVAS_SCALE
+  const ch = (fontPx + pad * 2) * CANVAS_SCALE
+  const canvas = document.createElement('canvas')
+  canvas.width = cw
+  canvas.height = ch
+  const ctx = canvas.getContext('2d')
+  ctx.scale(CANVAS_SCALE, CANVAS_SCALE)
+  ctx.font = `${fontPx}px ${font}`
+  ctx.textAlign = 'center'
+  ctx.textBaseline = 'middle'
+  const cx = (textW + pad * 2) / 2
+  const cy = (fontPx + pad * 2) / 2
+
+  // 外圈蓝晕：先描一层带 shadowBlur 的字，把辉光烘进纹理
+  ctx.shadowColor = TEXT_GLOW
+  ctx.shadowBlur = 10
+  ctx.fillStyle = TEXT_GLOW
+  ctx.fillText(text, cx, cy)
+  // 主体亮字：叠在辉光之上
+  ctx.shadowBlur = 3
+  ctx.shadowColor = 'rgba(3, 4, 10, 0.9)' // 内圈深色保字形
+  ctx.fillStyle = TEXT_TINT
+  ctx.fillText(text, cx, cy)
+
+  const texture = new THREE.CanvasTexture(canvas)
+  texture.minFilter = THREE.LinearFilter
+  texture.magFilter = THREE.LinearFilter
+  texture.colorSpace = THREE.SRGBColorSpace
+
+  const aspect = cw / ch
+  const h = heightWorld * ((fontPx + pad * 2) / fontPx) // 含 padding 的整块高
+  const w = h * aspect
+  const geo = new THREE.PlaneGeometry(w, h)
+  const material = new THREE.MeshBasicMaterial({
+    map: texture,
+    transparent: true,
+    opacity: 0,
+    depthWrite: false,
+    blending: THREE.AdditiveBlending
+  })
+  const mesh = new THREE.Mesh(geo, material)
+  // 躺平在布局平面：文字朝 +y，俯视端正、左→右与轴向一致
+  mesh.rotation.x = -Math.PI / 2
+  return { mesh, material }
 }
 
 // 主横线着色器：加法混合的底光 + 沿 x 极慢流动的光包。
@@ -64,11 +129,15 @@ function makeLineMaterial() {
   })
 }
 
-// 构建一套轴：一条主横线 + 若干刻度（短线 + 标签）+ 一个右端方向标签。
+// 构建一套轴：一条主横线 + 若干刻度（短线 + 贴地文字）+ 一个轴题。
 // 返回 { group, setOpacity(a), tick(dt) }
-function buildAxis({ x0, x1, ticks, endLabel }) {
+const TICK_FONT = '"SF Mono", Menlo, monospace'
+const TITLE_FONT = '"Songti SC", "Noto Serif SC", "STSong", serif'
+
+function buildAxis({ x0, x1, ticks, endLabel, tickLen = TICK_LEN, tickLabelGap = LABEL_GAP, titleGap = 54 }) {
   const group = new THREE.Group()
-  const labels = []
+  // 全部文字平面材质，供淡入淡出统一乘 opacity
+  const textMats = []
 
   // 主横线（带沿线参数 aU 供流光采样）
   const lineGeo = new THREE.BufferGeometry().setFromPoints([
@@ -80,18 +149,25 @@ function buildAxis({ x0, x1, ticks, endLabel }) {
   const line = new THREE.Line(lineGeo, lineMat)
   group.add(line)
 
-  // 刻度：每个刻度一段短线（加法混合、更亮）+ 一个 CSS2D 标签
+  const tickHeightW = worldTextHeight(TICK_TEXT_PX)
+  const titleHeightW = worldTextHeight(TITLE_TEXT_PX)
+
+  // 刻度：每个刻度一段短线（加法混合、更亮）+ 一块贴地文字
   const tickPts = []
   ticks.forEach((tk) => {
     tickPts.push(
       new THREE.Vector3(tk.x, 0, AXIS_Z),
-      new THREE.Vector3(tk.x, 0, AXIS_Z - TICK_LEN)
+      new THREE.Vector3(tk.x, 0, AXIS_Z - tickLen)
     )
-    const el = makeLabel(tk.label)
-    const obj = new CSS2DObject(el)
-    obj.position.set(tk.x, 0, AXIS_Z - TICK_LEN - LABEL_GAP)
-    group.add(obj)
-    labels.push(el)
+    const { mesh, material } = makeTextPlane(tk.label, {
+      fontPx: TICK_TEXT_PX * 4, // 高分辨率绘制，世界尺寸另定
+      font: TICK_FONT,
+      heightWorld: tickHeightW
+    })
+    // 刻度名在轴线 -z 侧（俯视上方）；平面锚点在几何中心，沿 -z 再退半个高留白
+    mesh.position.set(tk.x, 0, AXIS_Z - tickLen - tickLabelGap - mesh.geometry.parameters.height / 2)
+    group.add(mesh)
+    textMats.push(material)
   })
   const tickGeo = new THREE.BufferGeometry().setFromPoints(tickPts)
   const tickMat = new THREE.LineBasicMaterial({
@@ -104,20 +180,21 @@ function buildAxis({ x0, x1, ticks, endLabel }) {
   const tickLines = new THREE.LineSegments(tickGeo, tickMat)
   group.add(tickLines)
 
-  // 轴题：移到轴线下方（+z 侧），右对齐轴末端附近——与上方刻度标签分居两侧，互不碰撞
-  const endEl = makeLabel(endLabel, 'axis-end')
-  const endObj = new CSS2DObject(endEl)
-  // 轴题居中于轴线下方（+z 侧），与轴线留出呼吸间距
-  endObj.position.set((x0 + x1) / 2, 0, AXIS_Z + 54)
-  group.add(endObj)
-  labels.push(endEl)
+  // 轴题：轴线下方（+z 侧）居中，与刻度名分居两侧
+  const title = makeTextPlane(endLabel, {
+    fontPx: TITLE_TEXT_PX * 4,
+    font: TITLE_FONT,
+    heightWorld: titleHeightW
+  })
+  title.mesh.position.set((x0 + x1) / 2, 0, AXIS_Z + titleGap + title.mesh.geometry.parameters.height / 2)
+  group.add(title.mesh)
+  textMats.push(title.material)
 
   const setOpacity = (a) => {
     lineMat.uniforms.uFade.value = a
     tickMat.opacity = a * TICK_PEAK
-    const s = a.toFixed(3)
-    labels.forEach((el) => {
-      el.style.opacity = s
+    textMats.forEach((m) => {
+      m.opacity = a
     })
   }
   // 只在可见时推进流光相位，省开销
@@ -139,7 +216,10 @@ export function createLensAxes() {
     x0: -30,
     x1: tx(2020),
     ticks: [1600, 1700, 1800, 1900, 2000].map((y) => ({ x: tx(y), label: String(y) })),
-    endLabel: '时间 →'
+    endLabel: '时间 →',
+    tickLen: 10,
+    tickLabelGap: 2,
+    titleGap: 22
   })
 
   // —— 尺度轴 —— x = scaleExp*55
@@ -185,7 +265,7 @@ export function createLensAxes() {
     timeline.tick(dt, aTime)
     scale.tick(dt, aScale)
 
-    // 两套都近乎全暗时整组隐藏，CSS2DRenderer 连标签一起跳过
+    // 两套都近乎全暗时整组隐藏（贴地文字随 group 一起跳过渲染）
     group.visible = aTime > 0.004 || aScale > 0.004
   }
 

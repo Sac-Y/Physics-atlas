@@ -391,9 +391,6 @@ export function createSim(canvas, statsEl) {
       })
       puck(worlds.top.x, laneTop - 14, '120, 220, 235')
       puck(worlds.bot.x, laneBot - 14, '255, 190, 140')
-      // 速度箭头
-      if (Math.abs(worlds.top.v) > 0.3) arrow(worlds.top.x, laneTop - 38, worlds.top.v * 6, 0, 'rgba(120, 220, 235, 0.9)')
-      if (Math.abs(worlds.bot.v) > 0.3) arrow(worlds.bot.x, laneBot - 38, worlds.bot.v * 6, 0, 'rgba(255, 190, 140, 0.9)')
       // 位移对比
       ctx.font = '11px "SF Mono", Menlo, monospace'
       ctx.textAlign = 'right'

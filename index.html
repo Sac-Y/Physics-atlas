@@ -35,6 +35,9 @@
       display: flex; flex-direction: column; gap: 6px;
       pointer-events: none;
     }
+    .hud-title-main {
+      display: flex; align-items: center; gap: 18px;
+    }
     .hud-title h1 {
       font-size: 19px; font-weight: 500;
       letter-spacing: 0.42em; text-indent: 0.42em;
@@ -77,7 +80,7 @@
     .hud-lenses { top: auto; bottom: 26px; left: 34px; right: auto; }
 
     /* 搜索框 */
-    .hud-search { top: 116px; left: 34px; width: 240px; }
+    .hud-search { top: 92px; left: 34px; width: 240px; }
     .search-input {
       width: 100%;
       appearance: none; border: 1px solid var(--glass-border);
@@ -515,26 +518,11 @@
     .star-label--low { font-size: 10px; color: rgba(235, 240, 255, 0.55); padding-top: 24px; }
     .star-label--dust { font-size: 9px; color: rgba(235, 240, 255, 0.38); padding-top: 18px; letter-spacing: 0.14em; }
 
-    /* 透镜轴刻度标签：SF Mono 小号、克制蓝，随轴淡入淡出（opacity 由 JS 控） */
-    .axis-label {
-      font-family: "SF Mono", Menlo, monospace;
-      font-size: 11.5px; letter-spacing: 0.08em;
-      color: rgba(200, 225, 255, 0.95);
-      white-space: nowrap;
-      /* 外圈亮晕 + 内圈深色保字形 */
-      text-shadow: 0 0 10px rgba(150, 190, 255, 0.6), 0 0 3px rgba(3, 4, 10, 0.9);
-      transition: opacity 0.35s ease;
-      user-select: none; pointer-events: none;
-    }
-    .axis-label.axis-end {
-      font-family: "Songti SC", "Noto Serif SC", "STSong", serif;
-      font-size: 15px; letter-spacing: 0.2em;
-      color: rgba(210, 230, 255, 0.95);
-    }
+    /* 透镜轴文字已迁移为贴地 3D 文字（lensAxis.js 的 CanvasTexture 平面），
+       不再走 CSS2D，故此处原 .axis-label / .axis-end 样式已移除。 */
 
-    /* 学科图例：标题下方一排色点 + 中文名，可交互（hover/点击聚焦流派），与 HUD 同字体语言 */
+    /* 学科图例：标题右侧一排色点 + 中文名，可交互（hover/点击聚焦流派），与 HUD 同字体语言 */
     #branchLegend {
-      top: 78px; left: 34px;
       display: flex; flex-wrap: nowrap; gap: 8px;
       pointer-events: none;
       animation: hudIn 1.8s ease 1.4s backwards;
@@ -569,11 +557,12 @@
   <div id="app"></div>
 
   <div class="hud hud-title">
-    <h1>物理学星图</h1>
+    <div class="hud-title-main">
+      <h1>物理学星图</h1>
+      <div id="branchLegend" aria-label="学科图例"></div>
+    </div>
     <span>Physics Star Atlas</span>
   </div>
-
-  <div class="hud" id="branchLegend" aria-label="学科图例"></div>
 
   <div class="hud hud-styles" id="styleSwitcher" aria-label="风格方案"></div>
   <div class="hud hud-styles hud-lenses" id="lensSwitcher" aria-label="透镜"></div>

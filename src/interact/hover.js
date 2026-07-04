@@ -6,6 +6,7 @@ import * as THREE from 'three'
 
 const ACQUIRE_PX = 30 // 捕获半径
 const RELEASE_PX = 46 // 释放半径（迟滞，防边界抖动）
+const BRANCH_LABEL_CAP = 9 // 流派 hover 只显示代表节点文字，避免密集区满屏叠字
 
 export function createHoverFocus({
   stars,
@@ -33,6 +34,7 @@ export function createHoverFocus({
   // 流派聚焦：每个分支预算好其星的 id 集合与 index 集合（点亮/沉暗一次到位）
   const branchIds = new Map()
   const branchIdx = new Map()
+  const branchLabelIds = new Map()
   stars.forEach((s, i) => {
     if (!branchIds.has(s.branch)) {
       branchIds.set(s.branch, new Set())
@@ -40,6 +42,14 @@ export function createHoverFocus({
     }
     branchIds.get(s.branch).add(s.id)
     branchIdx.get(s.branch).add(i)
+  })
+  branchIds.forEach((ids, key) => {
+    const selected = [...ids]
+      .map((id) => stars[idToIndex.get(id)])
+      .sort((a, b) => b.influence - a.influence || a.year - b.year)
+      .slice(0, BRANCH_LABEL_CAP)
+      .map((s) => s.id)
+    branchLabelIds.set(key, new Set(selected))
   })
 
   // 整条血脉：全部祖先 + 全部后代（"从伽利略到黑洞"一次点亮）
@@ -132,7 +142,10 @@ export function createHoverFocus({
     const ids = branchIds.get(key)
     const idx = branchIdx.get(key)
     theoryStars.setFocus(idx)
-    labels.setFocus(ids)
+    labels.setFocus(branchLabelIds.get(key), {
+      forceFocusedLabels: false,
+      unfocusedOpacityScale: 0.02
+    })
     lineage.setFocusIds(ids) // 两端同流派的边点亮：展示流派内部师承网
     nebulae?.setBranchFocus(key)
     canvas.style.cursor = ''
