@@ -122,6 +122,8 @@ export function createStarCard() {
 
     root.classList.add('open')
 
+    const statsEl = q('.card-stats')
+    const runnable = star.simId && hasSim(star.simId)
     if (runnable) {
       // 等一个宏任务让布局定型再取 canvas 尺寸。
       // 不能用 rAF：后台标签页 rAF 不触发，挂载会永远卡住。
